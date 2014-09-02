@@ -1,0 +1,650 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550/followed_by?access_token=45364550.1fb234f.568db239a5a845c4ad8315557d551c1c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - text/html
+      Date:
+      - Mon, 18 Aug 2014 13:04:57 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - ccode=PL; Path=/
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '3336'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+        class=\"hl-en not-logged-in \">\n<head>\n    <meta charset=\"UTF-8\" />\n
+        \   <title>Page Not Found &bull; Instagram</title>\n\n    <meta name=\"robots\"
+        content=\"noimageindex\" />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\"
+        href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/favicon.ico\"
+        />\n\n    <meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />\n
+        \   <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\"
+        />\n\n    <link rel=\"apple-touch-icon-precomposed\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-72x72-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-114x114-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-144x144-precomposed.png\"
+        />\n\n    \n    <meta name=\"viewport\" content=\"width=device-width, user-scalable=no,
+        initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\" />\n    \n\n    \n
+        \       <script type=\"text/javascript\" src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/jquery.js\"></script>\n
+        \       <script type=\"text/javascript\" src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/bluebar.js\"></script>\n\n
+        \   \n\n    \n\n    \n    <link rel=\"stylesheet\" type=\"text/css\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/cache/distillery/dialog-main.css\"/>\n\n\n</head>\n<body
+        class=\" p-error dialog-404\">\n\n\n<div class=\"root\">\n\n    <div class=\"page\">\n
+        \       \n            \n                <header class=\"top-bar top-bar-new\">\n
+        \   <div class=\"top-bar-wrapper\">\n        <h1 class=\"logo\"><a href=\"/\">Instagram</a></h1>\n\n
+        \       <div class=\"top-bar-left\">\n            <ul class=\"top-bar-actions\">\n
+        \               <li>\n                    <a class=\"top-bar-home\" href=\"/\"
+        label=Home><i></i></a>\n                </li>\n            </ul>\n        </div>\n\n
+        \       <div class=\"top-bar-right account-state\" id=\"top_bar_right\">\n
+        \           <ul class=\"top-bar-actions\">\n                \n                \n
+        \               <li id=\"link_profile\" class=\"link-signin\">\n                    <a
+        href=\"javascript:;\" class=\"loginLink\">\n                        <i></i>\n
+        \                       <strong>Log in</strong>\n                    </a>\n
+        \               </li>\n                \n            </ul>\n\n            \n
+        \         </div>\n    </div>\n</header> <!-- .top-bar -->\n            \n
+        \       \n\n        \n        <div class=\"main\">\n            \n\t<div class=\"error-container\">\n\t\n\n\t<h2>Page
+        Not Found</h2>\n\n\t<p>This page could not be found.<br />You might have followed
+        an incorrect link.</p>\n\n\n\t</div>\n\n        </div> <!-- .main -->\n        \n\n
+        \   </div> <!-- .page -->\n\n    \n    <footer class=\"page-footer\" role=\"contentinfo\">\n
+        \       <div class=\"wrapper\">\n            <nav>\n                <ul>\n
+        \                   <li><a href=\"/about/us/\">About us</a></li>\n                    <li><a
+        href=\"http://help.instagram.com/\">Support</a></li>\n                    <li><a
+        href=\"http://blog.instagram.com/\">Blog</a></li>\n                    <li><a
+        href=\"http://instagram.com/press/\">Press</a></li>\n                    <li><a
+        href=\"/developer/\">API</a></li>\n                    <li><a href=\"/about/jobs/\">Jobs</a></li>\n
+        \                   <li><a href=\"/about/legal/privacy/\">Privacy</a></li>\n
+        \                   <li><a href=\"/about/legal/terms/\">Terms</a></li>\n                </ul>\n
+        \           </nav>\n\n            <p class=\"copyright\">&copy; 2014 Instagram</p>\n
+        \       </div>\n    </footer>\n    \n\n\n<div id=\"reactModalMountPoint\"></div>\n</div>
+        <!-- .root -->\n\n\n\n\n\n\n\n\n\n<script type=\"text/javascript\">\n    var
+        _gaq = _gaq || [];\n    _gaq.push(['_setAccount', 'UA-18105282-1']);\n    _gaq.push(['_setDomainName',
+        'none']);\n    _gaq.push(['_setAllowLinker', true]);\n    \n    _gaq.push(['_trackPageview']);\n
+        \   (function() {\n        var ga = document.createElement('script'); ga.type
+        = 'text/javascript'; ga.async = true;\n        ga.src = ('https:' == document.location.protocol
+        ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n        var
+        s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+        s);\n    })();\n</script>\n\n        <script type=\"text/javascript\">\nwindow._strings
+        = {\n\n\"%(count)s comments\": \"%(count)s comments\",\n\"%(count)s followers\":
+        \"%(count)s followers\",\n\"%(count)s following\": \"%(count)s following\",\n\"%(count)s
+        likes\": \"%(count)s likes\",\n\"%(count)s more comments\": \"%(count)s more
+        comments\",\n\"%(count)s new posts\": \"%(count)s new posts\",\n\"%(count)s
+        people liked this photo\": \"%(count)s people liked this photo\",\n\"%(count)s
+        photos,\": \"%(count)s photos,\",\n\"%(count)s posts\": \"%(count)s posts\",\n\"%(count)s+
+        new posts\": \"%(count)s+ new posts\",\n\"%(day)s %(month_name)s %(year)s\":
+        \"%(day)s %(month_name)s %(year)s\",\n\"%(days)s days ago\": \"%(days)s days
+        ago\",\n\"%(days)sd\": \"%(days)sd\",\n\"%(followerCount)s followers\": \"%(followerCount)s
+        followers\",\n\"%(hours)s hours ago\": \"%(hours)s hours ago\",\n\"%(hours)sh\":
+        \"%(hours)sh\",\n\"%(likes)s likes, %(comments)s comments\": \"%(likes)s likes,
+        %(comments)s comments\",\n\"%(mediaCount)s photos\": \"%(mediaCount)s photos\",\n\"%(minutes)s
+        minutes ago\": \"%(minutes)s minutes ago\",\n\"%(minutes)sm\": \"%(minutes)sm\",\n\"%(months)s
+        months ago\": \"%(months)s months ago\",\n\"%(seconds)s seconds ago\": \"%(seconds)s
+        seconds ago\",\n\"%(seconds)ss\": \"%(seconds)ss\",\n\"%(user)s on Instagram\":
+        \"%(user)s on Instagram\",\n\"%(username)s on Instagram\": \"%(username)s
+        on Instagram\",\n\"%(weeks)s weeks ago\": \"%(weeks)s weeks ago\",\n\"%(weeks)sw\":
+        \"%(weeks)sw\",\n\"%(year)s %(month)s\": \"%(year)s %(month)s\",\n\"1\": \"1\",\n\"1
+        comment\": \"1 comment\",\n\"1 day ago\": \"1 day ago\",\n\"1 follower\":
+        \"1 follower\",\n\"1 hour ago\": \"1 hour ago\",\n\"1 like\": \"1 like\",\n\"1
+        minute ago\": \"1 minute ago\",\n\"1 month ago\": \"1 month ago\",\n\"1 more
+        comment\": \"1 more comment\",\n\"1 new post\": \"1 new post\",\n\"1 photo>\":
+        \"1 photo\\u003E\",\n\"1 second ago\": \"1 second ago\",\n\"1 week ago\":
+        \"1 week ago\",\n\"2\": \"2\",\n\"3\": \"3\",\n\"AM\": \"AM\",\n\"About us\":
+        \"About us\",\n\"Account Insights - Instagram\": \"Account Insights \\u002D
+        Instagram\",\n\"Add a caption...\": \"Add a caption...\",\n\"Add a comment\":
+        \"Add a comment\",\n\"All items loaded\": \"All items loaded\",\n\"Apr\":
+        \"Apr\",\n\"April\": \"April\",\n\"Are you sure you want to delete this comment?\":
+        \"Are you sure you want to delete this comment?\",\n\"Are you sure?\": \"Are
+        you sure?\",\n\"Audience\": \"Audience\",\n\"Aug\": \"Aug\",\n\"August\":
+        \"August\",\n\"Badges\": \"Badges\",\n\"Blog\": \"Blog\",\n\"By using this
+        embed, you agree to Instagram\\\\'s <a href=\\\"http://instagram.com/about/legal/terms/api/\\\">API
+        Terms of Use</a>.\": \"By using this embed, you agree to Instagram\\u005C\\u0027s
+        \\u003Ca href\\u003D\\u0022http://instagram.com/about/legal/terms/api/\\u0022\\u003EAPI
+        Terms of Use\\u003C/a\\u003E.\",\n\"Cancel\": \"Cancel\",\n\"Content unavailable\":
+        \"Content unavailable\",\n\"Copy Embed Code\": \"Copy Embed Code\",\n\"Copy
+        this code:\": \"Copy this code:\",\n\"Couldn\\\\'t post comment\": \"Couldn\\u005C\\u0027t
+        post comment\",\n\"Dec\": \"Dec\",\n\"December\": \"December\",\n\"Delete\":
+        \"Delete\",\n\"Edit Profile\": \"Edit Profile\",\n\"Embed\": \"Embed\",\n\"Feb\":
+        \"Feb\",\n\"February\": \"February\",\n\"Follow\": \"Follow\",\n\"Follow %(username)s
+        on Instagram\": \"Follow %(username)s on Instagram\",\n\"Follow friends and
+        interesting people to see their photos here.\": \"Follow friends and interesting
+        people to see their photos here.\",\n\"Following\": \"Following\",\n\"Forgot
+        your password?\": \"Forgot your password?\",\n\"Fri\": \"Fri\",\n\"Friday\":
+        \"Friday\",\n\"Here are some suggestions.\": \"Here are some suggestions.\",\n\"Home\":
+        \"Home\",\n\"Jan\": \"Jan\",\n\"January\": \"January\",\n\"Jobs\": \"Jobs\",\n\"Jul\":
+        \"Jul\",\n\"July\": \"July\",\n\"Jun\": \"Jun\",\n\"June\": \"June\",\n\"Leave
+        a comment...\": \"Leave a comment...\",\n\"Like\": \"Like\",\n\"Likes\": \"Likes\",\n\"Load
+        More...\": \"Load More...\",\n\"Load more\": \"Load more\",\n\"Load more...\":
+        \"Load more...\",\n\"Loading more...\": \"Loading more...\",\n\"Loading...\":
+        \"Loading...\",\n\"Log Out\": \"Log Out\",\n\"Log in\": \"Log in\",\n\"Mar\":
+        \"Mar\",\n\"March\": \"March\",\n\"May\": \"May\",\n\"Mon\": \"Mon\",\n\"Monday\":
+        \"Monday\",\n\"More\": \"More\",\n\"Next photo\": \"Next photo\",\n\"No Recent
+        Photos\": \"No Recent Photos\",\n\"No likes yet.\": \"No likes yet.\",\n\"No
+        photos to show.\": \"No photos to show.\",\n\"Nov\": \"Nov\",\n\"November\":
+        \"November\",\n\"Now\": \"Now\",\n\"Oct\": \"Oct\",\n\"October\": \"October\",\n\"Open
+        in App\": \"Open in App\",\n\"Others\": \"Others\",\n\"PM\": \"PM\",\n\"Password:\":
+        \"Password:\",\n\"Paste it on your website, blog, or wherever you want to
+        link to your profile!\": \"Paste it on your website, blog, or wherever you
+        want to link to your profile!\",\n\"People you follow\": \"People you follow\",\n\"Performance\":
+        \"Performance\",\n\"Photo by %(username)s\": \"Photo by %(username)s\",\n\"Posts\":
+        \"Posts\",\n\"Press\": \"Press\",\n\"Press Page - Instagram\": \"Press Page
+        \\u002D Instagram\",\n\"Previous Posts\": \"Previous Posts\",\n\"Previous
+        photo\": \"Previous photo\",\n\"Privacy\": \"Privacy\",\n\"Report inappropriate\":
+        \"Report inappropriate\",\n\"Requested\": \"Requested\",\n\"Retry\": \"Retry\",\n\"Sat\":
+        \"Sat\",\n\"Saturday\": \"Saturday\",\n\"Select your badge:\": \"Select your
+        badge:\",\n\"Sep\": \"Sep\",\n\"September\": \"September\",\n\"Summary\":
+        \"Summary\",\n\"Sun\": \"Sun\",\n\"Sunday\": \"Sunday\",\n\"Support\": \"Support\",\n\"Terms\":
+        \"Terms\",\n\"This user is private\": \"This user is private\",\n\"Thu\":
+        \"Thu\",\n\"Thursday\": \"Thursday\",\n\"To follow %(username)s, you need
+        to log in.\": \"To follow %(username)s, you need to log in.\",\n\"Toggle like\":
+        \"Toggle like\",\n\"Tue\": \"Tue\",\n\"Tuesday\": \"Tuesday\",\n\"Username:\":
+        \"Username:\",\n\"Video by %(username)s\": \"Video by %(username)s\",\n\"View
+        Photo Page\": \"View Photo Page\",\n\"View Profile\": \"View Profile\",\n\"View
+        Video Page\": \"View Video Page\",\n\"View on Instagram\": \"View on Instagram\",\n\"Wed\":
+        \"Wed\",\n\"Wednesday\": \"Wednesday\",\n\"When you are finished following
+        people,\": \"When you are finished following people,\",\n\"Write a comment...\":
+        \"Write a comment...\",\n\"Yes\": \"Yes\",\n\"You must log in to add a comment.\":
+        \"You must log in to add a comment.\",\n\"You must log in to like this photo.\":
+        \"You must log in to like this photo.\",\n\"You need to be following %(username)s
+        to like or comment\": \"You need to be following %(username)s to like or comment\",\n\"Your
+        username or password was incorrect.\": \"Your username or password was incorrect.\",\n\"am\":
+        \"am\",\n\"banner photo\": \"banner photo\",\n\"nd\": \"nd\",\n\"pm\": \"pm\",\n\"rd\":
+        \"rd\",\n\"reload this page\": \"reload this page\",\n\"st\": \"st\",\n\"th\":
+        \"th\"\n};\n</script>\n        \n<script src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/polyfills/es5-shim.min.js\"></script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/polyfills/es5-sham.min.js\"></script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/polyfills/history.js/scripts/bundled/html5/native.history.js\"></script>\n\n\n<script
+        type=\"text/javascript\">window._sharedData = {\"entry_data\":{},\"hostname\":\"api.instagram.com\",\"config\":{\"csrf_token\":\"NOTPROVIDED\"},\"static_root\":\"\\/\\/d36xtkk24g8jdx.cloudfront.net\\/bluebar\\/3034ba9\"};</script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/cache/bundles/webpack-common.js\"></script>\n</body>\n</html>"
+    http_version: 
+  recorded_at: Mon, 18 Aug 2014 13:04:57 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550/followed_by?access_token=45364550.1fb234f.568db239a5a845c4ad8315557d551c1c&client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - text/html
+      Date:
+      - Mon, 18 Aug 2014 13:54:48 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - ccode=PL; Path=/
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '3336'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+        class=\"hl-en not-logged-in \">\n<head>\n    <meta charset=\"UTF-8\" />\n
+        \   <title>Page Not Found &bull; Instagram</title>\n\n    <meta name=\"robots\"
+        content=\"noimageindex\" />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\"
+        href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/favicon.ico\"
+        />\n\n    <meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />\n
+        \   <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\"
+        />\n\n    <link rel=\"apple-touch-icon-precomposed\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-72x72-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-114x114-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-144x144-precomposed.png\"
+        />\n\n    \n    <meta name=\"viewport\" content=\"width=device-width, user-scalable=no,
+        initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\" />\n    \n\n    \n
+        \       <script type=\"text/javascript\" src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/jquery.js\"></script>\n
+        \       <script type=\"text/javascript\" src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/bluebar.js\"></script>\n\n
+        \   \n\n    \n\n    \n    <link rel=\"stylesheet\" type=\"text/css\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/cache/distillery/dialog-main.css\"/>\n\n\n</head>\n<body
+        class=\" p-error dialog-404\">\n\n\n<div class=\"root\">\n\n    <div class=\"page\">\n
+        \       \n            \n                <header class=\"top-bar top-bar-new\">\n
+        \   <div class=\"top-bar-wrapper\">\n        <h1 class=\"logo\"><a href=\"/\">Instagram</a></h1>\n\n
+        \       <div class=\"top-bar-left\">\n            <ul class=\"top-bar-actions\">\n
+        \               <li>\n                    <a class=\"top-bar-home\" href=\"/\"
+        label=Home><i></i></a>\n                </li>\n            </ul>\n        </div>\n\n
+        \       <div class=\"top-bar-right account-state\" id=\"top_bar_right\">\n
+        \           <ul class=\"top-bar-actions\">\n                \n                \n
+        \               <li id=\"link_profile\" class=\"link-signin\">\n                    <a
+        href=\"javascript:;\" class=\"loginLink\">\n                        <i></i>\n
+        \                       <strong>Log in</strong>\n                    </a>\n
+        \               </li>\n                \n            </ul>\n\n            \n
+        \         </div>\n    </div>\n</header> <!-- .top-bar -->\n            \n
+        \       \n\n        \n        <div class=\"main\">\n            \n\t<div class=\"error-container\">\n\t\n\n\t<h2>Page
+        Not Found</h2>\n\n\t<p>This page could not be found.<br />You might have followed
+        an incorrect link.</p>\n\n\n\t</div>\n\n        </div> <!-- .main -->\n        \n\n
+        \   </div> <!-- .page -->\n\n    \n    <footer class=\"page-footer\" role=\"contentinfo\">\n
+        \       <div class=\"wrapper\">\n            <nav>\n                <ul>\n
+        \                   <li><a href=\"/about/us/\">About us</a></li>\n                    <li><a
+        href=\"http://help.instagram.com/\">Support</a></li>\n                    <li><a
+        href=\"http://blog.instagram.com/\">Blog</a></li>\n                    <li><a
+        href=\"http://instagram.com/press/\">Press</a></li>\n                    <li><a
+        href=\"/developer/\">API</a></li>\n                    <li><a href=\"/about/jobs/\">Jobs</a></li>\n
+        \                   <li><a href=\"/about/legal/privacy/\">Privacy</a></li>\n
+        \                   <li><a href=\"/about/legal/terms/\">Terms</a></li>\n                </ul>\n
+        \           </nav>\n\n            <p class=\"copyright\">&copy; 2014 Instagram</p>\n
+        \       </div>\n    </footer>\n    \n\n\n<div id=\"reactModalMountPoint\"></div>\n</div>
+        <!-- .root -->\n\n\n\n\n\n\n\n\n\n<script type=\"text/javascript\">\n    var
+        _gaq = _gaq || [];\n    _gaq.push(['_setAccount', 'UA-18105282-1']);\n    _gaq.push(['_setDomainName',
+        'none']);\n    _gaq.push(['_setAllowLinker', true]);\n    \n    _gaq.push(['_trackPageview']);\n
+        \   (function() {\n        var ga = document.createElement('script'); ga.type
+        = 'text/javascript'; ga.async = true;\n        ga.src = ('https:' == document.location.protocol
+        ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n        var
+        s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+        s);\n    })();\n</script>\n\n        <script type=\"text/javascript\">\nwindow._strings
+        = {\n\n\"%(count)s comments\": \"%(count)s comments\",\n\"%(count)s followers\":
+        \"%(count)s followers\",\n\"%(count)s following\": \"%(count)s following\",\n\"%(count)s
+        likes\": \"%(count)s likes\",\n\"%(count)s more comments\": \"%(count)s more
+        comments\",\n\"%(count)s new posts\": \"%(count)s new posts\",\n\"%(count)s
+        people liked this photo\": \"%(count)s people liked this photo\",\n\"%(count)s
+        photos,\": \"%(count)s photos,\",\n\"%(count)s posts\": \"%(count)s posts\",\n\"%(count)s+
+        new posts\": \"%(count)s+ new posts\",\n\"%(day)s %(month_name)s %(year)s\":
+        \"%(day)s %(month_name)s %(year)s\",\n\"%(days)s days ago\": \"%(days)s days
+        ago\",\n\"%(days)sd\": \"%(days)sd\",\n\"%(followerCount)s followers\": \"%(followerCount)s
+        followers\",\n\"%(hours)s hours ago\": \"%(hours)s hours ago\",\n\"%(hours)sh\":
+        \"%(hours)sh\",\n\"%(likes)s likes, %(comments)s comments\": \"%(likes)s likes,
+        %(comments)s comments\",\n\"%(mediaCount)s photos\": \"%(mediaCount)s photos\",\n\"%(minutes)s
+        minutes ago\": \"%(minutes)s minutes ago\",\n\"%(minutes)sm\": \"%(minutes)sm\",\n\"%(months)s
+        months ago\": \"%(months)s months ago\",\n\"%(seconds)s seconds ago\": \"%(seconds)s
+        seconds ago\",\n\"%(seconds)ss\": \"%(seconds)ss\",\n\"%(user)s on Instagram\":
+        \"%(user)s on Instagram\",\n\"%(username)s on Instagram\": \"%(username)s
+        on Instagram\",\n\"%(weeks)s weeks ago\": \"%(weeks)s weeks ago\",\n\"%(weeks)sw\":
+        \"%(weeks)sw\",\n\"%(year)s %(month)s\": \"%(year)s %(month)s\",\n\"1\": \"1\",\n\"1
+        comment\": \"1 comment\",\n\"1 day ago\": \"1 day ago\",\n\"1 follower\":
+        \"1 follower\",\n\"1 hour ago\": \"1 hour ago\",\n\"1 like\": \"1 like\",\n\"1
+        minute ago\": \"1 minute ago\",\n\"1 month ago\": \"1 month ago\",\n\"1 more
+        comment\": \"1 more comment\",\n\"1 new post\": \"1 new post\",\n\"1 photo>\":
+        \"1 photo\\u003E\",\n\"1 second ago\": \"1 second ago\",\n\"1 week ago\":
+        \"1 week ago\",\n\"2\": \"2\",\n\"3\": \"3\",\n\"AM\": \"AM\",\n\"About us\":
+        \"About us\",\n\"Account Insights - Instagram\": \"Account Insights \\u002D
+        Instagram\",\n\"Add a caption...\": \"Add a caption...\",\n\"Add a comment\":
+        \"Add a comment\",\n\"All items loaded\": \"All items loaded\",\n\"Apr\":
+        \"Apr\",\n\"April\": \"April\",\n\"Are you sure you want to delete this comment?\":
+        \"Are you sure you want to delete this comment?\",\n\"Are you sure?\": \"Are
+        you sure?\",\n\"Audience\": \"Audience\",\n\"Aug\": \"Aug\",\n\"August\":
+        \"August\",\n\"Badges\": \"Badges\",\n\"Blog\": \"Blog\",\n\"By using this
+        embed, you agree to Instagram\\\\'s <a href=\\\"http://instagram.com/about/legal/terms/api/\\\">API
+        Terms of Use</a>.\": \"By using this embed, you agree to Instagram\\u005C\\u0027s
+        \\u003Ca href\\u003D\\u0022http://instagram.com/about/legal/terms/api/\\u0022\\u003EAPI
+        Terms of Use\\u003C/a\\u003E.\",\n\"Cancel\": \"Cancel\",\n\"Content unavailable\":
+        \"Content unavailable\",\n\"Copy Embed Code\": \"Copy Embed Code\",\n\"Copy
+        this code:\": \"Copy this code:\",\n\"Couldn\\\\'t post comment\": \"Couldn\\u005C\\u0027t
+        post comment\",\n\"Dec\": \"Dec\",\n\"December\": \"December\",\n\"Delete\":
+        \"Delete\",\n\"Edit Profile\": \"Edit Profile\",\n\"Embed\": \"Embed\",\n\"Feb\":
+        \"Feb\",\n\"February\": \"February\",\n\"Follow\": \"Follow\",\n\"Follow %(username)s
+        on Instagram\": \"Follow %(username)s on Instagram\",\n\"Follow friends and
+        interesting people to see their photos here.\": \"Follow friends and interesting
+        people to see their photos here.\",\n\"Following\": \"Following\",\n\"Forgot
+        your password?\": \"Forgot your password?\",\n\"Fri\": \"Fri\",\n\"Friday\":
+        \"Friday\",\n\"Here are some suggestions.\": \"Here are some suggestions.\",\n\"Home\":
+        \"Home\",\n\"Jan\": \"Jan\",\n\"January\": \"January\",\n\"Jobs\": \"Jobs\",\n\"Jul\":
+        \"Jul\",\n\"July\": \"July\",\n\"Jun\": \"Jun\",\n\"June\": \"June\",\n\"Leave
+        a comment...\": \"Leave a comment...\",\n\"Like\": \"Like\",\n\"Likes\": \"Likes\",\n\"Load
+        More...\": \"Load More...\",\n\"Load more\": \"Load more\",\n\"Load more...\":
+        \"Load more...\",\n\"Loading more...\": \"Loading more...\",\n\"Loading...\":
+        \"Loading...\",\n\"Log Out\": \"Log Out\",\n\"Log in\": \"Log in\",\n\"Mar\":
+        \"Mar\",\n\"March\": \"March\",\n\"May\": \"May\",\n\"Mon\": \"Mon\",\n\"Monday\":
+        \"Monday\",\n\"More\": \"More\",\n\"Next photo\": \"Next photo\",\n\"No Recent
+        Photos\": \"No Recent Photos\",\n\"No likes yet.\": \"No likes yet.\",\n\"No
+        photos to show.\": \"No photos to show.\",\n\"Nov\": \"Nov\",\n\"November\":
+        \"November\",\n\"Now\": \"Now\",\n\"Oct\": \"Oct\",\n\"October\": \"October\",\n\"Open
+        in App\": \"Open in App\",\n\"Others\": \"Others\",\n\"PM\": \"PM\",\n\"Password:\":
+        \"Password:\",\n\"Paste it on your website, blog, or wherever you want to
+        link to your profile!\": \"Paste it on your website, blog, or wherever you
+        want to link to your profile!\",\n\"People you follow\": \"People you follow\",\n\"Performance\":
+        \"Performance\",\n\"Photo by %(username)s\": \"Photo by %(username)s\",\n\"Posts\":
+        \"Posts\",\n\"Press\": \"Press\",\n\"Press Page - Instagram\": \"Press Page
+        \\u002D Instagram\",\n\"Previous Posts\": \"Previous Posts\",\n\"Previous
+        photo\": \"Previous photo\",\n\"Privacy\": \"Privacy\",\n\"Report inappropriate\":
+        \"Report inappropriate\",\n\"Requested\": \"Requested\",\n\"Retry\": \"Retry\",\n\"Sat\":
+        \"Sat\",\n\"Saturday\": \"Saturday\",\n\"Select your badge:\": \"Select your
+        badge:\",\n\"Sep\": \"Sep\",\n\"September\": \"September\",\n\"Summary\":
+        \"Summary\",\n\"Sun\": \"Sun\",\n\"Sunday\": \"Sunday\",\n\"Support\": \"Support\",\n\"Terms\":
+        \"Terms\",\n\"This user is private\": \"This user is private\",\n\"Thu\":
+        \"Thu\",\n\"Thursday\": \"Thursday\",\n\"To follow %(username)s, you need
+        to log in.\": \"To follow %(username)s, you need to log in.\",\n\"Toggle like\":
+        \"Toggle like\",\n\"Tue\": \"Tue\",\n\"Tuesday\": \"Tuesday\",\n\"Username:\":
+        \"Username:\",\n\"Video by %(username)s\": \"Video by %(username)s\",\n\"View
+        Photo Page\": \"View Photo Page\",\n\"View Profile\": \"View Profile\",\n\"View
+        Video Page\": \"View Video Page\",\n\"View on Instagram\": \"View on Instagram\",\n\"Wed\":
+        \"Wed\",\n\"Wednesday\": \"Wednesday\",\n\"When you are finished following
+        people,\": \"When you are finished following people,\",\n\"Write a comment...\":
+        \"Write a comment...\",\n\"Yes\": \"Yes\",\n\"You must log in to add a comment.\":
+        \"You must log in to add a comment.\",\n\"You must log in to like this photo.\":
+        \"You must log in to like this photo.\",\n\"You need to be following %(username)s
+        to like or comment\": \"You need to be following %(username)s to like or comment\",\n\"Your
+        username or password was incorrect.\": \"Your username or password was incorrect.\",\n\"am\":
+        \"am\",\n\"banner photo\": \"banner photo\",\n\"nd\": \"nd\",\n\"pm\": \"pm\",\n\"rd\":
+        \"rd\",\n\"reload this page\": \"reload this page\",\n\"st\": \"st\",\n\"th\":
+        \"th\"\n};\n</script>\n        \n<script src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/polyfills/es5-shim.min.js\"></script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/polyfills/es5-sham.min.js\"></script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/polyfills/history.js/scripts/bundled/html5/native.history.js\"></script>\n\n\n<script
+        type=\"text/javascript\">window._sharedData = {\"entry_data\":{},\"hostname\":\"api.instagram.com\",\"config\":{\"csrf_token\":\"NOTPROVIDED\"},\"static_root\":\"\\/\\/d36xtkk24g8jdx.cloudfront.net\\/bluebar\\/3034ba9\"};</script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/cache/bundles/webpack-common.js\"></script>\n</body>\n</html>"
+    http_version: 
+  recorded_at: Mon, 18 Aug 2014 13:54:48 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550/followed_by?access_token=622268995.1fb234f.2dddf4bf03bb4e4091af3b2ea32887e4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - text/html
+      Date:
+      - Mon, 18 Aug 2014 14:07:30 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - ccode=PL; Path=/
+      Vary:
+      - Accept-Language, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '3336'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+        class=\"hl-en not-logged-in \">\n<head>\n    <meta charset=\"UTF-8\" />\n
+        \   <title>Page Not Found &bull; Instagram</title>\n\n    <meta name=\"robots\"
+        content=\"noimageindex\" />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\"
+        href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/favicon.ico\"
+        />\n\n    <meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />\n
+        \   <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\"
+        />\n\n    <link rel=\"apple-touch-icon-precomposed\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-72x72-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-114x114-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/images/ico/apple-touch-icon-144x144-precomposed.png\"
+        />\n\n    \n    <meta name=\"viewport\" content=\"width=device-width, user-scalable=no,
+        initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\" />\n    \n\n    \n
+        \       <script type=\"text/javascript\" src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/jquery.js\"></script>\n
+        \       <script type=\"text/javascript\" src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/bluebar.js\"></script>\n\n
+        \   \n\n    \n\n    \n    <link rel=\"stylesheet\" type=\"text/css\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/cache/distillery/dialog-main.css\"/>\n\n\n</head>\n<body
+        class=\" p-error dialog-404\">\n\n\n<div class=\"root\">\n\n    <div class=\"page\">\n
+        \       \n            \n                <header class=\"top-bar top-bar-new\">\n
+        \   <div class=\"top-bar-wrapper\">\n        <h1 class=\"logo\"><a href=\"/\">Instagram</a></h1>\n\n
+        \       <div class=\"top-bar-left\">\n            <ul class=\"top-bar-actions\">\n
+        \               <li>\n                    <a class=\"top-bar-home\" href=\"/\"
+        label=Home><i></i></a>\n                </li>\n            </ul>\n        </div>\n\n
+        \       <div class=\"top-bar-right account-state\" id=\"top_bar_right\">\n
+        \           <ul class=\"top-bar-actions\">\n                \n                \n
+        \               <li id=\"link_profile\" class=\"link-signin\">\n                    <a
+        href=\"javascript:;\" class=\"loginLink\">\n                        <i></i>\n
+        \                       <strong>Log in</strong>\n                    </a>\n
+        \               </li>\n                \n            </ul>\n\n            \n
+        \         </div>\n    </div>\n</header> <!-- .top-bar -->\n            \n
+        \       \n\n        \n        <div class=\"main\">\n            \n\t<div class=\"error-container\">\n\t\n\n\t<h2>Page
+        Not Found</h2>\n\n\t<p>This page could not be found.<br />You might have followed
+        an incorrect link.</p>\n\n\n\t</div>\n\n        </div> <!-- .main -->\n        \n\n
+        \   </div> <!-- .page -->\n\n    \n    <footer class=\"page-footer\" role=\"contentinfo\">\n
+        \       <div class=\"wrapper\">\n            <nav>\n                <ul>\n
+        \                   <li><a href=\"/about/us/\">About us</a></li>\n                    <li><a
+        href=\"http://help.instagram.com/\">Support</a></li>\n                    <li><a
+        href=\"http://blog.instagram.com/\">Blog</a></li>\n                    <li><a
+        href=\"http://instagram.com/press/\">Press</a></li>\n                    <li><a
+        href=\"/developer/\">API</a></li>\n                    <li><a href=\"/about/jobs/\">Jobs</a></li>\n
+        \                   <li><a href=\"/about/legal/privacy/\">Privacy</a></li>\n
+        \                   <li><a href=\"/about/legal/terms/\">Terms</a></li>\n                </ul>\n
+        \           </nav>\n\n            <p class=\"copyright\">&copy; 2014 Instagram</p>\n
+        \       </div>\n    </footer>\n    \n\n\n<div id=\"reactModalMountPoint\"></div>\n</div>
+        <!-- .root -->\n\n\n\n\n\n\n\n\n\n<script type=\"text/javascript\">\n    var
+        _gaq = _gaq || [];\n    _gaq.push(['_setAccount', 'UA-18105282-1']);\n    _gaq.push(['_setDomainName',
+        'none']);\n    _gaq.push(['_setAllowLinker', true]);\n    \n    _gaq.push(['_trackPageview']);\n
+        \   (function() {\n        var ga = document.createElement('script'); ga.type
+        = 'text/javascript'; ga.async = true;\n        ga.src = ('https:' == document.location.protocol
+        ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n        var
+        s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+        s);\n    })();\n</script>\n\n        <script type=\"text/javascript\">\nwindow._strings
+        = {\n\n\"%(count)s comments\": \"%(count)s comments\",\n\"%(count)s followers\":
+        \"%(count)s followers\",\n\"%(count)s following\": \"%(count)s following\",\n\"%(count)s
+        likes\": \"%(count)s likes\",\n\"%(count)s more comments\": \"%(count)s more
+        comments\",\n\"%(count)s new posts\": \"%(count)s new posts\",\n\"%(count)s
+        people liked this photo\": \"%(count)s people liked this photo\",\n\"%(count)s
+        photos,\": \"%(count)s photos,\",\n\"%(count)s posts\": \"%(count)s posts\",\n\"%(count)s+
+        new posts\": \"%(count)s+ new posts\",\n\"%(day)s %(month_name)s %(year)s\":
+        \"%(day)s %(month_name)s %(year)s\",\n\"%(days)s days ago\": \"%(days)s days
+        ago\",\n\"%(days)sd\": \"%(days)sd\",\n\"%(followerCount)s followers\": \"%(followerCount)s
+        followers\",\n\"%(hours)s hours ago\": \"%(hours)s hours ago\",\n\"%(hours)sh\":
+        \"%(hours)sh\",\n\"%(likes)s likes, %(comments)s comments\": \"%(likes)s likes,
+        %(comments)s comments\",\n\"%(mediaCount)s photos\": \"%(mediaCount)s photos\",\n\"%(minutes)s
+        minutes ago\": \"%(minutes)s minutes ago\",\n\"%(minutes)sm\": \"%(minutes)sm\",\n\"%(months)s
+        months ago\": \"%(months)s months ago\",\n\"%(seconds)s seconds ago\": \"%(seconds)s
+        seconds ago\",\n\"%(seconds)ss\": \"%(seconds)ss\",\n\"%(user)s on Instagram\":
+        \"%(user)s on Instagram\",\n\"%(username)s on Instagram\": \"%(username)s
+        on Instagram\",\n\"%(weeks)s weeks ago\": \"%(weeks)s weeks ago\",\n\"%(weeks)sw\":
+        \"%(weeks)sw\",\n\"%(year)s %(month)s\": \"%(year)s %(month)s\",\n\"1\": \"1\",\n\"1
+        comment\": \"1 comment\",\n\"1 day ago\": \"1 day ago\",\n\"1 follower\":
+        \"1 follower\",\n\"1 hour ago\": \"1 hour ago\",\n\"1 like\": \"1 like\",\n\"1
+        minute ago\": \"1 minute ago\",\n\"1 month ago\": \"1 month ago\",\n\"1 more
+        comment\": \"1 more comment\",\n\"1 new post\": \"1 new post\",\n\"1 photo>\":
+        \"1 photo\\u003E\",\n\"1 second ago\": \"1 second ago\",\n\"1 week ago\":
+        \"1 week ago\",\n\"2\": \"2\",\n\"3\": \"3\",\n\"AM\": \"AM\",\n\"About us\":
+        \"About us\",\n\"Account Insights - Instagram\": \"Account Insights \\u002D
+        Instagram\",\n\"Add a caption...\": \"Add a caption...\",\n\"Add a comment\":
+        \"Add a comment\",\n\"All items loaded\": \"All items loaded\",\n\"Apr\":
+        \"Apr\",\n\"April\": \"April\",\n\"Are you sure you want to delete this comment?\":
+        \"Are you sure you want to delete this comment?\",\n\"Are you sure?\": \"Are
+        you sure?\",\n\"Audience\": \"Audience\",\n\"Aug\": \"Aug\",\n\"August\":
+        \"August\",\n\"Badges\": \"Badges\",\n\"Blog\": \"Blog\",\n\"By using this
+        embed, you agree to Instagram\\\\'s <a href=\\\"http://instagram.com/about/legal/terms/api/\\\">API
+        Terms of Use</a>.\": \"By using this embed, you agree to Instagram\\u005C\\u0027s
+        \\u003Ca href\\u003D\\u0022http://instagram.com/about/legal/terms/api/\\u0022\\u003EAPI
+        Terms of Use\\u003C/a\\u003E.\",\n\"Cancel\": \"Cancel\",\n\"Content unavailable\":
+        \"Content unavailable\",\n\"Copy Embed Code\": \"Copy Embed Code\",\n\"Copy
+        this code:\": \"Copy this code:\",\n\"Couldn\\\\'t post comment\": \"Couldn\\u005C\\u0027t
+        post comment\",\n\"Dec\": \"Dec\",\n\"December\": \"December\",\n\"Delete\":
+        \"Delete\",\n\"Edit Profile\": \"Edit Profile\",\n\"Embed\": \"Embed\",\n\"Feb\":
+        \"Feb\",\n\"February\": \"February\",\n\"Follow\": \"Follow\",\n\"Follow %(username)s
+        on Instagram\": \"Follow %(username)s on Instagram\",\n\"Follow friends and
+        interesting people to see their photos here.\": \"Follow friends and interesting
+        people to see their photos here.\",\n\"Following\": \"Following\",\n\"Forgot
+        your password?\": \"Forgot your password?\",\n\"Fri\": \"Fri\",\n\"Friday\":
+        \"Friday\",\n\"Here are some suggestions.\": \"Here are some suggestions.\",\n\"Home\":
+        \"Home\",\n\"Jan\": \"Jan\",\n\"January\": \"January\",\n\"Jobs\": \"Jobs\",\n\"Jul\":
+        \"Jul\",\n\"July\": \"July\",\n\"Jun\": \"Jun\",\n\"June\": \"June\",\n\"Leave
+        a comment...\": \"Leave a comment...\",\n\"Like\": \"Like\",\n\"Likes\": \"Likes\",\n\"Load
+        More...\": \"Load More...\",\n\"Load more\": \"Load more\",\n\"Load more...\":
+        \"Load more...\",\n\"Loading more...\": \"Loading more...\",\n\"Loading...\":
+        \"Loading...\",\n\"Log Out\": \"Log Out\",\n\"Log in\": \"Log in\",\n\"Mar\":
+        \"Mar\",\n\"March\": \"March\",\n\"May\": \"May\",\n\"Mon\": \"Mon\",\n\"Monday\":
+        \"Monday\",\n\"More\": \"More\",\n\"Next photo\": \"Next photo\",\n\"No Recent
+        Photos\": \"No Recent Photos\",\n\"No likes yet.\": \"No likes yet.\",\n\"No
+        photos to show.\": \"No photos to show.\",\n\"Nov\": \"Nov\",\n\"November\":
+        \"November\",\n\"Now\": \"Now\",\n\"Oct\": \"Oct\",\n\"October\": \"October\",\n\"Open
+        in App\": \"Open in App\",\n\"Others\": \"Others\",\n\"PM\": \"PM\",\n\"Password:\":
+        \"Password:\",\n\"Paste it on your website, blog, or wherever you want to
+        link to your profile!\": \"Paste it on your website, blog, or wherever you
+        want to link to your profile!\",\n\"People you follow\": \"People you follow\",\n\"Performance\":
+        \"Performance\",\n\"Photo by %(username)s\": \"Photo by %(username)s\",\n\"Posts\":
+        \"Posts\",\n\"Press\": \"Press\",\n\"Press Page - Instagram\": \"Press Page
+        \\u002D Instagram\",\n\"Previous Posts\": \"Previous Posts\",\n\"Previous
+        photo\": \"Previous photo\",\n\"Privacy\": \"Privacy\",\n\"Report inappropriate\":
+        \"Report inappropriate\",\n\"Requested\": \"Requested\",\n\"Retry\": \"Retry\",\n\"Sat\":
+        \"Sat\",\n\"Saturday\": \"Saturday\",\n\"Select your badge:\": \"Select your
+        badge:\",\n\"Sep\": \"Sep\",\n\"September\": \"September\",\n\"Summary\":
+        \"Summary\",\n\"Sun\": \"Sun\",\n\"Sunday\": \"Sunday\",\n\"Support\": \"Support\",\n\"Terms\":
+        \"Terms\",\n\"This user is private\": \"This user is private\",\n\"Thu\":
+        \"Thu\",\n\"Thursday\": \"Thursday\",\n\"To follow %(username)s, you need
+        to log in.\": \"To follow %(username)s, you need to log in.\",\n\"Toggle like\":
+        \"Toggle like\",\n\"Tue\": \"Tue\",\n\"Tuesday\": \"Tuesday\",\n\"Username:\":
+        \"Username:\",\n\"Video by %(username)s\": \"Video by %(username)s\",\n\"View
+        Photo Page\": \"View Photo Page\",\n\"View Profile\": \"View Profile\",\n\"View
+        Video Page\": \"View Video Page\",\n\"View on Instagram\": \"View on Instagram\",\n\"Wed\":
+        \"Wed\",\n\"Wednesday\": \"Wednesday\",\n\"When you are finished following
+        people,\": \"When you are finished following people,\",\n\"Write a comment...\":
+        \"Write a comment...\",\n\"Yes\": \"Yes\",\n\"You must log in to add a comment.\":
+        \"You must log in to add a comment.\",\n\"You must log in to like this photo.\":
+        \"You must log in to like this photo.\",\n\"You need to be following %(username)s
+        to like or comment\": \"You need to be following %(username)s to like or comment\",\n\"Your
+        username or password was incorrect.\": \"Your username or password was incorrect.\",\n\"am\":
+        \"am\",\n\"banner photo\": \"banner photo\",\n\"nd\": \"nd\",\n\"pm\": \"pm\",\n\"rd\":
+        \"rd\",\n\"reload this page\": \"reload this page\",\n\"st\": \"st\",\n\"th\":
+        \"th\"\n};\n</script>\n        \n<script src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/polyfills/es5-shim.min.js\"></script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/polyfills/es5-sham.min.js\"></script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/scripts/polyfills/history.js/scripts/bundled/html5/native.history.js\"></script>\n\n\n<script
+        type=\"text/javascript\">window._sharedData = {\"entry_data\":{},\"hostname\":\"api.instagram.com\",\"config\":{\"csrf_token\":\"NOTPROVIDED\"},\"static_root\":\"\\/\\/d36xtkk24g8jdx.cloudfront.net\\/bluebar\\/3034ba9\"};</script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/3034ba9/cache/bundles/webpack-common.js\"></script>\n</body>\n</html>"
+    http_version: 
+  recorded_at: Mon, 18 Aug 2014 14:07:30 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550/followed-by?access_token=622268995.1fb234f.2dddf4bf03bb4e4091af3b2ea32887e4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 18 Aug 2014 14:08:20 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - ccode=PL; Path=/
+      - csrftoken=a4728ee1bc0e1a2ff062c814d04fdd3e; expires=Mon, 17-Aug-2015 14:08:20
+        GMT; Max-Age=31449600; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4993'
+      Content-Length:
+      - '2450'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/45364550\/followed-by?access_token=622268995.1fb234f.2dddf4bf03bb4e4091af3b2ea32887e4\u0026cursor=1335124316229","next_cursor":"1335124316229"},"meta":{"code":200},"data":[{"username":"dtrojanowski","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_530991023_75sq_1377855699.jpg","full_name":"Daniel
+        Trojanowski","id":"530991023"},{"username":"fargere","bio":"","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfp1\/10549597_569879776454137_1119085070_a.jpg","full_name":"Christopher
+        Fargere","id":"1433101232"},{"username":"j_creixell","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_248435969_75sq_1368811814.jpg","full_name":"Jorge
+        Creixell","id":"248435969"},{"username":"missplr","bio":"British in Berlin
+        \/\/ Brandnew IO","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_703627778_75sq_1389463707.jpg","full_name":"Philippa","id":"703627778"},{"username":"ewerobaczek","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_263843655_75sq_1393126836.jpg","full_name":"Evelina
+        Robaczek","id":"263843655"},{"username":"pandaamonium","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Kamil
+        Politowicz","id":"31211763"},{"username":"noireaud","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_210365970_75sq_1389309043.jpg","full_name":"Aur\u00e9lien
+        Elimane Gu\u00e8ye","id":"210365970"},{"username":"lokalnybohater","bio":"","website":"http:\/\/www.motorstudio.pl","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_56052092_75sq_1337098603.jpg","full_name":"","id":"56052092"},{"username":"grupaagrafka","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_1261604383_75sq_1397310852.jpg","full_name":"Bogdan
+        Balicki","id":"1261604383"},{"username":"smaoirsh","bio":"Dubliner in Berlin.
+        Influencer Manager at Brandnew IO.","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_194858541_75sq_1386796103.jpg","full_name":"Saoirse","id":"194858541"},{"username":"graciehroberts","bio":"Berlin,
+        and then some.","website":"http:\/\/www.graciehroberts.tumblr.com","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfp1\/10488783_654252764663278_453934701_a.jpg","full_name":"Gracie
+        Roberts","id":"31456518"},{"username":"kbiernat01","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_1093867926_75sq_1392390710.jpg","full_name":"Kasia
+        Biernat","id":"1093867926"},{"username":"simonx111","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_1026114304_75sq_1390779235.jpg","full_name":"Szymon
+        Kurcab","id":"1026114304"},{"username":"ewejan","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Ewelina","id":"252071348"},{"username":"nighelxo","bio":"","website":"","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/10593342_328380043988007_1276909057_a.jpg","full_name":"Nicole
+        B.","id":"320558283"},{"username":"txustice","bio":"Berlin. Ruby developer,
+        entrepreneur, musician and successful astronaut. @codegram co-founder and
+        @baruco organizer!","website":"http:\/\/blog.txus.io","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_30969847_75sq_1333525751.jpg","full_name":"Josep
+        M. Bach","id":"30969847"},{"username":"eugenpirogoff","bio":"","website":"http:\/\/twitter.com\/eugenpirogoff","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_371308_75sq_1356044771.jpg","full_name":"Eugen
+        Pirogoff","id":"371308"},{"username":"marwoj74","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_843084528_75sq_1387783410.jpg","full_name":"Marcin
+        W\u00f3jcik","id":"843084528"},{"username":"slimacek","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"176842003"},{"username":"jarekelo","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"783024835"},{"username":"rusilko","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_50220889_75sq_1373575358.jpg","full_name":"","id":"50220889"},{"username":"marcinb","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_811568_75sq_1290726542.jpg","full_name":"Marcin
+        Bali\u0144ski","id":"811568"},{"username":"purechloe","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_176815106_75sq_1388999326.jpg","full_name":"Anna
+        \u015alimak","id":"176815106"},{"username":"fdiazgarrido","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_543302801_75sq_1378509803.jpg","full_name":"Fernando
+        Diaz Garrido","id":"543302801"},{"username":"iurimatias","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_344425432_75sq_1365146515.jpg","full_name":"Iuri
+        Matias","id":"344425432"},{"username":"pkwiatko","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_52364490_75sq_1336288226.jpg","full_name":"","id":"52364490"},{"username":"blazejos","bio":"Passion.
+        @blazej_os","website":"https:\/\/sher.ly","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xpa1\/927083_517019791733518_58363161_a.jpg","full_name":"Blazej
+        Marciniak","id":"1574205"},{"username":"kubowaty","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_319722516_75sq_1362407116.jpg","full_name":"KubaS","id":"319722516"},{"username":"snowboard200","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_301786448_75sq_1360159981.jpg","full_name":"Snowboard","id":"301786448"},{"username":"cfcosta_","bio":"My
+        other car is also a porsche.","website":"http:\/\/omgninjas.net","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_233432354_75sq_1349670468.jpg","full_name":"Cain\u00e3
+        Costa","id":"233432354"},{"username":"olamad","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"54707590"},{"username":"sickill","bio":"","website":"http:\/\/ku1ik.com","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_37720029_75sq_1342429061.jpg","full_name":"Marcin","id":"37720029"},{"username":"yundt","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_52711177_75sq_1354403877.jpg","full_name":"","id":"52711177"},{"username":"maryjkachwacka","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_237967013_75sq_1350412955.jpg","full_name":"Maryjka
+        Chwacka","id":"237967013"},{"username":"lucek_jestem_lubie_cycki","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_3368160_75sq_1364738315.jpg","full_name":"Lucek","id":"3368160"},{"username":"zwrozka","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_235129267_75sq_1349995998.jpg","full_name":"Pawe\u0142
+        Pierzcha\u0142a","id":"235129267"},{"username":"gosiaciesla","bio":"@gosia_ciesla","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_231766680_75sq_1349375917.jpg","full_name":"Gosia
+        Cie\u015bla","id":"231766680"},{"username":"addlena","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_52946373_75sq_1337105564.jpg","full_name":"","id":"52946373"},{"username":"patttkkka","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_205911048_75sq_1345463043.jpg","full_name":"","id":"205911048"},{"username":"blashca","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"55795459"},{"username":"psolnic","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_195920815_75sq_1342604111.jpg","full_name":"","id":"195920815"},{"username":"knapo2","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"196283008"},{"username":"jasiek_","bio":"for
+        teh lulz","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_145354975_75sq_1355139644.jpg","full_name":"","id":"145354975"},{"username":"wiktorsarota","bio":"","website":"http:\/\/www.infakt.pl","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_962999_75sq_1336333994.jpg","full_name":"Wiktor
+        Sarota","id":"962999"},{"username":"mariuszwozniak","bio":"","website":"http:\/\/mariuszwozniak.com","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_182041623_75sq_1339693408.jpg","full_name":"Mariusz
+        Wozniak","id":"182041623"},{"username":"mariusz","bio":"Be nice, work hard,
+        build something that matters. \u2014 Designer, developer, cofounder of Lifetramp.com.
+        \/ Berlin, Krakow \/ Nexus 5","website":"http:\/\/mariusz.cc","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_19742_75sq_1399817278.jpg","full_name":"Mariusz
+        Ciesla","id":"19742"},{"username":"ags313","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Andrzej","id":"32530748"},{"username":"bober0","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Sebastian
+        Bobrowski","id":"51339892"},{"username":"radarek","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"30095577"},{"username":"psionides","bio":"","website":"http:\/\/psionides.eu","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_22084806_75sq_1339015956.jpg","full_name":"Kuba
+        Suder","id":"22084806"}]}'
+    http_version: 
+  recorded_at: Mon, 18 Aug 2014 14:08:20 GMT
+recorded_with: VCR 2.9.2

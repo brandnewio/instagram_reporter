@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/search?client_id=<API_TOKEN>&q=goldie_berlin
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 30 Apr 2014 21:34:51 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - ccode=PL; Path=/
+      - csrftoken=263475926a99d80d63ce1ce6e6920a64; expires=Wed, 29-Apr-2015 21:34:51
+        GMT; Max-Age=31449600; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4848'
+      Content-Length:
+      - '296'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":[{"username":"goldie_berlin","bio":"Instagramer
+        from Germany \/Berlin \u2728MY DIARY AROUND THE WORLD IN COLORS \u2728 travel
+        with me on Instagram \u2728sylvia@brandnew.io \u2728","website":"http:\/\/www.InstagramerFromGermany.com","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_165640_75sq_1380875972.jpg","full_name":"!
+        Sylvia","id":"165640"}]}'
+    http_version: 
+  recorded_at: Wed, 30 Apr 2014 21:34:50 GMT
+recorded_with: VCR 2.8.0

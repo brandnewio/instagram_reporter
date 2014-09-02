@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/653714645670132444_16192269?access_token=16192269.01a3945.5132ead0890d4650a196c1f33f8d0748
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 30 Apr 2014 12:41:42 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - ccode=PL; Path=/
+      - csrftoken=8372bccc40c27ecdec58d1322001b3c7; expires=Wed, 29-Apr-2015 12:41:42
+        GMT; Max-Age=31449600; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4992'
+      Content-Length:
+      - '1571'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":{"attribution":null,"tags":["scarosso","buybuy"],"type":"image","location":null,"comments":{"count":23,"data":[{"created_time":"1392188251","text":"@jasminkasapoglu
+        great choice! Please send us your shipping details in a direct message and
+        then Scarosso can deliver the shoes to you with free delivery!","from":{"username":"buybuythanks","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_887914439_75sq_1392153009.jpg","id":"887914439","full_name":"BuyBuyThanks"},"id":"654044918295263986"},{"created_time":"1392190289","text":"Nice
+        bag","from":{"username":"cathy_0925","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_366760475_75sq_1391933145.jpg","id":"366760475","full_name":"Nice
+        Meet You!\ud83d\ude1d I Love My Dog!"},"id":"654062014664243301"},{"created_time":"1392194781","text":"@willyoubetrue
+        Hi there! These are lovely boots from Scarosso. Please get in touch through
+        direct message when you want to order them. If you do so we also offer global
+        free shipping! :)","from":{"username":"buybuythanks","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_887914439_75sq_1392153009.jpg","id":"887914439","full_name":"BuyBuyThanks"},"id":"654099692231293768"},{"created_time":"1392502137","text":"@rscdmngz  siiiiii
+        jaja ahora salen a la venta :P","from":{"username":"3stefany","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_181820098_75sq_1356362307.jpg","id":"181820098","full_name":"Fany
+        Martin Torres"},"id":"656677985828698969"},{"created_time":"1392629477","text":"@dahliahamzah
+        boots camni pun tgkkan tau","from":{"username":"nishaazman","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_284029212_75sq_1381762434.jpg","id":"284029212","full_name":"Nisha
+        A."},"id":"657746189703412404"},{"created_time":"1394706468","text":"@shecute___","from":{"username":"ale_ponti96","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_403934942_75sq_1395690168.jpg","id":"403934942","full_name":"Alessia"},"id":"675169253172935386"},{"created_time":"1395533061","text":"Your
+        shoes @vabigailee","from":{"username":"southernpeachhoney","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_199029894_75sq_1394852962.jpg","id":"199029894","full_name":"Tay.
+        \u2693\ufe0f"},"id":"682103214092548472"},{"created_time":"1395533112","text":"Hahahaha
+        OMG @southernpeachhoney","from":{"username":"vabigailee","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_635360263_75sq_1395102641.jpg","id":"635360263","full_name":"Abigail\ud83c\udf40\u2693\ufe0f\ud83c\udf80"},"id":"682103643614443920"}]},"filter":"Normal","created_time":"1392148880","link":"http:\/\/instagram.com\/p\/kSdgG3o3rc\/","likes":{"count":4072,"data":[{"username":"clay_kenzie","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_879906874_75sq_1397756195.jpg","id":"879906874","full_name":"Mackenzie"},{"username":"marifer_mc99","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","id":"247743243","full_name":"Mariiaa99"},{"username":"southernpeachhoney","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_199029894_75sq_1394852962.jpg","id":"199029894","full_name":"Tay.
+        \u2693\ufe0f"},{"username":"sarinamatt","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_39539591_75sq_1358639358.jpg","id":"39539591","full_name":"Sara
+        Matteagi"}]},"images":{"low_resolution":{"url":"http:\/\/origincache-frc.fbcdn.net\/1742359_458427910923878_1438111553_a.jpg","width":306,"height":306},"thumbnail":{"url":"http:\/\/origincache-frc.fbcdn.net\/1742359_458427910923878_1438111553_s.jpg","width":150,"height":150},"standard_resolution":{"url":"http:\/\/origincache-frc.fbcdn.net\/1742359_458427910923878_1438111553_n.jpg","width":640,"height":640}},"users_in_photo":[],"caption":{"created_time":"1392148880","text":"Look
+        at these amazing new shoes BRUNA from @scarosso! www.scarosso.com\n If you
+        want to order them here, just comment #BuyBuy with your shoe size below the
+        picture. Price is 199 EUR. Scarosso and #BuyBuy will then exclusively get
+        in contact with you for shipping! #scarosso","from":{"username":"rockglam","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_16192269_75sq_1363379907.jpg","id":"16192269","full_name":"jeunesse
+        dor\u00e9e"},"id":"653714646072785527"},"user_has_liked":true,"id":"653714645670132444_16192269","user":{"username":"rockglam","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_16192269_75sq_1363379907.jpg","full_name":"jeunesse
+        dor\u00e9e","bio":"","id":"16192269"}}}'
+    http_version: 
+  recorded_at: Wed, 30 Apr 2014 12:41:41 GMT
+recorded_with: VCR 2.8.0
