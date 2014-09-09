@@ -41,13 +41,13 @@ describe InstagramWebsiteScraper do
 
   let(:luki3k5_media_file_page) do
     VCR.use_cassette('get_media_file_page') do
-       InstagramWebsiteCaller.new.get_media_file_page('http://instagram.com/p/kkfGbfo3kl')
+       InstagramWebsiteCaller.new.get_media_file_page('http://instagram.com/p/rbk7ivrf2M')
     end
   end
 
   let(:luki3k5_media_file_page_no_likes_no_comments) do
     VCR.use_cassette('get_media_file_page') do
-       InstagramWebsiteCaller.new.get_media_file_page('http://instagram.com/p/HhNH5')
+       InstagramWebsiteCaller.new.get_media_file_page('http://instagram.com/p/Fw1u1')
     end
   end
 
@@ -58,7 +58,7 @@ describe InstagramWebsiteScraper do
       "website"             => "",
       "profile_picture"     => "http://images.ak.instagram.com/profiles/profile_4907942_75sq_1392804574.jpg",
       "full_name"           => "",
-      "counts"              => { "media" => 36, "followed_by" => 34, "follows" => 3 },
+      "counts"              => { "media" => 37, "followed_by" => 34, "follows" => 3 },
       "id"                  => "4907942",
       "contact_data_email"  => nil,
       "other_contact_means" => nil
@@ -81,7 +81,7 @@ describe InstagramWebsiteScraper do
     
     it 'returns number of media files' do
       VCR.use_cassette('get_number_of_media_files') do
-        expect(subject.get_profile_statistic(luki3k5_web_profile)["media"].to_s).to eq("36")
+        expect(subject.get_profile_statistic(luki3k5_web_profile)["media"].to_s).to eq("37")
       end
     end
     it 'returns number of followers' do
@@ -97,8 +97,8 @@ describe InstagramWebsiteScraper do
 
     it 'returns number of commets and likes for media file with given media_id for given profile' do
       VCR.use_cassette('get_likes_and_comments') do
-        expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:likes_count]).to eq("2284")
-        expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:comments_count]).to eq("20")
+        expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:likes_count]).to eq("9")
+        expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:comments_count]).to eq("2")
       end
     end
 
