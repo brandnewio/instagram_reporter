@@ -10,15 +10,15 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse(POPULAR_INSTAGRAM_MEDIA_URL, query_params(access_token))
   end
 
-  def get_hashtag_info_by_access_token(tag, access_token, min_id = nil)
+  def get_hashtag_info_by_access_token(tag, access_token, max_tag_id = nil)
     params = query_params(access_token)
-    params.merge!(min_id: min_id) unless min_id.nil?
+    params.merge!(max_tag_id: max_tag_id) unless max_tag_id.nil?
     api_get_and_parse("/v1/tags/#{tag}/media/recent", params, true)
   end
 
-  def get_hashtag_info_by_api_token(tag, min_id = nil)
+  def get_hashtag_info_by_api_token(tag, max_tag_id = nil)
     params = query_params(nil)
-    params.merge!(min_id: min_id) unless min_id.nil?
+    params.merge!(max_tag_id: max_tag_id) unless max_tag_id.nil?
     api_get_and_parse("/v1/tags/#{tag}/media/recent", params, true)
   end
 
