@@ -38,10 +38,11 @@ class InstagramWebsiteScraper
     likes            = likes_content.match(/[0-9][0-9]*/).to_s
     comments_content = doc.content.match(/"comments":{"nodes":\[.*?\]}/).to_s
     comments         = comments_content.scan(/"id":"[0-9]*"/)
-    return {result: 'error', body: 'could not scrape web page for likes and comments'} if likes.nil? || comments.nil?
+    
     # instagram media file removed
-    returnee.merge!({status: 'offline',result: 'error', body:'Page not found for media file'}) if !doc.content.match(/Page Not Found/).nil?
-    returnee.merge!({result: 'ok', likes_count: likes, comments_count: comments.size.to_s})
+    return returnee.merge!({status: 'offline',result: 'error', body:'Page not found for media file'}) if !doc.content.match(/Page Not Found/).nil?
+    return {result: 'error', body: 'could not scrape web page for likes and comments'} if likes.blank? || comments.blank?
+    return returnee.merge!({result: 'ok', likes_count: likes, comments_count: comments.size.to_s})
   end
 
   def get_profile_statistic(html)
