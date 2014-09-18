@@ -36,12 +36,12 @@ class InstagramWebsiteScraper
     doc              = Nokogiri::HTML(html)
     likes_content    = doc.content.match(/"likes":\{"count":[0-9]+(?:\.[0-9]*)?/).to_s
     likes            = likes_content.match(/[0-9][0-9]*/).to_s
-    comments_content = doc.content.match(/"comments":{"nodes":\[.*?\]}/).to_s
+    comments_content = doc.content.match(/"comments":{"nodes":\[.*?\]}/).to_s || '0'
     comments         = comments_content.scan(/"id":"[0-9]*"/)
     
     # instagram media file removed
     return returnee.merge!({status: 'offline',result: 'error', body:'Page not found for media file'}) if !doc.content.match(/Page Not Found/).nil?
-    return {result: 'error', body: 'could not scrape web page for likes and comments'} if likes.blank? || comments.blank?
+    return {result: 'error', status: 'offline', body: 'could not scrape web page for likes and comments'} if likes.nil? || comments.nil?
     return returnee.merge!({result: 'ok', likes_count: likes, comments_count: comments.size.to_s})
   end
 

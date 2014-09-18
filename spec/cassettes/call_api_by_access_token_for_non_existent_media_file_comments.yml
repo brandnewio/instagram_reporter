@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.9
+      - Faraday v0.9.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -25,7 +25,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 30 Apr 2014 12:41:42 GMT
+      - Wed, 17 Sep 2014 14:59:58 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
@@ -34,14 +34,14 @@ http_interactions:
       - nginx
       Set-Cookie:
       - ccode=PL; Path=/
-      - csrftoken=e8fec784dbd27b7308b20bdbf0e4d08b; expires=Wed, 29-Apr-2015 12:41:42
+      - csrftoken=9916b775d8743e1a3a8b5623be6eff92; expires=Wed, 16-Sep-2015 14:59:58
         GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4991'
+      - '4999'
       Content-Length:
       - '88'
       Connection:
@@ -51,5 +51,5 @@ http_interactions:
       string: '{"meta":{"error_type":"APINotFoundError","code":400,"error_message":"invalid
         media id"}}'
     http_version: 
-  recorded_at: Wed, 30 Apr 2014 12:41:41 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Wed, 17 Sep 2014 14:59:59 GMT
+recorded_with: VCR 2.9.3

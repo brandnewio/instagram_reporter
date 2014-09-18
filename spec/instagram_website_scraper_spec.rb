@@ -103,7 +103,7 @@ describe InstagramWebsiteScraper do
     end
 
     it 'returns number of commets and likes for media file with given media_id for given profile' do
-      VCR.use_cassette('get_likes_and_comments_when_none_exist') do
+      VCR.use_cassette('likes_comments_non_existing_media_file') do
         expect(subject.get_likes_and_comments(luki3k5_media_file_page_no_likes_no_comments)[:likes_count]).to eq("0")
         expect(subject.get_likes_and_comments(luki3k5_media_file_page_no_likes_no_comments)[:comments_count]).to eq("0")
       end
