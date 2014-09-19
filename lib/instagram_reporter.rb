@@ -16,5 +16,8 @@ require 'instagram_reporter/instagram_api_caller'
 require 'instagram_reporter/instagram_website_caller'
 require 'instagram_reporter/instagram_website_scraper'
 
+# TEMP
+require 'instagram_reporter/issues_logger'
+
 module InstagramReporter
 end

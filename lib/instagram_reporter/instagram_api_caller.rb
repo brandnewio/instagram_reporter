@@ -98,6 +98,7 @@ class InstagramApiCaller < InstagramInteractionsBase
       when 200
         parse_json(response.body)
       when 400, 404, 500, 502, 503, 504
+        IssuesLogger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response.body}")
         {
           result: 'error',
           body: response.body,
@@ -105,7 +106,7 @@ class InstagramApiCaller < InstagramInteractionsBase
           url: uri
         }
       else
-        raise "unsupported response status during GET #{uri}: #{response.status}. response body : #{response.body} "
+        raise "unsupported response status during GET #{uri}: #{response.status}. response body : #{response.body}"
       end
     end
 
@@ -113,34 +114,42 @@ class InstagramApiCaller < InstagramInteractionsBase
       access_token ? { access_token: access_token } : { client_id: API_TOKEN }
     end
 
-    def call_api_by_access_token_for_media_info(instagram_media_id, access_token , action)
+    def call_api_by_access_token_for_media_info(instagram_media_id, access_token, action)
+      uri = "/v1/media/#{instagram_media_id}?access_token=#{access_token}"
       response = api_connection.get do |req|
-        req.url "/v1/media/#{instagram_media_id}?access_token=#{access_token}"
+        req.url uri
         req.options = DEFAULT_REQUEST_OPTIONS
       end
-      if response.status == 200
+      case response.status
+      when 200
         resp_json = parse_json(response.body)
         return {result: 'ok'}.merge(resp_json[action])
-      elsif  response.status == 400
-        return {result: 'error', body: Oj.load(response.body)}
+      when 400, 404, 500, 502, 503, 504
+        response_body = Oj.load(response.body)
+        IssuesLogger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
+        return {result: 'error', body: response_body}
       else
         raise "call for media #{action} (media_id: #{instagram_media_id}) failed with response #{response.inspect}"
       end
     end
 
     def call_api_by_api_token_for_media_file(media_id, action)
+      uri = "/v1/media/#{media_id}?client_id=#{API_TOKEN}"
       response = api_connection.get do |req|
-        req.url "/v1/media/#{media_id}?client_id=#{API_TOKEN}"
+        req.url uri
         req.options = DEFAULT_REQUEST_OPTIONS
       end
-      if response.status == 200
+      case response.status
+      when 200
         resp_json = parse_json(response.body)
         if action == 'caption' && resp_json[action].nil?
           return {result: 'ok', text: nil}
         end
         return {result: 'ok'}.merge(resp_json[action])
-      elsif  response.status == 400
-        return {result: 'error', body: Oj.load(response.body)}
+      when 400, 404, 500, 502, 503, 504
+        response_body = Oj.load(response.body)
+        IssuesLogger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
+        return {result: 'error', body: response_body}
       else
         raise "call for media #{action} (media_id: #{media_id}) failed with response #{response.inspect}"
       end
