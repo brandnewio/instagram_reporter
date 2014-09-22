@@ -98,7 +98,7 @@ class InstagramApiCaller < InstagramInteractionsBase
       when 200
         parse_json(response.body)
       when 400, 404, 500, 502, 503, 504
-        IssuesLogger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response.body}")
+        InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response.body}")
         {
           result: 'error',
           body: response.body,
@@ -126,7 +126,7 @@ class InstagramApiCaller < InstagramInteractionsBase
         return {result: 'ok'}.merge(resp_json[action])
       when 400, 404, 500, 502, 503, 504
         response_body = Oj.load(response.body)
-        IssuesLogger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
+        InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
         return {result: 'error', body: response_body}
       else
         raise "call for media #{action} (media_id: #{instagram_media_id}) failed with response #{response.inspect}"
@@ -148,7 +148,7 @@ class InstagramApiCaller < InstagramInteractionsBase
         return {result: 'ok'}.merge(resp_json[action])
       when 400, 404, 500, 502, 503, 504
         response_body = Oj.load(response.body)
-        IssuesLogger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
+        InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
         return {result: 'error', body: response_body}
       else
         raise "call for media #{action} (media_id: #{media_id}) failed with response #{response.inspect}"
