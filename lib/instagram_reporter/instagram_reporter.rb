@@ -1,5 +1,6 @@
 # Temporary class
 module InstagramReporter
+  attr_accessor :logger
   extend self
 
   class NilLogger
@@ -8,11 +9,7 @@ module InstagramReporter
   end
 
   def logger
-    if defined?(IssuesLogger)
-      IssuesLogger
-    else
-      NilLogger
-    end
+    @logger || NilLogger
   end
 end
 
