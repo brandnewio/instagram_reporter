@@ -125,7 +125,12 @@ class InstagramApiCaller < InstagramInteractionsBase
         resp_json = parse_json(response.body)
         return {result: 'ok'}.merge(resp_json[action])
       when 400, 404, 500, 502, 503, 504
-        response_body = Oj.load(response.body)
+        response_body = ''
+        begin
+          response_body = Oj.load(response.body)
+        rescue Oj::ParseError
+          response_body = response.body
+        end
         InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
         return {result: 'error', body: response_body}
       else
@@ -147,7 +152,12 @@ class InstagramApiCaller < InstagramInteractionsBase
         end
         return {result: 'ok'}.merge(resp_json[action])
       when 400, 404, 500, 502, 503, 504
-        response_body = Oj.load(response.body)
+        response_body = ''
+        begin
+          response_body = Oj.load(response.body)
+        rescue Oj::ParseError
+          response_body = response.body
+        end
         InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
         return {result: 'error', body: response_body}
       else
