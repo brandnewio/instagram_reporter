@@ -58,7 +58,7 @@ describe InstagramWebsiteScraper do
       "website"             => "",
       "profile_picture"     => "http://images.ak.instagram.com/profiles/profile_4907942_75sq_1392804574.jpg",
       "full_name"           => "",
-      "counts"              => { "media" => 37, "followed_by" => 34, "follows" => 3 },
+      "counts"              => { "media" => 37, "followed_by" => 33, "follows" => 3 },
       "id"                  => "4907942",
       "contact_data_email"  => nil,
       "other_contact_means" => nil
@@ -86,7 +86,7 @@ describe InstagramWebsiteScraper do
     end
     it 'returns number of followers' do
       VCR.use_cassette('get_number_of_followers') do
-        expect(subject.get_profile_statistic(luki3k5_web_profile)["followed_by"].to_s).to eq("34")
+        expect(subject.get_profile_statistic(luki3k5_web_profile)["followed_by"].to_s).to eq("33")
       end
     end
     it 'returns number of followed profiles' do

@@ -10,6 +10,9 @@ ENV['INSTAGRAM_API_TOKEN'] = 'TEST-TOKEN-NOT-RELEVANT' unless ENV['INSTAGRAM_API
 require 'instagram_reporter'
 
 RSpec.configure do |c|
+  c.order = "random"
+  c.tty = true
+  c.color = true
 end
 
 VCR.configure do |c|
