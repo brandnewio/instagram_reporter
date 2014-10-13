@@ -10,6 +10,9 @@ require 'capybara/dsl'
 require 'nokogiri'
 require 'oj'
 
+# InstagramReporter module (including logger)
+require 'instagram_reporter/instagram_reporter'
+
 # MAIN FILES
 require 'instagram_reporter/instagram_interactions_base'
 require 'instagram_reporter/instagram_api_caller'
