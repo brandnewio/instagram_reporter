@@ -150,7 +150,7 @@ class InstagramApiCaller < InstagramInteractionsBase
       @api_connection ||= Faraday.new(url: API_BASE_URL) do |faraday|
         faraday.request  :url_encoded
         faraday.use FaradayMiddleware::FollowRedirects
-        faraday.adapter  Faraday.default_adapter
+        faraday.adapter  :excon
       end
     end
 end
