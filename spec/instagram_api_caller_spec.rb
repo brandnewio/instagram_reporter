@@ -47,7 +47,7 @@ describe InstagramApiCaller do
 
     it 'returns parsed data' do
       VCR.use_cassette('get_instagram_accounts_by_access_token') do
-        expect(subject.get_instagram_accounts_by_access_token('4907942.01a3945.d24a9419c2794fc987b60dcab98e22fe')['data'].size).to eq(19)
+        expect(subject.get_instagram_accounts_by_access_token('4907942.01a3945.d24a9419c2794fc987b60dcab98e22fe')['data'].size).to eq(20)
       end
     end
   end

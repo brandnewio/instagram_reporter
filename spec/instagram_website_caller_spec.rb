@@ -9,6 +9,7 @@ describe InstagramWebsiteCaller do
     end
 
     it 'has proper Faraday connection object' do
+      InstagramInteractionsBase::API_TOKEN = @current_token
       expect(subject.website_connection.class).to be(Faraday::Connection)
     end
 
