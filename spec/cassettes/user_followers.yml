@@ -12,7 +12,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 404
@@ -44,7 +44,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+      string: ! "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
         class=\"hl-en not-logged-in \">\n<head>\n    <meta charset=\"UTF-8\" />\n
         \   <title>Page Not Found &bull; Instagram</title>\n\n    <meta name=\"robots\"
         content=\"noimageindex\" />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\"
@@ -198,7 +198,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 404
@@ -230,7 +230,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+      string: ! "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
         class=\"hl-en not-logged-in \">\n<head>\n    <meta charset=\"UTF-8\" />\n
         \   <title>Page Not Found &bull; Instagram</title>\n\n    <meta name=\"robots\"
         content=\"noimageindex\" />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\"
@@ -384,7 +384,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 404
@@ -416,7 +416,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+      string: ! "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
         class=\"hl-en not-logged-in \">\n<head>\n    <meta charset=\"UTF-8\" />\n
         \   <title>Page Not Found &bull; Instagram</title>\n\n    <meta name=\"robots\"
         content=\"noimageindex\" />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\"
@@ -570,7 +570,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -606,7 +606,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/45364550\/followed-by?access_token=622268995.1fb234f.2dddf4bf03bb4e4091af3b2ea32887e4\u0026cursor=1335124316229","next_cursor":"1335124316229"},"meta":{"code":200},"data":[{"username":"dtrojanowski","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_530991023_75sq_1377855699.jpg","full_name":"Daniel
+      string: ! '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/45364550\/followed-by?access_token=622268995.1fb234f.2dddf4bf03bb4e4091af3b2ea32887e4\u0026cursor=1335124316229","next_cursor":"1335124316229"},"meta":{"code":200},"data":[{"username":"dtrojanowski","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_530991023_75sq_1377855699.jpg","full_name":"Daniel
         Trojanowski","id":"530991023"},{"username":"fargere","bio":"","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfp1\/10549597_569879776454137_1119085070_a.jpg","full_name":"Christopher
         Fargere","id":"1433101232"},{"username":"j_creixell","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_248435969_75sq_1368811814.jpg","full_name":"Jorge
         Creixell","id":"248435969"},{"username":"missplr","bio":"British in Berlin
@@ -647,4 +647,81 @@ http_interactions:
         Suder","id":"22084806"}]}'
     http_version: 
   recorded_at: Mon, 18 Aug 2014 14:08:20 GMT
-recorded_with: VCR 2.9.2
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 20 Oct 2014 11:34:27 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - csrftoken=05ae2ca0781ac9f9c25ebf7234002b75; expires=Mon, 19-Oct-2015 11:34:27
+        GMT; Max-Age=31449600; Path=/, ccode=PL; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4985'
+      Content-Length:
+      - '10001'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/45364550\/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4\u0026cursor=1340223806352","next_cursor":"1340223806352"},"meta":{"code":200},"data":[{"username":"kaena_me","bio":"","website":"","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/10724274_334231760089181_7668590_a.jpg","full_name":"ka\u00ebNa","id":"49096233"},{"username":"tomaszgieres","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_1107014295_75sq_1392932055.jpg","full_name":"Tomasz
+        Giere\u015b","id":"1107014295"},{"username":"muszek","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_216206074_75sq_1346500952.jpg","full_name":"","id":"216206074"},{"username":"queju","bio":"Lives
+        in Krakow, Poland.","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_22313760_75sq_1392033095.jpg","full_name":"Lukasz","id":"22313760"},{"username":"luismawhatakuai","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_50441659_75sq_1335902510.jpg","full_name":"","id":"50441659"},{"username":"awesomeola","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1395084926"},{"username":"xymenka","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_848969204_75sq_1393531550.jpg","full_name":"","id":"848969204"},{"username":"dtrojanowski","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_530991023_75sq_1377855699.jpg","full_name":"Daniel
+        Trojanowski","id":"530991023"},{"username":"fargere","bio":"","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfp1\/10549597_569879776454137_1119085070_a.jpg","full_name":"Christopher
+        Fargere","id":"1433101232"},{"username":"j_creixell","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_248435969_75sq_1368811814.jpg","full_name":"Jorge
+        Creixell","id":"248435969"},{"username":"missplr","bio":"British in Berlin
+        \/\/ Brandnew IO","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_703627778_75sq_1389463707.jpg","full_name":"Philippa","id":"703627778"},{"username":"ewerobaczek","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_263843655_75sq_1393126836.jpg","full_name":"Evelina
+        Robaczek","id":"263843655"},{"username":"pandaamonium","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Kamil
+        Politowicz","id":"31211763"},{"username":"noireaud","bio":"","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/10707182_692970000782472_1302337160_a.jpg","full_name":"Aur\u00e9lien
+        Elimane Gu\u00e8ye","id":"210365970"},{"username":"lokalnybohater","bio":"","website":"http:\/\/www.motorstudio.pl","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_56052092_75sq_1337098603.jpg","full_name":"","id":"56052092"},{"username":"grupaagrafka","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_1261604383_75sq_1397310852.jpg","full_name":"Bogdan
+        Balicki","id":"1261604383"},{"username":"smaoirsh","bio":"Dubliner in Berlin.
+        Influencer Manager at Brandnew IO \ud83d\udcf7 iPhone 4s || Samsung NX300","website":"http:\/\/www.brandnew.io","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_194858541_75sq_1386796103.jpg","full_name":"Saoirse","id":"194858541"},{"username":"graciehroberts","bio":"Somewhere
+        between Berlin \u0026 Prague","website":"http:\/\/www.graciehroberts.tumblr.com","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xaf1\/10693255_1529900290559593_2131590333_a.jpg","full_name":"Gracie
+        Roberts","id":"31456518"},{"username":"kbiernat01","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_1093867926_75sq_1392390710.jpg","full_name":"Kasia
+        Biernat","id":"1093867926"},{"username":"simonx111","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_1026114304_75sq_1390779235.jpg","full_name":"Szymon
+        Kurcab","id":"1026114304"},{"username":"ewejan","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Ewelina","id":"252071348"},{"username":"nighelxo","bio":"","website":"","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/10593342_328380043988007_1276909057_a.jpg","full_name":"Nicole
+        B.","id":"320558283"},{"username":"txustice","bio":"Berlin. Ruby developer,
+        entrepreneur, musician and successful astronaut. @codegram co-founder and
+        @baruco organizer!","website":"http:\/\/blog.txus.io","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_30969847_75sq_1333525751.jpg","full_name":"Josep
+        M. Bach","id":"30969847"},{"username":"eugenpirogoff","bio":"","website":"http:\/\/twitter.com\/eugenpirogoff","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_371308_75sq_1356044771.jpg","full_name":"Eugen
+        Pirogoff","id":"371308"},{"username":"marwoj74","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_843084528_75sq_1387783410.jpg","full_name":"Marcin
+        W\u00f3jcik","id":"843084528"},{"username":"slimacek","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"176842003"},{"username":"jarekelo","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"783024835"},{"username":"rusilko","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_50220889_75sq_1373575358.jpg","full_name":"","id":"50220889"},{"username":"marcinb","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_811568_75sq_1290726542.jpg","full_name":"Marcin
+        Bali\u0144ski","id":"811568"},{"username":"purechloe","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_176815106_75sq_1388999326.jpg","full_name":"Anna
+        \u015alimak","id":"176815106"},{"username":"fdiazgarrido","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_543302801_75sq_1378509803.jpg","full_name":"Fernando
+        Diaz Garrido","id":"543302801"},{"username":"iurimatias","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_344425432_75sq_1365146515.jpg","full_name":"Iuri
+        Matias","id":"344425432"},{"username":"pkwiatko","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_52364490_75sq_1336288226.jpg","full_name":"","id":"52364490"},{"username":"kubowaty","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_319722516_75sq_1362407116.jpg","full_name":"KubaS","id":"319722516"},{"username":"snowboard200","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_301786448_75sq_1360159981.jpg","full_name":"Snowboard","id":"301786448"},{"username":"cfcosta_","bio":"My
+        other car is also a porsche.","website":"http:\/\/omgninjas.net","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_233432354_75sq_1349670468.jpg","full_name":"Cain\u00e3
+        Costa","id":"233432354"},{"username":"olamad","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"54707590"},{"username":"sickill","bio":"","website":"http:\/\/ku1ik.com","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_37720029_75sq_1342429061.jpg","full_name":"Marcin","id":"37720029"},{"username":"yundt","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_52711177_75sq_1354403877.jpg","full_name":"","id":"52711177"},{"username":"lucek_jestem_lubie_cycki","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_3368160_75sq_1364738315.jpg","full_name":"Lucek","id":"3368160"},{"username":"zwrozka","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_235129267_75sq_1349995998.jpg","full_name":"Pawe\u0142
+        Pierzcha\u0142a","id":"235129267"},{"username":"gosiaciesla","bio":"@gosia_ciesla","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_231766680_75sq_1349375917.jpg","full_name":"Gosia
+        Cie\u015bla","id":"231766680"},{"username":"addlena","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_52946373_75sq_1337105564.jpg","full_name":"","id":"52946373"},{"username":"patttkkka","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_205911048_75sq_1345463043.jpg","full_name":"","id":"205911048"},{"username":"blashca","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"55795459"},{"username":"psolnic","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_195920815_75sq_1342604111.jpg","full_name":"","id":"195920815"},{"username":"knapo2","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"196283008"},{"username":"jasiek_","bio":"for
+        teh lulz","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_145354975_75sq_1355139644.jpg","full_name":"","id":"145354975"},{"username":"wiktorsarota","bio":"","website":"http:\/\/www.infakt.pl","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_962999_75sq_1336333994.jpg","full_name":"Wiktor
+        Sarota","id":"962999"}]}'
+    http_version: 
+  recorded_at: Mon, 20 Oct 2014 11:34:27 GMT
+recorded_with: VCR 2.9.3

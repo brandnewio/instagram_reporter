@@ -12,7 +12,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -48,7 +48,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"meta":{"code":200},"data":[{"username":"goldie_berlin","bio":"Instagramer
+      string: ! '{"meta":{"code":200},"data":[{"username":"goldie_berlin","bio":"Instagramer
         from Germany \/Berlin \u2728MY DIARY AROUND THE WORLD IN COLORS \u2728 travel
         with me on Instagram \u2728sylvia@brandnew.io \u2728","website":"http:\/\/www.InstagramerFromGermany.com","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_165640_75sq_1380875972.jpg","full_name":"!
         Sylvia","id":"165640"}]}'
@@ -66,7 +66,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -102,10 +102,59 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"meta":{"code":200},"data":[{"username":"goldie_berlin","bio":"Instagramer
+      string: ! '{"meta":{"code":200},"data":[{"username":"goldie_berlin","bio":"Instagramer
         from Germany \/Berlin \u2728MY DIARY AROUND THE WORLD IN COLORS \u2728 travel
         with me on Instagram \u0026 my Blog \u2728sylvia@brandnew.io \u2728","website":"http:\/\/www.InstagramerFromGermany.com","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xpa1\/10507898_586420331474455_125020016_a.jpg","full_name":"Travel
         diary by Sylvia","id":"165640"}]}'
     http_version: 
   recorded_at: Mon, 18 Aug 2014 13:04:57 GMT
-recorded_with: VCR 2.9.2
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/search?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4&q=goldie_berlin
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 20 Oct 2014 11:34:25 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - csrftoken=8b0f0fc19bf194b9aae9f297f5c764f7; expires=Mon, 19-Oct-2015 11:34:25
+        GMT; Max-Age=31449600; Path=/, ccode=PL; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4987'
+      Content-Length:
+      - '454'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta":{"code":200},"data":[{"username":"goldie_berlin","bio":"Instagramer
+        from Germany \/Berlin \u2728MY DIARY AROUND THE WORLD IN COLORS \u2728 travel
+        with me on Instagram \u0026 my Blog \u2728info@InstagramerFromGermany.com\u2728","website":"http:\/\/www.InstagramerFromGermany.com","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xpa1\/10507898_586420331474455_125020016_a.jpg","full_name":"Travel
+        diary by Sylvia","id":"165640"}]}'
+    http_version: 
+  recorded_at: Mon, 20 Oct 2014 11:34:25 GMT
+recorded_with: VCR 2.9.3

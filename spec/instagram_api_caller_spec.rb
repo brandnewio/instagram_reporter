@@ -6,7 +6,7 @@ describe InstagramApiCaller do
   let(:test_hashtag) { "inspiredby" }
   let(:test_media_file_id) { '653714645670132444_16192269' }
   let(:non_existent_media_file_id) { '669371381316733323_213058217' }
-  let(:access_token) { '622268995.1fb234f.2dddf4bf03bb4e4091af3b2ea32887e4' }
+  let(:access_token) { '1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4' }
   let(:user_id) { '45364550' }
 
   describe '#initialize' do
@@ -41,13 +41,13 @@ describe InstagramApiCaller do
   describe '#get_instagram_accounts_by_access_token' do
     it 'returns parsed data' do
       VCR.use_cassette('get_instagram_accounts_by_access_token') do
-        expect(subject.get_instagram_accounts_by_access_token('4907942.01a3945.d24a9419c2794fc987b60dcab98e22fe')['data'].class).to eq(Array)
+        expect(subject.get_instagram_accounts_by_access_token('1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4')['data'].class).to eq(Array)
       end
     end
 
     it 'returns parsed data' do
       VCR.use_cassette('get_instagram_accounts_by_access_token') do
-        expect(subject.get_instagram_accounts_by_access_token('4907942.01a3945.d24a9419c2794fc987b60dcab98e22fe')['data'].size).to eq(20)
+        expect(subject.get_instagram_accounts_by_access_token('1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4')['data'].size).to eq(19)
       end
     end
   end
@@ -81,14 +81,14 @@ describe InstagramApiCaller do
   describe '#get_hashtag_info_by_access_token' do
     it 'returns parsed data' do
       VCR.use_cassette('get_hashtag_info_by_access_token') do
-        response = subject.get_hashtag_info_by_access_token(test_hashtag, '4907942.01a3945.d24a9419c2794fc987b60dcab98e22fe')
+        response = subject.get_hashtag_info_by_access_token(test_hashtag, '1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4')
         expect(response['data'].class).to eq(Array)
       end
     end
 
     it 'returns 20 media files infos inside' do
       VCR.use_cassette('get_hashtag_info_by_access_token') do
-        response = subject.get_hashtag_info_by_access_token(test_hashtag, '4907942.01a3945.d24a9419c2794fc987b60dcab98e22fe')
+        response = subject.get_hashtag_info_by_access_token(test_hashtag, '1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4')
         expect(response['data'].size).to eq(20)
       end
     end
@@ -105,7 +105,7 @@ describe InstagramApiCaller do
     it 'gives proper count of comments' do
       VCR.use_cassette('call_api_by_api_token_for_media_file_likes') do
         response = subject.call_api_by_api_token_for_media_file_comments(test_media_file_id)
-        expect(response['count']).to eq(22)
+        expect(response['count']).to eq(23)
       end
     end
   end
@@ -162,7 +162,7 @@ describe InstagramApiCaller do
     it 'gives proper count of likes' do
       VCR.use_cassette('call_api_for_media_file_likes') do
         response = subject.call_api_by_api_token_for_media_file_likes(test_media_file_id)
-        expect(response['count']).to eq(4094)
+        expect(response['count']).to eq(4072)
       end
     end
   end
@@ -178,7 +178,7 @@ describe InstagramApiCaller do
     it 'gives proper count of likes' do
       VCR.use_cassette('call_api_by_access_token_for_media_file_likes') do
         response = subject.call_api_by_access_token_for_media_file_likes(test_media_file_id, access_token)
-        expect(response['count']).to eq(4094)
+        expect(response['count']).to eq(4095)
       end
     end
 
@@ -237,7 +237,7 @@ describe InstagramApiCaller do
     end
 
     context 'when using access_token' do
-      #let(:access_token) { '45364550.1fb234f.568db239a5a845c4ad8315557d551c1c' }
+      let(:access_token) { '1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4' }
 
       it "returns a response containing media data with image urls etc" do
         VCR.use_cassette('users_search_by_access_token') do

@@ -12,7 +12,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -48,7 +48,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+      string: ! "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
         class=\"hl-en not-logged-in \n\n\n\">\n<head>\n    <meta charset=\"UTF-8\"
         />\n    <title>\nInstagram\n</title>\n\n    <meta name=\"robots\" content=\"noimageindex\"
         />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/fd485cf/images/ico/favicon.ico\"
@@ -197,7 +197,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -233,7 +233,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+      string: ! "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
         class=\"hl-en not-logged-in \n\n\n\">\n<head>\n    <meta charset=\"UTF-8\"
         />\n    <title>\nInstagram\n</title>\n\n    <meta name=\"robots\" content=\"noimageindex\"
         />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/fd485cf/images/ico/favicon.ico\"
@@ -350,4 +350,367 @@ http_interactions:
         src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/fd485cf/scripts/polyfills/es5-sham.min.js\"></script>\n\n</body>\n</html>"
     http_version: 
   recorded_at: Wed, 30 Apr 2014 12:41:46 GMT
-recorded_with: VCR 2.8.0
+- request:
+    method: get
+    uri: http://instagram.com/p/Fw1u1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZSwgbm8tY2FjaGUsIG5vLXN0b3JlLCBtdXN0LXJldmFsaWRhdGU=
+      !binary "Q29udGVudC1MYW5ndWFnZQ==":
+      - !binary |-
+        ZW4=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC9odG1s
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAyMCBPY3QgMjAxNCAxMTozNDoyMyBHTVQ=
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        U2F0LCAwMSBKYW4gMjAwMCAwMDowMDowMCBHTVQ=
+      !binary "UHJhZ21h":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbng=
+      !binary "U2V0LUNvb2tpZQ==":
+      - !binary |-
+        Y3NyZnRva2VuPTVlMGFkNzgyMGYzYjQ4MjkwYTZkNjNlYjM5YjdmNGNkOyBl
+        eHBpcmVzPU1vbiwgMTktT2N0LTIwMTUgMTE6MzQ6MjMgR01UOyBNYXgtQWdl
+        PTMxNDQ5NjAwOyBQYXRoPS8sIG1pZD1WRVR6UHdBRUFBSGlZT1VBbGFWY2Jw
+        SHg3OGx6OyBleHBpcmVzPVN1biwgMTUtT2N0LTIwMzQgMTE6MzQ6MjMgR01U
+        OyBNYXgtQWdlPTYzMDcyMDAwMDsgUGF0aD0vLCBjY29kZT1QTDsgUGF0aD0v
+      !binary "VmFyeQ==":
+      - !binary |-
+        Q29va2llLCBBY2NlcHQtTGFuZ3VhZ2UsIEFjY2VwdC1FbmNvZGluZw==
+      !binary "WC1GcmFtZS1PcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MTA4MDc=
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+        class=\"hl-en not-logged-in \n\n\n\">\n<head>\n    <meta charset=\"UTF-8\"
+        />\n    <title>\nInstagram\n</title>\n\n    <meta name=\"robots\" content=\"noimageindex\"
+        />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/images/ico/favicon.ico\"
+        />\n\n    <meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />\n
+        \   <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\"
+        />\n\n    <link rel=\"apple-touch-icon-precomposed\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/images/ico/apple-touch-icon-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/images/ico/apple-touch-icon-72x72-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/images/ico/apple-touch-icon-114x114-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/images/ico/apple-touch-icon-144x144-precomposed.png\"
+        />\n\n    \n    <meta name=\"viewport\" content=\"width=device-width, user-scalable=no,
+        initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\" />\n    \n\n    \n\n
+        \   <script type=\"text/javascript\">\n        GATEKEEPERS = {\n            banzai_logs:
+        true\n        };\n    </script>\n\n    \n        <script src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/scripts/jquery.js\"
+        type=\"text/javascript\"></script>\n        <script src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/scripts/bluebar.js\"
+        type=\"text/javascript\"></script>\n\n    \n\n    \n\n    <meta property=\"og:site_name\"
+        content=\"Instagram\" />\n    <meta property=\"og:title\" content=\"\" />\n
+        \   <meta property=\"og:image\" content=\"http://images.ak.instagram.com/media/2011/06/15/fbca575e7206449db5ee7e72eedc0e78_7.jpg\"
+        />\n    <meta property=\"og:determiner\" content=\"a\" />\n    <meta property=\"fb:app_id\"
+        content=\"124024574287414\" />\n    <meta property=\"og:url\" content=\"http://instagram.com/p/Fw1u1/\"
+        />\n    <meta property=\"instapp:owner_user_id\" content=\"4907942\" />\n
+        \   <meta property=\"twitter:card\" content=\"app\" />\n    <meta property=\"twitter:app:name:iphone\"
+        content=\"Instagram\" />\n    <meta property=\"twitter:app:id:iphone\" content=\"389801252\"
+        />\n    <meta property=\"twitter:app:url:iphone\" content=\"instagram://media?id=96689077\"
+        />\n    <meta property=\"twitter:app:url:ipad\" content=\"instagram://media?id=96689077\"
+        />\n    <meta property=\"twitter:app:name:googleplay\" content=\"Instagram\"
+        />\n    <meta property=\"twitter:app:id:googleplay\" content=\"com.instagram.android\"
+        />\n    <meta property=\"twitter:app:url:googleplay\" content=\"http://instagram.com/p/Fw1u1/\"
+        />\n    \n    <meta name=\"medium\" content=\"image\" />\n    <meta property=\"og:type\"
+        content=\"instapp:photo\" />\n    <meta property=\"og:description\" content=\"luki3k5's
+        photo on Instagram\" />\n\n\n\n    \n    \n\n</head>\n<body class=\"\">\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+        \       <script type=\"text/javascript\">\nwindow._strings = {\n\n\"%(count)s
+        comments\": \"%(count)s comments\",\n\"%(count)s followers\": \"%(count)s
+        followers\",\n\"%(count)s following\": \"%(count)s following\",\n\"%(count)s
+        likes\": \"%(count)s likes\",\n\"%(count)s more comments\": \"%(count)s more
+        comments\",\n\"%(count)s new posts\": \"%(count)s new posts\",\n\"%(count)s
+        people liked this photo\": \"%(count)s people liked this photo\",\n\"%(count)s
+        photos,\": \"%(count)s photos,\",\n\"%(count)s posts\": \"%(count)s posts\",\n\"%(count)s+
+        new posts\": \"%(count)s+ new posts\",\n\"%(day)s %(month_name)s %(year)s\":
+        \"%(day)s %(month_name)s %(year)s\",\n\"%(days)s days ago\": \"%(days)s days
+        ago\",\n\"%(days)sd\": \"%(days)sd\",\n\"%(followerCount)s followers\": \"%(followerCount)s
+        followers\",\n\"%(hours)s hours ago\": \"%(hours)s hours ago\",\n\"%(hours)sh\":
+        \"%(hours)sh\",\n\"%(likes)s likes, %(comments)s comments\": \"%(likes)s likes,
+        %(comments)s comments\",\n\"%(mediaCount)s photos\": \"%(mediaCount)s photos\",\n\"%(minutes)s
+        minutes ago\": \"%(minutes)s minutes ago\",\n\"%(minutes)sm\": \"%(minutes)sm\",\n\"%(months)s
+        months ago\": \"%(months)s months ago\",\n\"%(seconds)s seconds ago\": \"%(seconds)s
+        seconds ago\",\n\"%(seconds)ss\": \"%(seconds)ss\",\n\"%(user)s on Instagram\":
+        \"%(user)s on Instagram\",\n\"%(username)s on Instagram\": \"%(username)s
+        on Instagram\",\n\"%(weeks)s weeks ago\": \"%(weeks)s weeks ago\",\n\"%(weeks)sw\":
+        \"%(weeks)sw\",\n\"%(year)s %(month)s\": \"%(year)s %(month)s\",\n\"1\": \"1\",\n\"1
+        comment\": \"1 comment\",\n\"1 day ago\": \"1 day ago\",\n\"1 follower\":
+        \"1 follower\",\n\"1 hour ago\": \"1 hour ago\",\n\"1 like\": \"1 like\",\n\"1
+        minute ago\": \"1 minute ago\",\n\"1 month ago\": \"1 month ago\",\n\"1 more
+        comment\": \"1 more comment\",\n\"1 new post\": \"1 new post\",\n\"1 photo>\":
+        \"1 photo\\u003E\",\n\"1 second ago\": \"1 second ago\",\n\"1 week ago\":
+        \"1 week ago\",\n\"2\": \"2\",\n\"3\": \"3\",\n\"AM\": \"AM\",\n\"About us\":
+        \"About us\",\n\"Account Insights - Instagram\": \"Account Insights \\u002D
+        Instagram\",\n\"Add a caption...\": \"Add a caption...\",\n\"Add a comment\":
+        \"Add a comment\",\n\"All items loaded\": \"All items loaded\",\n\"Apr\":
+        \"Apr\",\n\"April\": \"April\",\n\"Are you sure you want to delete this comment?\":
+        \"Are you sure you want to delete this comment?\",\n\"Are you sure?\": \"Are
+        you sure?\",\n\"Audience\": \"Audience\",\n\"Aug\": \"Aug\",\n\"August\":
+        \"August\",\n\"Badges\": \"Badges\",\n\"Blog\": \"Blog\",\n\"By using this
+        embed, you agree to Instagram\\\\'s <a href=\\\"http://instagram.com/about/legal/terms/api/\\\">API
+        Terms of Use</a>.\": \"By using this embed, you agree to Instagram\\u005C\\u0027s
+        \\u003Ca href\\u003D\\u0022http://instagram.com/about/legal/terms/api/\\u0022\\u003EAPI
+        Terms of Use\\u003C/a\\u003E.\",\n\"Cancel\": \"Cancel\",\n\"Content unavailable\":
+        \"Content unavailable\",\n\"Copy Embed Code\": \"Copy Embed Code\",\n\"Copy
+        this code:\": \"Copy this code:\",\n\"Couldn\\\\'t post comment\": \"Couldn\\u005C\\u0027t
+        post comment\",\n\"Dec\": \"Dec\",\n\"December\": \"December\",\n\"Delete\":
+        \"Delete\",\n\"Edit Profile\": \"Edit Profile\",\n\"Embed\": \"Embed\",\n\"Feb\":
+        \"Feb\",\n\"February\": \"February\",\n\"Follow\": \"Follow\",\n\"Follow %(username)s
+        on Instagram\": \"Follow %(username)s on Instagram\",\n\"Follow friends and
+        interesting people to see their photos here.\": \"Follow friends and interesting
+        people to see their photos here.\",\n\"Following\": \"Following\",\n\"Forgot
+        your password?\": \"Forgot your password?\",\n\"Fri\": \"Fri\",\n\"Friday\":
+        \"Friday\",\n\"Here are some suggestions.\": \"Here are some suggestions.\",\n\"Home\":
+        \"Home\",\n\"Jan\": \"Jan\",\n\"January\": \"January\",\n\"Jobs\": \"Jobs\",\n\"Jul\":
+        \"Jul\",\n\"July\": \"July\",\n\"Jun\": \"Jun\",\n\"June\": \"June\",\n\"Leave
+        a comment...\": \"Leave a comment...\",\n\"Like\": \"Like\",\n\"Likes\": \"Likes\",\n\"Load
+        More...\": \"Load More...\",\n\"Load more\": \"Load more\",\n\"Load more...\":
+        \"Load more...\",\n\"Loading more...\": \"Loading more...\",\n\"Loading...\":
+        \"Loading...\",\n\"Log Out\": \"Log Out\",\n\"Log in\": \"Log in\",\n\"Mar\":
+        \"Mar\",\n\"March\": \"March\",\n\"May\": \"May\",\n\"Mon\": \"Mon\",\n\"Monday\":
+        \"Monday\",\n\"More\": \"More\",\n\"Next photo\": \"Next photo\",\n\"No Recent
+        Photos\": \"No Recent Photos\",\n\"No likes yet.\": \"No likes yet.\",\n\"No
+        photos to show.\": \"No photos to show.\",\n\"Nov\": \"Nov\",\n\"November\":
+        \"November\",\n\"Now\": \"Now\",\n\"Oct\": \"Oct\",\n\"October\": \"October\",\n\"Open
+        in App\": \"Open in App\",\n\"Others\": \"Others\",\n\"PM\": \"PM\",\n\"Password:\":
+        \"Password:\",\n\"Paste it on your website, blog, or wherever you want to
+        link to your profile!\": \"Paste it on your website, blog, or wherever you
+        want to link to your profile!\",\n\"People you follow\": \"People you follow\",\n\"Performance\":
+        \"Performance\",\n\"Photo by %(username)s\": \"Photo by %(username)s\",\n\"Posts\":
+        \"Posts\",\n\"Press\": \"Press\",\n\"Press Page - Instagram\": \"Press Page
+        \\u002D Instagram\",\n\"Previous Posts\": \"Previous Posts\",\n\"Previous
+        photo\": \"Previous photo\",\n\"Privacy\": \"Privacy\",\n\"Report inappropriate\":
+        \"Report inappropriate\",\n\"Requested\": \"Requested\",\n\"Retry\": \"Retry\",\n\"Sat\":
+        \"Sat\",\n\"Saturday\": \"Saturday\",\n\"Select your badge:\": \"Select your
+        badge:\",\n\"Sep\": \"Sep\",\n\"September\": \"September\",\n\"Summary\":
+        \"Summary\",\n\"Sun\": \"Sun\",\n\"Sunday\": \"Sunday\",\n\"Support\": \"Support\",\n\"Terms\":
+        \"Terms\",\n\"This user is private\": \"This user is private\",\n\"Thu\":
+        \"Thu\",\n\"Thursday\": \"Thursday\",\n\"To follow %(username)s, you need
+        to log in.\": \"To follow %(username)s, you need to log in.\",\n\"Toggle like\":
+        \"Toggle like\",\n\"Tue\": \"Tue\",\n\"Tuesday\": \"Tuesday\",\n\"Username:\":
+        \"Username:\",\n\"Video by %(username)s\": \"Video by %(username)s\",\n\"View
+        Photo Page\": \"View Photo Page\",\n\"View Profile\": \"View Profile\",\n\"View
+        Video Page\": \"View Video Page\",\n\"View on Instagram\": \"View on Instagram\",\n\"Wed\":
+        \"Wed\",\n\"Wednesday\": \"Wednesday\",\n\"When you are finished following
+        people,\": \"When you are finished following people,\",\n\"Write a comment...\":
+        \"Write a comment...\",\n\"Yes\": \"Yes\",\n\"You must log in to add a comment.\":
+        \"You must log in to add a comment.\",\n\"You must log in to like this photo.\":
+        \"You must log in to like this photo.\",\n\"You need to be following %(username)s
+        to like or comment\": \"You need to be following %(username)s to like or comment\",\n\"Your
+        username or password was incorrect.\": \"Your username or password was incorrect.\",\n\"am\":
+        \"am\",\n\"banner photo\": \"banner photo\",\n\"nd\": \"nd\",\n\"pm\": \"pm\",\n\"rd\":
+        \"rd\",\n\"reload this page\": \"reload this page\",\n\"st\": \"st\",\n\"th\":
+        \"th\"\n};\n</script>\n        \n<script src=//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/scripts/polyfills/es5-shim.min.js></script>\n<script
+        src=//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/scripts/polyfills/es5-sham.min.js></script>\n<script
+        src=//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/scripts/polyfills/history.js/scripts/bundled/html5/native.history.js></script>\n\n\n<script
+        type=\"text/javascript\">window._sharedData = {\"static_root\":\"\\/\\/d36xtkk24g8jdx.cloudfront.net\\/bluebar\\/669b453\",\"platform\":{\"is_touch\":false,\"app_platform\":\"web\"},\"hostname\":\"instagram.com\",\"entry_data\":{\"DesktopPPage\":[{\"canSeePrerelease\":false,\"viewer\":null,\"media\":{\"code\":\"Fw1u1\",\"date\":1308140971.0,\"caption\":\"The
+        marketing In this country continues to amaze me :)))\",\"usertags\":{\"nodes\":[]},\"comments\":{\"nodes\":[]},\"shared_by_author\":true,\"likes\":{\"count\":0,\"viewer_has_liked\":false,\"nodes\":[]},\"owner\":{\"username\":\"luki3k5\",\"requested_by_viewer\":false,\"followed_by_viewer\":false,\"profile_pic_url\":\"http:\\/\\/images.ak.instagram.com\\/profiles\\/profile_4907942_75sq_1392804574.jpg\",\"has_blocked_viewer\":false,\"id\":\"4907942\",\"is_private\":false},\"is_video\":false,\"id\":\"96689077\",\"display_src\":\"http:\\/\\/images.ak.instagram.com\\/media\\/2011\\/06\\/15\\/fbca575e7206449db5ee7e72eedc0e78_7.jpg\"},\"__get_params\":{},\"staticRoot\":\"\\/\\/d36xtkk24g8jdx.cloudfront.net\\/bluebar\\/669b453\",\"__query_string\":\"?\",\"prerelease\":false,\"__path\":\"\\/p\\/Fw1u1\\/\",\"shortcode\":\"Fw1u1\"}]},\"country_code\":\"PL\",\"config\":{\"viewer\":null,\"csrf_token\":\"5e0ad7820f3b48290a6d63eb39b7f4cd\"}};</script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/cache/bundles/webpack-common.js\"></script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/cache/bundles/DesktopPPage.js\"></script>\n</body>\n</html>"
+    http_version: 
+  recorded_at: Mon, 20 Oct 2014 11:34:23 GMT
+- request:
+    method: get
+    uri: http://instagram.com/p/rbk7ivrf2M
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZSwgbm8tY2FjaGUsIG5vLXN0b3JlLCBtdXN0LXJldmFsaWRhdGU=
+      !binary "Q29udGVudC1MYW5ndWFnZQ==":
+      - !binary |-
+        ZW4=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC9odG1s
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAyMCBPY3QgMjAxNCAxMTozNDoyNCBHTVQ=
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        U2F0LCAwMSBKYW4gMjAwMCAwMDowMDowMCBHTVQ=
+      !binary "UHJhZ21h":
+      - !binary |-
+        bm8tY2FjaGU=
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbng=
+      !binary "U2V0LUNvb2tpZQ==":
+      - !binary |-
+        Y3NyZnRva2VuPWE2YmJlNTc4OGEwOGYzY2E0OTFhMjNkMDY2ODExOTVmOyBl
+        eHBpcmVzPU1vbiwgMTktT2N0LTIwMTUgMTE6MzQ6MjQgR01UOyBNYXgtQWdl
+        PTMxNDQ5NjAwOyBQYXRoPS8sIG1pZD1WRVR6UUFBRUFBR05oa1d0X0dSR0N6
+        MW5WenNFOyBleHBpcmVzPVN1biwgMTUtT2N0LTIwMzQgMTE6MzQ6MjQgR01U
+        OyBNYXgtQWdlPTYzMDcyMDAwMDsgUGF0aD0vLCBjY29kZT1QTDsgUGF0aD0v
+      !binary "VmFyeQ==":
+      - !binary |-
+        Q29va2llLCBBY2NlcHQtTGFuZ3VhZ2UsIEFjY2VwdC1FbmNvZGluZw==
+      !binary "WC1GcmFtZS1PcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MTI2NTQ=
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+        class=\"hl-en not-logged-in \n\n\n\">\n<head>\n    <meta charset=\"UTF-8\"
+        />\n    <title>\nInstagram\n</title>\n\n    <meta name=\"robots\" content=\"noimageindex\"
+        />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/images/ico/favicon.ico\"
+        />\n\n    <meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />\n
+        \   <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\"
+        />\n\n    <link rel=\"apple-touch-icon-precomposed\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/images/ico/apple-touch-icon-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/images/ico/apple-touch-icon-72x72-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/images/ico/apple-touch-icon-114x114-precomposed.png\"
+        />\n    <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/images/ico/apple-touch-icon-144x144-precomposed.png\"
+        />\n\n    \n    <meta name=\"viewport\" content=\"width=device-width, user-scalable=no,
+        initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\" />\n    \n\n    \n\n
+        \   <script type=\"text/javascript\">\n        GATEKEEPERS = {\n            banzai_logs:
+        true\n        };\n    </script>\n\n    \n        <script src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/scripts/jquery.js\"
+        type=\"text/javascript\"></script>\n        <script src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/scripts/bluebar.js\"
+        type=\"text/javascript\"></script>\n\n    \n\n    \n\n    <meta property=\"og:site_name\"
+        content=\"Instagram\" />\n    <meta property=\"og:title\" content=\"\" />\n
+        \   <meta property=\"og:image\" content=\"http://photos-c.ak.instagram.com/hphotos-ak-xfa1/10576070_425983834207618_1380249100_n.jpg\"
+        />\n    <meta property=\"og:determiner\" content=\"a\" />\n    <meta property=\"fb:app_id\"
+        content=\"124024574287414\" />\n    <meta property=\"og:url\" content=\"http://instagram.com/p/rbk7ivrf2M/\"
+        />\n    <meta property=\"instapp:owner_user_id\" content=\"4907942\" />\n
+        \   <meta property=\"twitter:card\" content=\"app\" />\n    <meta property=\"twitter:app:name:iphone\"
+        content=\"Instagram\" />\n    <meta property=\"twitter:app:id:iphone\" content=\"389801252\"
+        />\n    <meta property=\"twitter:app:url:iphone\" content=\"instagram://media?id=782381381709593996\"
+        />\n    <meta property=\"twitter:app:url:ipad\" content=\"instagram://media?id=782381381709593996\"
+        />\n    <meta property=\"twitter:app:name:googleplay\" content=\"Instagram\"
+        />\n    <meta property=\"twitter:app:id:googleplay\" content=\"com.instagram.android\"
+        />\n    <meta property=\"twitter:app:url:googleplay\" content=\"http://instagram.com/p/rbk7ivrf2M/\"
+        />\n    \n    <meta name=\"medium\" content=\"image\" />\n    <meta property=\"og:type\"
+        content=\"instapp:photo\" />\n    <meta property=\"og:description\" content=\"luki3k5's
+        photo on Instagram\" />\n\n\n\n    \n    \n\n</head>\n<body class=\"\">\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+        \       <script type=\"text/javascript\">\nwindow._strings = {\n\n\"%(count)s
+        comments\": \"%(count)s comments\",\n\"%(count)s followers\": \"%(count)s
+        followers\",\n\"%(count)s following\": \"%(count)s following\",\n\"%(count)s
+        likes\": \"%(count)s likes\",\n\"%(count)s more comments\": \"%(count)s more
+        comments\",\n\"%(count)s new posts\": \"%(count)s new posts\",\n\"%(count)s
+        people liked this photo\": \"%(count)s people liked this photo\",\n\"%(count)s
+        photos,\": \"%(count)s photos,\",\n\"%(count)s posts\": \"%(count)s posts\",\n\"%(count)s+
+        new posts\": \"%(count)s+ new posts\",\n\"%(day)s %(month_name)s %(year)s\":
+        \"%(day)s %(month_name)s %(year)s\",\n\"%(days)s days ago\": \"%(days)s days
+        ago\",\n\"%(days)sd\": \"%(days)sd\",\n\"%(followerCount)s followers\": \"%(followerCount)s
+        followers\",\n\"%(hours)s hours ago\": \"%(hours)s hours ago\",\n\"%(hours)sh\":
+        \"%(hours)sh\",\n\"%(likes)s likes, %(comments)s comments\": \"%(likes)s likes,
+        %(comments)s comments\",\n\"%(mediaCount)s photos\": \"%(mediaCount)s photos\",\n\"%(minutes)s
+        minutes ago\": \"%(minutes)s minutes ago\",\n\"%(minutes)sm\": \"%(minutes)sm\",\n\"%(months)s
+        months ago\": \"%(months)s months ago\",\n\"%(seconds)s seconds ago\": \"%(seconds)s
+        seconds ago\",\n\"%(seconds)ss\": \"%(seconds)ss\",\n\"%(user)s on Instagram\":
+        \"%(user)s on Instagram\",\n\"%(username)s on Instagram\": \"%(username)s
+        on Instagram\",\n\"%(weeks)s weeks ago\": \"%(weeks)s weeks ago\",\n\"%(weeks)sw\":
+        \"%(weeks)sw\",\n\"%(year)s %(month)s\": \"%(year)s %(month)s\",\n\"1\": \"1\",\n\"1
+        comment\": \"1 comment\",\n\"1 day ago\": \"1 day ago\",\n\"1 follower\":
+        \"1 follower\",\n\"1 hour ago\": \"1 hour ago\",\n\"1 like\": \"1 like\",\n\"1
+        minute ago\": \"1 minute ago\",\n\"1 month ago\": \"1 month ago\",\n\"1 more
+        comment\": \"1 more comment\",\n\"1 new post\": \"1 new post\",\n\"1 photo>\":
+        \"1 photo\\u003E\",\n\"1 second ago\": \"1 second ago\",\n\"1 week ago\":
+        \"1 week ago\",\n\"2\": \"2\",\n\"3\": \"3\",\n\"AM\": \"AM\",\n\"About us\":
+        \"About us\",\n\"Account Insights - Instagram\": \"Account Insights \\u002D
+        Instagram\",\n\"Add a caption...\": \"Add a caption...\",\n\"Add a comment\":
+        \"Add a comment\",\n\"All items loaded\": \"All items loaded\",\n\"Apr\":
+        \"Apr\",\n\"April\": \"April\",\n\"Are you sure you want to delete this comment?\":
+        \"Are you sure you want to delete this comment?\",\n\"Are you sure?\": \"Are
+        you sure?\",\n\"Audience\": \"Audience\",\n\"Aug\": \"Aug\",\n\"August\":
+        \"August\",\n\"Badges\": \"Badges\",\n\"Blog\": \"Blog\",\n\"By using this
+        embed, you agree to Instagram\\\\'s <a href=\\\"http://instagram.com/about/legal/terms/api/\\\">API
+        Terms of Use</a>.\": \"By using this embed, you agree to Instagram\\u005C\\u0027s
+        \\u003Ca href\\u003D\\u0022http://instagram.com/about/legal/terms/api/\\u0022\\u003EAPI
+        Terms of Use\\u003C/a\\u003E.\",\n\"Cancel\": \"Cancel\",\n\"Content unavailable\":
+        \"Content unavailable\",\n\"Copy Embed Code\": \"Copy Embed Code\",\n\"Copy
+        this code:\": \"Copy this code:\",\n\"Couldn\\\\'t post comment\": \"Couldn\\u005C\\u0027t
+        post comment\",\n\"Dec\": \"Dec\",\n\"December\": \"December\",\n\"Delete\":
+        \"Delete\",\n\"Edit Profile\": \"Edit Profile\",\n\"Embed\": \"Embed\",\n\"Feb\":
+        \"Feb\",\n\"February\": \"February\",\n\"Follow\": \"Follow\",\n\"Follow %(username)s
+        on Instagram\": \"Follow %(username)s on Instagram\",\n\"Follow friends and
+        interesting people to see their photos here.\": \"Follow friends and interesting
+        people to see their photos here.\",\n\"Following\": \"Following\",\n\"Forgot
+        your password?\": \"Forgot your password?\",\n\"Fri\": \"Fri\",\n\"Friday\":
+        \"Friday\",\n\"Here are some suggestions.\": \"Here are some suggestions.\",\n\"Home\":
+        \"Home\",\n\"Jan\": \"Jan\",\n\"January\": \"January\",\n\"Jobs\": \"Jobs\",\n\"Jul\":
+        \"Jul\",\n\"July\": \"July\",\n\"Jun\": \"Jun\",\n\"June\": \"June\",\n\"Leave
+        a comment...\": \"Leave a comment...\",\n\"Like\": \"Like\",\n\"Likes\": \"Likes\",\n\"Load
+        More...\": \"Load More...\",\n\"Load more\": \"Load more\",\n\"Load more...\":
+        \"Load more...\",\n\"Loading more...\": \"Loading more...\",\n\"Loading...\":
+        \"Loading...\",\n\"Log Out\": \"Log Out\",\n\"Log in\": \"Log in\",\n\"Mar\":
+        \"Mar\",\n\"March\": \"March\",\n\"May\": \"May\",\n\"Mon\": \"Mon\",\n\"Monday\":
+        \"Monday\",\n\"More\": \"More\",\n\"Next photo\": \"Next photo\",\n\"No Recent
+        Photos\": \"No Recent Photos\",\n\"No likes yet.\": \"No likes yet.\",\n\"No
+        photos to show.\": \"No photos to show.\",\n\"Nov\": \"Nov\",\n\"November\":
+        \"November\",\n\"Now\": \"Now\",\n\"Oct\": \"Oct\",\n\"October\": \"October\",\n\"Open
+        in App\": \"Open in App\",\n\"Others\": \"Others\",\n\"PM\": \"PM\",\n\"Password:\":
+        \"Password:\",\n\"Paste it on your website, blog, or wherever you want to
+        link to your profile!\": \"Paste it on your website, blog, or wherever you
+        want to link to your profile!\",\n\"People you follow\": \"People you follow\",\n\"Performance\":
+        \"Performance\",\n\"Photo by %(username)s\": \"Photo by %(username)s\",\n\"Posts\":
+        \"Posts\",\n\"Press\": \"Press\",\n\"Press Page - Instagram\": \"Press Page
+        \\u002D Instagram\",\n\"Previous Posts\": \"Previous Posts\",\n\"Previous
+        photo\": \"Previous photo\",\n\"Privacy\": \"Privacy\",\n\"Report inappropriate\":
+        \"Report inappropriate\",\n\"Requested\": \"Requested\",\n\"Retry\": \"Retry\",\n\"Sat\":
+        \"Sat\",\n\"Saturday\": \"Saturday\",\n\"Select your badge:\": \"Select your
+        badge:\",\n\"Sep\": \"Sep\",\n\"September\": \"September\",\n\"Summary\":
+        \"Summary\",\n\"Sun\": \"Sun\",\n\"Sunday\": \"Sunday\",\n\"Support\": \"Support\",\n\"Terms\":
+        \"Terms\",\n\"This user is private\": \"This user is private\",\n\"Thu\":
+        \"Thu\",\n\"Thursday\": \"Thursday\",\n\"To follow %(username)s, you need
+        to log in.\": \"To follow %(username)s, you need to log in.\",\n\"Toggle like\":
+        \"Toggle like\",\n\"Tue\": \"Tue\",\n\"Tuesday\": \"Tuesday\",\n\"Username:\":
+        \"Username:\",\n\"Video by %(username)s\": \"Video by %(username)s\",\n\"View
+        Photo Page\": \"View Photo Page\",\n\"View Profile\": \"View Profile\",\n\"View
+        Video Page\": \"View Video Page\",\n\"View on Instagram\": \"View on Instagram\",\n\"Wed\":
+        \"Wed\",\n\"Wednesday\": \"Wednesday\",\n\"When you are finished following
+        people,\": \"When you are finished following people,\",\n\"Write a comment...\":
+        \"Write a comment...\",\n\"Yes\": \"Yes\",\n\"You must log in to add a comment.\":
+        \"You must log in to add a comment.\",\n\"You must log in to like this photo.\":
+        \"You must log in to like this photo.\",\n\"You need to be following %(username)s
+        to like or comment\": \"You need to be following %(username)s to like or comment\",\n\"Your
+        username or password was incorrect.\": \"Your username or password was incorrect.\",\n\"am\":
+        \"am\",\n\"banner photo\": \"banner photo\",\n\"nd\": \"nd\",\n\"pm\": \"pm\",\n\"rd\":
+        \"rd\",\n\"reload this page\": \"reload this page\",\n\"st\": \"st\",\n\"th\":
+        \"th\"\n};\n</script>\n        \n<script src=//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/scripts/polyfills/es5-shim.min.js></script>\n<script
+        src=//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/scripts/polyfills/es5-sham.min.js></script>\n<script
+        src=//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/scripts/polyfills/history.js/scripts/bundled/html5/native.history.js></script>\n\n\n<script
+        type=\"text/javascript\">window._sharedData = {\"static_root\":\"\\/\\/d36xtkk24g8jdx.cloudfront.net\\/bluebar\\/669b453\",\"platform\":{\"is_touch\":false,\"app_platform\":\"web\"},\"hostname\":\"instagram.com\",\"entry_data\":{\"DesktopPPage\":[{\"canSeePrerelease\":false,\"viewer\":null,\"media\":{\"code\":\"rbk7ivrf2M\",\"date\":1407487150.0,\"caption\":\"#azores
+        Portuguese dog in the town - very #cute and friendly :)\",\"usertags\":{\"nodes\":[]},\"comments\":{\"nodes\":[{\"text\":\"\\u2764\\ufe0f\\u2764\\ufe0f\",\"viewer_can_delete\":false,\"id\":\"782404311256530409\",\"user\":{\"username\":\"goldie_berlin\",\"profile_pic_url\":\"http:\\/\\/photos-h.ak.instagram.com\\/hphotos-ak-xpa1\\/10507898_586420331474455_125020016_a.jpg\"}},{\"text\":\"yeah
+        I love it too :) I wish I knew what breed is it\",\"viewer_can_delete\":false,\"id\":\"785672860381085121\",\"user\":{\"username\":\"luki3k5\",\"profile_pic_url\":\"http:\\/\\/images.ak.instagram.com\\/profiles\\/profile_4907942_75sq_1392804574.jpg\"}}]},\"shared_by_author\":true,\"likes\":{\"count\":9,\"viewer_has_liked\":false,\"nodes\":[{\"user\":{\"username\":\"igers_azores\",\"profile_pic_url\":\"http:\\/\\/images.ak.instagram.com\\/profiles\\/profile_285281696_75sq_1391693369.jpg\"}},{\"user\":{\"username\":\"goldie_berlin\",\"profile_pic_url\":\"http:\\/\\/photos-h.ak.instagram.com\\/hphotos-ak-xpa1\\/10507898_586420331474455_125020016_a.jpg\"}},{\"user\":{\"username\":\"tamirlebedev\",\"profile_pic_url\":\"http:\\/\\/photos-g.ak.instagram.com\\/hphotos-ak-xfp1\\/10467889_885203018174766_182158359_a.jpg\"}},{\"user\":{\"username\":\"smaoirsh\",\"profile_pic_url\":\"http:\\/\\/images.ak.instagram.com\\/profiles\\/profile_194858541_75sq_1386796103.jpg\"}},{\"user\":{\"username\":\"urania835\",\"profile_pic_url\":\"http:\\/\\/photos-g.ak.instagram.com\\/hphotos-ak-xfa1\\/10666142_977600018933110_1920463606_a.jpg\"}},{\"user\":{\"username\":\"barbaroskinran\",\"profile_pic_url\":\"http:\\/\\/images.ak.instagram.com\\/profiles\\/profile_41414479_75sq_1395196863.jpg\"}},{\"user\":{\"username\":\"free_heaven_\",\"profile_pic_url\":\"http:\\/\\/photos-f.ak.instagram.com\\/hphotos-ak-xpa1\\/928289_960486297298245_2089144516_a.jpg\"}},{\"user\":{\"username\":\"jasmingur\",\"profile_pic_url\":\"http:\\/\\/photos-f.ak.instagram.com\\/hphotos-ak-xfp1\\/10354324_240079016184541_1706191430_a.jpg\"}},{\"user\":{\"username\":\"smuzya\",\"profile_pic_url\":\"http:\\/\\/images.ak.instagram.com\\/profiles\\/profile_427620734_75sq_1372190221.jpg\"}}]},\"owner\":{\"username\":\"luki3k5\",\"requested_by_viewer\":false,\"followed_by_viewer\":false,\"profile_pic_url\":\"http:\\/\\/images.ak.instagram.com\\/profiles\\/profile_4907942_75sq_1392804574.jpg\",\"has_blocked_viewer\":false,\"id\":\"4907942\",\"is_private\":false},\"is_video\":false,\"id\":\"782381381709593996\",\"display_src\":\"http:\\/\\/photos-c.ak.instagram.com\\/hphotos-ak-xfa1\\/10576070_425983834207618_1380249100_n.jpg\"},\"__get_params\":{},\"staticRoot\":\"\\/\\/d36xtkk24g8jdx.cloudfront.net\\/bluebar\\/669b453\",\"__query_string\":\"?\",\"prerelease\":false,\"__path\":\"\\/p\\/rbk7ivrf2M\\/\",\"shortcode\":\"rbk7ivrf2M\"}]},\"country_code\":\"PL\",\"config\":{\"viewer\":null,\"csrf_token\":\"a6bbe5788a08f3ca491a23d06681195f\"}};</script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/cache/bundles/webpack-common.js\"></script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/669b453/cache/bundles/DesktopPPage.js\"></script>\n</body>\n</html>"
+    http_version: 
+  recorded_at: Mon, 20 Oct 2014 11:34:24 GMT
+recorded_with: VCR 2.9.3

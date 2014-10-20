@@ -5,7 +5,7 @@ class InstagramWebsiteScraper
 
   def contact_data_email(data)
     matched = data.match(EMAIL_PATTERN_MATCH)
-    return matched.to_s if matched != nil
+    return matched.to_s if !matched.nil?
     nil
   end
 
@@ -15,7 +15,7 @@ class InstagramWebsiteScraper
     SEARCHABLE_KEYWORDS.each do |ci|
       return data.gsub(',', '') if data.include?(ci)
     end
-    return nil
+    nil
   end
 
   def scrape_data_for_profile_page(html)
@@ -32,17 +32,23 @@ class InstagramWebsiteScraper
   end
 
   def get_likes_and_comments(html)
-    returnee         = {status: 'online'}
+    returnee         = { status: 'online' }
     doc              = Nokogiri::HTML(html)
-    likes_content    = doc.content.match(/"likes":\{"count":[0-9]+(?:\.[0-9]*)?/).to_s
-    likes            = likes_content.match(/[0-9][0-9]*/).to_s
-    comments_content = doc.content.match(/"comments":{"nodes":\[.*?\]}/).to_s || '0'
-    comments         = comments_content.scan(/"id":"[0-9]*"/)
     
-    # instagram media file removed
-    return returnee.merge!({status: 'offline',result: 'error', body:'Page not found for media file'}) if !doc.content.match(/Page Not Found/).nil?
-    return {result: 'error', status: 'offline', body: 'could not scrape web page for likes and comments'} if likes.nil? || comments.nil?
-    return returnee.merge!({result: 'ok', likes_count: likes, comments_count: comments.size.to_s})
+    if !doc.content.match(/Page Not Found/).nil?
+      returnee.merge!({ status: 'offline', result: 'error', body: 'Page not found for media file' })
+    else
+      likes_content    = doc.content.match(/"likes":\{"count":[0-9]+(?:\.[0-9]*)?/).to_s
+      likes            = likes_content.match(/[0-9][0-9]*/).to_s
+      comments_content = doc.content.match(/"comments":{"nodes":\[.*?\]}/).to_s || '0'
+      comments         = comments_content.scan(/"id":"[0-9]*"/)
+
+      if likes.nil? || comments.nil?
+        { result: 'error', status: 'offline', body: 'could not scrape web page for likes and comments' }
+      else
+        returnee.merge!({ result: 'ok', likes_count: likes, comments_count: comments.size.to_s })
+      end
+    end
   end
 
   def get_profile_statistic(html)

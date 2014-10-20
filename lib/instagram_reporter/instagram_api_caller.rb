@@ -39,6 +39,10 @@ class InstagramApiCaller < InstagramInteractionsBase
     call_api_by_access_token_for_media_info(instagram_media_id, access_token, 'likes')
   end
 
+  def call_api_by_access_token_for_media_file_likes_and_comments(instagram_media_id, access_token)
+    call_api_by_access_token_for_media_info(instagram_media_id, access_token, ['likes', 'comments'])
+  end
+
   def call_api_by_api_token_for_media_file_comments(instagram_media_id)
     call_api_by_api_token_for_media_file(instagram_media_id, 'comments')
   end
@@ -114,16 +118,25 @@ class InstagramApiCaller < InstagramInteractionsBase
       access_token ? { access_token: access_token } : { client_id: API_TOKEN }
     end
 
-    def call_api_by_access_token_for_media_info(instagram_media_id, access_token, action)
+    def call_api_by_access_token_for_media_info(instagram_media_id, access_token, actions)
       uri = "/v1/media/#{instagram_media_id}?access_token=#{access_token}"
       response = api_connection.get do |req|
         req.url uri
         req.options = DEFAULT_REQUEST_OPTIONS
       end
+
       case response.status
       when 200
         resp_json = parse_json(response.body)
-        return {result: 'ok'}.merge(resp_json[action])
+        response = { result: 'ok' }
+        if actions.is_a?(Array)
+          actions.each do |action|
+            response[action] = resp_json[action]
+          end
+        else
+          response = response.merge(resp_json[actions])
+        end
+        response
       when 400, 404, 500, 502, 503, 504
         response_body = ''
         begin
@@ -132,9 +145,9 @@ class InstagramApiCaller < InstagramInteractionsBase
           response_body = response.body
         end
         InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
-        return {result: 'error', body: response_body}
+        { result: 'error', body: response_body }
       else
-        raise "call for media #{action} (media_id: #{instagram_media_id}) failed with response #{response.inspect}"
+        raise "call for media #{actions} (media_id: #{instagram_media_id}) failed with response #{response.inspect}"
       end
     end
 
