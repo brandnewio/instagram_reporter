@@ -6,6 +6,7 @@ describe InstagramApiCaller do
   let(:test_hashtag) { "inspiredby" }
   let(:test_media_file_id) { '653714645670132444_16192269' }
   let(:non_existent_media_file_id) { '669371381316733323_213058217' }
+  let(:test_media_file_with_location_id) {'831138234853764564_4168338'}
   let(:access_token) { '1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4' }
   let(:user_id) { '45364550' }
 
@@ -163,6 +164,24 @@ describe InstagramApiCaller do
       VCR.use_cassette('call_api_for_media_file_likes') do
         response = subject.call_api_by_api_token_for_media_file_likes(test_media_file_id)
         expect(response['count']).to eq(4072)
+      end
+    end
+  end
+
+  describe '#call_api_by_access_token_for_media_file_location' do
+    it 'returns media file location' do
+      VCR.use_cassette('call_api_by_access_token_for_media_file_location') do
+        response = subject.call_api_by_access_token_for_media_file_location(test_media_file_with_location_id, access_token)
+        expect(response[:result]).to eq('ok')
+        expect(response['latitude']).to eq(59.943762911)
+        expect(response['longitude']).to eq(30.26491185)
+      end
+    end
+
+    it 'returns error when there is no location for media file' do
+      VCR.use_cassette('call_api_by_access_token_for_media_file_without_location') do
+        response = subject.call_api_by_access_token_for_media_file_location(test_media_file_id, access_token)
+        expect(response[:result]).to eq('error')
       end
     end
   end
