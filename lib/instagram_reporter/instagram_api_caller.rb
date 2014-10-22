@@ -128,13 +128,13 @@ class InstagramApiCaller < InstagramInteractionsBase
       case response.status
       when 200
         resp_json = parse_json(response.body)
-        response = {}
+        response = { result: 'ok' }
         if actions.is_a?(Array)
           actions.each do |action|
-            response[action] = { result: 'ok' }.merge(resp_json[action])
+            response[action] = resp_json[action]
           end
         else
-          response = { result: 'ok' }.merge(resp_json[actions])
+          response = response.merge(resp_json[actions])
         end
         response
       when 400, 404, 500, 502, 503, 504
