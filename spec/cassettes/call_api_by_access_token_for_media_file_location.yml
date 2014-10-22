@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/831138234853764564_4168338?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 22 Oct 2014 12:52:24 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - csrftoken=187aea97d5c72daf0ad898aa7abe178b; expires=Wed, 21-Oct-2015 12:52:24
+        GMT; Max-Age=31449600; Path=/, ccode=PL; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4998'
+      Content-Length:
+      - '4932'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":{"attribution":null,"tags":[],"type":"image","location":{"latitude":59.943762911,"longitude":30.26491185},"comments":{"count":439,"data":[{"created_time":"1413841260","text":"Hii
+        im single, anybody love and marry me??","from":{"username":"alfarisi_guci","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_448043320_75sq_1382885093.jpg","id":"448043320","full_name":"Rudi
+        Alfarisi Guci"},"id":"835683519093288725"},{"created_time":"1413843539","text":"Hello
+        beauty","from":{"username":"baby_yxj","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xpa1\/1742594_295307154011122_1963587403_a.jpg","id":"1509504023","full_name":"Menos
+        rigoroso"},"id":"835702641680198781"},{"created_time":"1413843732","text":"Beautiful
+        \ud83d\ude0a","from":{"username":"saaraaah02","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xaf1\/10731571_849351161782291_1085853642_a.jpg","id":"1532589139","full_name":"Sarah07\ud83d\ude0e"},"id":"835704257342876909"},{"created_time":"1413844369","text":"Very
+        appealing young beauty","from":{"username":"ward_eye_guy","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfa1\/10597415_304635086382553_1876580743_a.jpg","id":"1453430590","full_name":"ward"},"id":"835709603511807596"},{"created_time":"1413845007","text":"@sara_arif1
+        @reem_mahmoud_s @mayoarif \u0632\u064a \u0645\u064a","from":{"username":"rana.arif","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfa1\/10268830_704160419641457_1875387702_a.jpg","id":"1319931372","full_name":"Rana"},"id":"835714950804811763"},{"created_time":"1413846468","text":"\u0627\u06cc\u0686\u0647
+        \u0648\u0648\u0631\u0648\u0645","from":{"username":"mammad_az","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","id":"1532390598","full_name":"mammad"},"id":"835727207114747641"},{"created_time":"1413848735","text":"\ud83d\ude0d","from":{"username":"menlifestyleblog","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xfa1\/10735337_374941119337623_1912358116_a.jpg","id":"1536038753","full_name":"Men''s
+        Fashion Style"},"id":"835746229113859085"},{"created_time":"1413961896","text":"amazing
+        picture","from":{"username":"fashionabletrend","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_723873909_75sq_1385663993.jpg","id":"723873909","full_name":"FashionableTrend"},"id":"836695485555420898"}]},"filter":"Lo-fi","created_time":"1413299420","link":"http:\/\/instagram.com\/p\/uIy9IvtC3U\/","likes":{"count":22257,"data":[{"username":"vlada_karpycheva2904","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/10735335_359955420837479_1613188160_a.jpg","id":"1233222536","full_name":"\u0432\u043b\u0430\u0434\u0430
+        \u043a\u0430\u0440\u043f\u044b\u0447\u0435\u0432\u0430"},{"username":"kalyuzhnaya_yulia","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/10624022_344309742408992_554869162_a.jpg","id":"1286733250","full_name":"kalyuzhnaya_yulia"},{"username":"javiercbarriga","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/10616837_739826796083268_1622510861_a.jpg","id":"1257629715","full_name":"Javier
+        Celis Barriga"},{"username":"d.dmitrievich","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xpf1\/1742951_690235224385681_1935941863_a.jpg","id":"1200008339","full_name":"\u25b2Melon\u25b2"}]},"images":{"low_resolution":{"url":"http:\/\/scontent-b.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/10727589_295861500608808_797064362_a.jpg","width":306,"height":306},"thumbnail":{"url":"http:\/\/scontent-b.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/10727589_295861500608808_797064362_s.jpg","width":150,"height":150},"standard_resolution":{"url":"http:\/\/scontent-b.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/10727589_295861500608808_797064362_n.jpg","width":640,"height":640}},"users_in_photo":[],"caption":{"created_time":"1413299420","text":"\u0415\u0441\u043b\u0438
+        \u043f\u0440\u0438\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c\u0441\u044f
+        ,\u0442\u043e \u043c\u043e\u0436\u043d\u043e \u0443\u0432\u0438\u0434\u0435\u0442\u044c,\u0447\u0442\u043e
+        \u043d\u0430 \u0441\u0442\u0430\u043a\u0430\u043d\u0447\u0438\u043a\u0435
+        \u043d\u0430\u043f\u0438\u0441\u0430\u043d\u043e \"\u041c\u0430\u0445\u0443\u0440\u043a\u0430\"\ud83c\udf43\ud83d\ude04","from":{"username":"mashashatrova","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xap1\/10175396_571217823024212_828660966_a.jpg","id":"4168338","full_name":"M
+        A S H A\u2022XVII\u2022S H A T R O V A"},"id":"831138235449355947"},"user_has_liked":false,"id":"831138234853764564_4168338","user":{"username":"mashashatrova","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xap1\/10175396_571217823024212_828660966_a.jpg","full_name":"M
+        A S H A\u2022XVII\u2022S H A T R O V A","bio":"","id":"4168338"}}}'
+    http_version: 
+  recorded_at: Wed, 22 Oct 2014 12:52:24 GMT
+recorded_with: VCR 2.9.3

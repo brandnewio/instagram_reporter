@@ -22,13 +22,24 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/tags/#{tag}/media/recent", params, true)
   end
 
-  def get_user_recent_media(user_id, access_token)
-    api_get_and_parse("/v1/users/#{user_id}/media/recent", query_params(access_token), true)
+  def get_user_recent_media(user_id, access_token, max_tag_id = nil)
+    params = query_params(access_token)
+    params.merge!(max_tag_id: max_tag_id) unless max_tag_id.nil?
+    api_get_and_parse("/v1/users/#{user_id}/media/recent", params, true)
   end
 
   def get_users_by_name(username, access_token)
     params = query_params(access_token).merge!(q: username)
     api_get_and_parse("/v1/users/search", params, true)
+  end
+
+  def call_api_by_access_token_for_media_file_location(instagram_media_id,access_token)
+    call_api_by_access_token_for_media_info(instagram_media_id, access_token, 'location')
+  end
+
+  def get_location_info_by_access_token(longitude, latitude, access_token)
+    params = query_params(access_token).merge!(lng: longitude, lat: latitude)
+    api_get_and_parse("/v1/locations/search", params, true)
   end
 
   def call_api_by_access_token_for_media_file_comments(instagram_media_id,access_token)
@@ -134,6 +145,7 @@ class InstagramApiCaller < InstagramInteractionsBase
             response[action] = resp_json[action]
           end
         else
+          return {result: 'error', body: 'no location value present'} if actions == 'location' && resp_json[actions].nil?
           response = response.merge(resp_json[actions])
         end
         response

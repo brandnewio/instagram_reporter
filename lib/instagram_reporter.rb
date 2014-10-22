@@ -9,6 +9,7 @@ require 'capybara'
 require 'capybara/dsl'
 require 'nokogiri'
 require 'oj'
+require 'excon'
 
 # InstagramReporter module (including logger)
 require 'instagram_reporter/instagram_reporter'
