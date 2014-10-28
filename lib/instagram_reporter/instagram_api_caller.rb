@@ -80,7 +80,11 @@ class InstagramApiCaller < InstagramInteractionsBase
   private
 
     def parse_json(data)
-      Oj.load(data)['data']
+      begin
+        Oj.load(data)['data']
+      rescue Oj::ParseError
+        raise "Oj Parser Error: unable to parse instagram api response data #{data}"
+      end
     end
 
     def get_pagination(data)
@@ -194,7 +198,7 @@ class InstagramApiCaller < InstagramInteractionsBase
       @api_connection ||= Faraday.new(url: API_BASE_URL) do |faraday|
         faraday.request  :url_encoded
         faraday.use FaradayMiddleware::FollowRedirects
-        faraday.adapter  :excon
+        faraday.adapter  :typhoeus
       end
     end
 end
