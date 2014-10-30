@@ -71,10 +71,12 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/locations/#{location_id}", query_params(access_token), false)
   end
 
-  def get_followers(user_id, access_token)
+  def get_followers(user_id, access_token, cursor = nil)
     #/v1/users/3/followed-by?access_token=ACCESS-TOKEN
     #/v1/users/45364550/followed-by
-    api_get_and_parse("/v1/users/#{user_id}/followed-by", query_params(access_token), false)
+    params = query_params(access_token)
+    params.merge!(cursor: cursor) unless cursor.nil?
+    api_get_and_parse("/v1/users/#{user_id}/followed-by", params, true)
   end
 
   private

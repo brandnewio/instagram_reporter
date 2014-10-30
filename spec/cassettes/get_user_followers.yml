@@ -1,0 +1,230 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/165640/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 30 Oct 2014 13:23:43 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - csrftoken=597fea6b5db757d5d0e02c75b1173a70; expires=Thu, 29-Oct-2015 13:23:43
+        GMT; Max-Age=31449600; Path=/
+      - ccode=PL; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4999'
+      Content-Length:
+      - '13515'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/165640\/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4\u0026cursor=1414630850768","next_cursor":"1414630850768"},"meta":{"code":200},"data":[{"username":"instanbulphoto","bio":"\u0130stanbul
+        Foto\u011fraflar\u0131\n#instanbulphoto\n#instanbulfoto","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfa1\/10729193_779629555427289_628733302_a.jpg","full_name":"","id":"1544643028"},{"username":"lizzielisunsosun","bio":"I
+        expect you to communicate. webcam and chat without payment ... my nickname
+        HotConny","website":"http:\/\/busticket-turkey.com\/go\/V5s9L9yAhA.php","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/10731804_1566852800204970_1828294181_a.jpg","full_name":"","id":"1545523272"},{"username":"gretalisunsosun","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1545523426"},{"username":"falangespezzata","bio":"","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xpa1\/10520317_1437797203165364_408096693_a.jpg","full_name":"Alessandro
+        Salzmann","id":"205089122"},{"username":"soranvarsa19071hotmailcom","bio":"","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/10729166_700507863363680_1521722802_a.jpg","full_name":"kaan__","id":"1394851092"},{"username":"maryam.rad78","bio":"","website":"","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xpa1\/926852_810706872322486_1735165881_a.jpg","full_name":"mary","id":"1541190130"},{"username":"aslmutlu123","bio":"Bence
+        o soz boyle olmaliydi; geceler derin, yaralar kadar.","website":"","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xpa1\/1390124_341024592740327_96954902_a.jpg","full_name":"Asl\u0131
+        Mutlu","id":"1520915606"},{"username":"tiikkaaapresintya","bio":"","website":"","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/10707061_1503237299933821_1796282826_a.jpg","full_name":"Tika
+        Apresintya","id":"1545399308"},{"username":"vistiyogarrido","bio":"Twitter:vistiyogarrido","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xaf1\/10724019_278320019043676_388853992_a.jpg","full_name":"","id":"475187238"},{"username":"gemiciogluozlem","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_258742310_75sq_1353845422.jpg","full_name":"Ozlem","id":"258742310"},{"username":"mh_mim","bio":"\ud83c\udf31\ud83c\udf3f\ud83c\udf33\ud83c\udf43\ud83c\udf3c\ud83c\udf42\ud83c\udf41\ud83c\udf44","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xfa1\/10724753_1719686744922443_1122138048_a.jpg","full_name":"Mim_mh","id":"1292478141"},{"username":"jeremy7","bio":"A
+        hiking lover with taking pictures. Himalayas ! \/ El Camino de Santiago !!
+        \/ Kalalau Trail !!!","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_9397894_75sq_1392635166.jpg","full_name":"Jeremy
+        Hong","id":"9397894"},{"username":"rossingtonn","bio":"|The White Black Frank
+        White|","website":"","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xpa1\/928297_258576411014133_2082560226_a.jpg","full_name":"Ross
+        Ington","id":"232633143"},{"username":"_foreignaffairs_","bio":"Travel | Photography
+        | Foreign Tales","website":"http:\/\/www.500px.com\/alexanderzonneveld","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xap1\/1389816_766085843432902_1409822343_a.jpg","full_name":"Alexander
+        Zonneveld","id":"567142303"},{"username":"iqbaal_ramadhana","bio":"{ peace
+        begin''s with a smile }\nLine : iqbaalramadhana\nPou : iqbaalramadhana\nTwiter
+        : @iqbaalramadhana\nPath : iqbaal_ramadhana","website":"http:\/\/www.facebook.com\/iqbaal_ramadhana","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xaf1\/10611076_776220025753587_1041131309_a.jpg","full_name":"iqbaalramadhana","id":"1346782450"},{"username":"vladoviz","bio":"Aficionado
+        a la aventura y la fotograf\u00eda, amante de la naturaleza en todas sus expresiones.
+        Puerto Ordaz, Venezuela.","website":"","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfp1\/10424520_1463155283936342_1086378384_a.jpg","full_name":"Vladimir
+        Vizcaino","id":"209110047"},{"username":"s6amsalem","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_492398289_75sq_1386105108.jpg","full_name":"satam","id":"492398289"},{"username":"halimmee","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_212635878_75sq_1352038674.jpg","full_name":"","id":"212635878"},{"username":"sarapcyyy","bio":"","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/10735094_680791192034052_1856520183_a.jpg","full_name":"g\u00f6khan
+        keskin","id":"1537376352"},{"username":"loy_don","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1530934519"},{"username":"nancyfancy__","bio":"","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/10665925_332393880272194_906550350_a.jpg","full_name":"Maureen\/Nancy","id":"527428893"},{"username":"diena_","bio":"Mostly
+        pic of my family or things that''s interesting to my eye","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_23464412_75sq_1398278198.jpg","full_name":"Diena
+        Said","id":"23464412"},{"username":"actus_sport","bio":"Deux personnes sur
+        ce compte :: @vvince_v @bbaptiste_b.tous les r\u00e9sultats de sport (ou presque
+        \ud83d\udc4f).","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xpa1\/925562_373623809463161_1782794602_a.jpg","full_name":"","id":"1545231886"},{"username":"marianacobzari","bio":"I
+        swear I am going to travel the world. Berlin based, from Moldova.","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xap1\/10483432_843663029001314_421155766_a.jpg","full_name":"","id":"20137100"},{"username":"mydarktwistedside","bio":"Lebe
+        meine anderes Ich aus, sage all das worauf ich Lust hab \ud83d\udc28 von Tiefsinnigkeit
+        \u00fcber Kleidung und Essen bis Spa\u00df wird viel dabei sein\u270c\ufe0f","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfa1\/10729328_1524592924454697_1923985031_a.jpg","full_name":"","id":"1545589619"},{"username":"bornreadybetty","bio":"Community
+        Team @Instagram Europe. New York lover. Wanderlust queen. Fan of all things
+        delicious.","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/10623775_1451468258462096_1431324507_a.jpg","full_name":"Mareike
+        Bruns","id":"37628117"},{"username":"nel_ts","bio":"Parrillero de coraz\u00f3n
+        , ing de profesi\u00f3n. ntrejosalvo@gmail.com","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_313542912_75sq_1391057972.jpg","full_name":"Nelson
+        Trejo Salvo","id":"313542912"},{"username":"_xrawr13x_","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Angie","id":"483416033"},{"username":"adingattamimi_photography","bio":"\ud83c\udfe1
+        Melbourne, AU and beyond | \ud83d\udc64 Travel photographer, mentor and story
+        teller | \ud83d\udcf7 Nikon and Fuji X Series | \ud83d\udcf1\ud83d\udcbb Apple
+        | \ud83d\udce7 info@aa-photography.net","website":"http:\/\/www.adingattamimiphotography.com","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfp1\/10454190_694052270661814_1468669068_a.jpg","full_name":"Ading
+        Attamimi","id":"33797437"},{"username":"marru_ali","bio":"##Buzy in me \ud83d\udc60\ud83d\udc60
+        (un) in follow I''ll (un) follow you \ud83d\ude3c\ud83d\ude3c \ud83d\udcb8\ud83d\udcb8\ud83d\udcb8
+        my job is to spend the money of my father \ud83d\udcb4\ud83d\udcb5\ud83d\udcb0\ud83d\udc51
+        TWITTER : @ammarakazmi2","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/10727297_1498357603777676_1894605428_a.jpg","full_name":"Marru
+        ali","id":"247812759"},{"username":"sankar1896","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_376687216_75sq_1374083543.jpg","full_name":"Sankar
+        Rao","id":"376687216"},{"username":"dagi_beeee_fan_","bio":"","website":"","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xfa1\/10725023_1484307891857847_1448855144_a.jpg","full_name":"","id":"1542488554"},{"username":"helishah1212","bio":"","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xpa1\/923789_1469674419987482_1569252913_a.jpg","full_name":"Heli","id":"895007695"},{"username":"barbara25x","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_495542309_75sq_1375704778.jpg","full_name":"Barbara
+        Fischer","id":"495542309"},{"username":"vidayeye","bio":"","website":"","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xaf1\/10684309_334917813342606_1249292541_a.jpg","full_name":"","id":"1468700437"},{"username":"photoristique","bio":"","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/10732041_1484192648514192_1518737962_a.jpg","full_name":"","id":"1544737503"},{"username":"jokemoun10","bio":"","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xaf1\/10413264_725643497475099_719812448_a.jpg","full_name":"","id":"1382132384"},{"username":"alv_edor63","bio":"\"Live
+        joy. Be kind. Love unconditionally.\"ALM..\u2764Vancouver Coal Harbour.\ud83d\ude0d\ud83d\udc4d","website":"","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/10735069_389122201238277_782479062_a.jpg","full_name":"Alvin
+        Edora","id":"1541081210"},{"username":"dee2dawn","bio":"HAPPINESS. It''s up
+        to you on how you define it.\nPhoto lover || Dreamer || PH","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/10543949_1445807842350164_1211917111_a.jpg","full_name":"dawndia
+        n.","id":"184327928"},{"username":"travel_shop1","bio":"\u0646\u0633\u062a\u0639\u0631\u0636
+        \u0647\u0646\u0627 \u0635\u0648\u0631\u0627 \u0644\u0623\u062c\u0645\u0644
+        \u0645\u0627 \u0631\u0623\u062a\u0647 \u0639\u064a\u0648\u0646 \u0627\u0644\u0628\u0634\u0631
+        \u0641\u064a \u0647\u0630\u0627 \u0627\u0644\u0643\u0648\u0646 \u060c \u0634\u0627\u0631\u0643\u0646\u0627
+        \u0645\u0627 \u062a\u0631\u0627\u0647 \u0639\u064a\u0646\u0643 \u062c\u0645\u064a\u0644\u0627\u064b
+        \u060c\u060c","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/10748475_786793421380872_148002370_a.jpg","full_name":"\u0645\u062a\u0639\u0629
+        \u0627\u0644\u0633\u0641\u0631","id":"1544642398"},{"username":"shqipe.kololli","bio":"Oh
+        Hi Tushe","website":"","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xfa1\/10747928_1533011006943197_400823863_a.jpg","full_name":"","id":"615319757"},{"username":"hoshizora.meteo","bio":"","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xaf1\/10729369_402722173209185_1363606926_a.jpg","full_name":"hoshizora.meteo","id":"1545306219"},{"username":"bver_x","bio":"\ue41d
+        Sawasdee kub (Hello), I''m Thai nice to meet you all\ue00e","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_2819202_75sq_1301220561.jpg","full_name":"","id":"2819202"},{"username":"galata33666","bio":"","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/914394_730310273689298_1927431783_a.jpg","full_name":"Adem
+        \u015ea\u015fmaz","id":"1517099982"},{"username":"celiashivara","bio":"","website":"","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/10693237_308306602694285_1812707098_a.jpg","full_name":"","id":"222860200"},{"username":"ldnubern","bio":"Traveling
+        the US then onto the world! #Nuventures","website":"http:\/\/www.nuventuretravels.wordpress.com","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_297280115_75sq_1359438001.jpg","full_name":"Lindsey
+        Desmarais Nubern","id":"297280115"},{"username":"rohim_khazanah","bio":"Karyawati  tinggal
+        Bandung cimahi","website":"http:\/\/www.nhz.com","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xap1\/1517319_744275668943322_1136138402_a.jpg","full_name":"zr
+        nuy aziyah hasanah","id":"1545399062"},{"username":"m_qasim86","bio":"LONDON  Willesden
+        LANE Brent","website":"","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xap1\/923820_495408180601918_1805032825_a.jpg","full_name":"","id":"326037667"},{"username":"faygreenan","bio":"Life
+        is like a box of chocolates... \u270c\ud83d\udc9a","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xfa1\/10731545_723294477751899_1298346863_a.jpg","full_name":"Fay","id":"55692123"},{"username":"iridellafrs","bio":"\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2640
+        Puglia, Italy \ud83c\uddee\ud83c\uddf9\n\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800Daily
+        life pictures \uf8ff\n\u2800\u2800\u2800\u2800\u2800\u2800\ud83c\udf0e Travel
+        \ud83c\udfb6 Music \ud83c\udf5d Food","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/10735331_1484562465166552_1165536584_a.jpg","full_name":"\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800Iride
+        \u2742 Ferrarese","id":"8814726"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/165640/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+  recorded_at: Thu, 30 Oct 2014 13:23:43 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/165640/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4&cursor=1414444718563
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 30 Oct 2014 13:24:45 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - csrftoken=6bfb712dc747976b8bc608b10bc95240; expires=Thu, 29-Oct-2015 13:24:45
+        GMT; Max-Age=31449600; Path=/
+      - ccode=PL; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4998'
+      transfer-encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/165640\/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4\u0026cursor=1414434213375","next_cursor":"1414434213375"},"meta":{"code":200},"data":[{"username":"mkljay","bio":"I
+        hold a beast, an angel, and a madman inside me | Medical Student | Documenting
+        beautiful things | London |  Ireland","website":"http:\/\/special-needs.blogspot.com","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfa1\/10611113_802011119851761_1021173588_a.jpg","full_name":"Michael","id":"18784633"},{"username":"a_wanderluster","bio":"I
+        want to make memories all over the world... My photos are my souvenirs. \ud83c\udf0e\ud83d\udcf7","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xpa1\/927469_954724507875235_457451352_a.jpg","full_name":"Traveler\/Explorer","id":"693324819"},{"username":"mr_sprichoo","bio":"","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfp1\/1391409_729521843788618_2034584304_a.jpg","full_name":"Mr
+        Sprichoo","id":"1531420763"},{"username":"sami.ucuk","bio":"Nam\u0131 De\u011fer
+        Tantana","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/10724635_1576622975899690_1333208111_a.jpg","full_name":"Sami
+        U\u00e7uk","id":"1540454252"},{"username":"anapaulanogueira13","bio":"Movie,
+        Art, Journalism, Photografy, Models. Community Toplessinrio. http:\/\/www.behance.net\/anapnogueira","website":"http:\/\/toplessinrio.wordpress.com","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/10727223_329429540573973_1112645856_a.jpg","full_name":"Ana
+        Paula Nogueira","id":"41846944"},{"username":"marsangalo","bio":"\"Ao bom
+        entendedor a morte \u00e9 apenas mais uma aventura\" Albus Dumbledore \ud83d\ude09
+        Salvador, 15 Brasil","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/10707174_721503231254730_1623138066_a.jpg","full_name":"Maria
+        Sangalo","id":"339401164"},{"username":"kai_linehan","bio":"I love photography.
+        NIKON D5200\ud83d\udcf7 and IPhone 5s\ud83d\udcf1","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfp1\/10449030_269914369864072_1010848649_a.jpg","full_name":"Kai","id":"615923165"},{"username":"ozkardeslermakina","bio":"","website":"http:\/\/www.ozkardeslermakina.com","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/10735060_303947809794111_826602141_a.jpg","full_name":"\u00d6zkardesler
+        Makina Ticaret A.S","id":"1543080553"},{"username":"sedattozbek","bio":"Sadece
+        G\u00fcl\u00fcmseyin....:D","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_458442848_75sq_1395642905.jpg","full_name":"Sedat
+        \u00d6zbek","id":"458442848"},{"username":"peichi73","bio":"","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/10735011_292898914227184_1969562170_a.jpg","full_name":"Pei
+        Chi Lin","id":"368596643"},{"username":"grandnoor","bio":"\u0627\u0631\u0649
+        \u0627\u0644\u0623\u0641\u0642 \u0627\u0644\u0641\u0633\u064a\u062d \u0623\u0645\u0627\u0645\u064a
+        \u0648\u062a\u062a\u0633\u0639 \u062f\u0648\u0627\u0626\u0631 \u0627\u0644\u062d\u064a\u0627\u0629
+        .   .\u0641\u064a\u0642\u0648\u0644\u0646 \u0644\u064a\u0633 \u0644\u0643
+        \u0627\u0644\u0627 \u0627\u0644\u0632\u0648\u0627\u064a\u0627","website":"","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xfa1\/10748312_933515006661943_127544768_a.jpg","full_name":"Q","id":"1538249582"},{"username":"meyernadine","bio":"","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xaf1\/10683817_1556983197857292_256169138_a.jpg","full_name":"Nadine
+        Meyer","id":"1427401881"},{"username":"ines.correia.figueiredo","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Maria
+        In\u00eas","id":"1412759416"},{"username":"azamatcarykulyyew","bio":"","website":"","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/10727588_406775146138606_1204726604_a.jpg","full_name":"azamat","id":"1530543035"},{"username":"gibevent","bio":"Uygun
+        fiyata ki\u015fiye \u00f6zel tasar\u0131m ve malzemeler..\n\u2709\ufe0f gibevent@gmail.com
+        - \ud83d\udc95\ud83d\udc95\ud83d\udc95Kargo aliciya aittir \ud83d\udc95\ud83d\udc95\ud83d\udc95
+        \ud83d\udcf10535 564 36 09","website":"","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xpf1\/10424662_520568371388127_522848394_a.jpg","full_name":"Gib
+        Event","id":"929107733"},{"username":"blkface88","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1543119400"},{"username":"delautrecotedublog","bio":"Hello,
+        welcome to DLCDB, Mathilde \u0026 Damien''s travel blog.","website":"http:\/\/www.delautrecotedublog.com","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xpa1\/10520390_654353198017786_431560175_a.jpg","full_name":"DLCDB","id":"1539807616"},{"username":"yolo.time","bio":"Hei\u00dfe
+        Marcel","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/10727258_669508449813272_2065584179_a.jpg","full_name":"YOLO.TIME
+        XD","id":"1543100295"},{"username":"buzdolabi1234","bio":"","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfp1\/10424388_603039623133962_1457296570_a.jpg","full_name":"abdullah","id":"1537831368"},{"username":"tena_tantoon","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_851446832_75sq_1387918768.jpg","full_name":"Tena_tantoon","id":"851446832"},{"username":"saudhzazi","bio":"\u0628\u062a\u0628\u0642\u064a\u064b  \u0639\u0645\u0631\u064a
+        \u0628\u0642\u064a","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xaf1\/10735195_1536557543256427_1631633620_a.jpg","full_name":"Saud","id":"307353202"},{"username":"amirhosein.farhadinia","bio":"","website":"","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/10729285_171795859662079_1606368436_a.jpg","full_name":"Amir
+        Hosein Farhadinia","id":"1542982399"},{"username":"caapirass","bio":"\"Si
+        pu\u00f2 cambiare il proprio futuro cambiando il proprio atteggiamento\".
+        \ud83d\udc91\ud83d\udc9e\nCanon EOS 1100D \ud83d\udcf7","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/10693501_628797263903392_1076996694_a.jpg","full_name":"","id":"1416625699"},{"username":"amazingitalytourswithus","bio":"","website":"http:\/\/www.amazing-italy.com","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/10731601_1485136888422655_308130480_a.jpg","full_name":"AMAZINGITALY","id":"1541689705"},{"username":"ajboss2002","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1541653194"},{"username":"mehrdadheidarzade","bio":"","website":"","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/10593521_512733335537766_70493794_a.jpg","full_name":"Mehrad
+        HRZ","id":"1454498788"},{"username":"ckeyn","bio":"Ooh catch me!","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfa1\/10623890_779461715438089_1495634438_a.jpg","full_name":"Chaz
+        Waterkeyn","id":"276116281"},{"username":"aggimehandzhiyska","bio":"Snapchat:
+        aggichaa \/\nnature lover \nart girl\narchitecture\nfreedom\nhappiness \nPhotography\n\/
+        natural girl ;) \/ instagram: healthyfoodsbg","website":"","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xfa1\/10598186_1678362075723159_361422935_a.jpg","full_name":"A.
+        M. : )","id":"202752177"},{"username":"kloud9bosslady","bio":"#RockMom\ud83d\udc6b\ud83d\udc99\ud83d\udc60\n.\nBe
+        a fountain, not a drain. Drama\u0026energy vampires are not welcomed in my
+        life. #QueenLife\ud83d\udc51\n.\nYour opinion is not my reality.\ud83c\udf05\ud83c\udf3b\ud83c\udf33\ud83c\udf3a","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xaf1\/10735321_867862096580283_305532639_a.jpg","full_name":"Susan\u2693\u2651\ud83d\udcf7","id":"15582135"},{"username":"susanacplima","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_271314132_75sq_1367832433.jpg","full_name":"Susana
+        Lima","id":"271314132"},{"username":"aynyai717","bio":"Free chat with me on
+        website","website":"http:\/\/lyfohavi.builtfree.org\/padug.html","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xaf1\/10731942_510622049074881_2115813456_a.jpg","full_name":"","id":"1539853859"},{"username":"nikemarkatr","bio":"","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xaf1\/10691619_357603847724931_50543443_a.jpg","full_name":"","id":"1493108189"},{"username":"danaopran","bio":"","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/10727708_950738588274036_285459185_a.jpg","full_name":"","id":"1298796041"},{"username":"mmang2","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_215555124_75sq_1386946255.jpg","full_name":"mmang2","id":"215555124"},{"username":"cefer_nesirov","bio":"","website":"","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xaf1\/10731726_674527459312683_1328670784_a.jpg","full_name":"Cefer
+        Nesirov","id":"1539298174"},{"username":"jajo9jj","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"Mateusz
+        J","id":"1401492647"},{"username":"cheerful28","bio":"\ud83c\udf43\ud83c\udf41\ud83c\udf43All
+        Photographs taken by me! \ud83d\udcf7\ud83d\udcf1\u00ae","website":"","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/10748071_741886802547399_662265735_a.jpg","full_name":"Ms
+        Autumn \ud83c\udf43\ud83c\udf41\ud83c\udf42","id":"750059673"},{"username":"zarkogavrilovic","bio":"","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xap1\/923817_783063365070898_869646700_a.jpg","full_name":"Zarko
+        Gavrilovic","id":"976851745"},{"username":"jcaran","bio":"Instagramer, Runner,
+        \uf8ff \u0026 twitter addict - \ud83d\udcf7Nikon D3000, \ud83d\udcf1iPhone
+        5 - Camera+ \u0026 Snapseed","website":"http:\/\/about.me\/jcaran","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_932066_75sq_1356782260.jpg","full_name":"Jan
+        Caran","id":"932066"},{"username":"natashdi","bio":"20, Russia,Moscow \ud83c\udf80
+        Impossible is nothing \ud83d\ude09","website":"https:\/\/www.facebook.com\/natasha.dikaya.5","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/10706774_299051226963694_1518667042_a.jpg","full_name":"Natasha
+        Dikaya","id":"314923435"},{"username":"cheryl_2303","bio":"\ud83d\udcf7 Pictures
+        of my life - the things that have made me smile \ud83d\ude0a and quotes \ud83d\udc48.","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/10735149_573321602796880_1782063119_a.jpg","full_name":"Cheryl
+        L \ud83c\udf42\ud83c\udf83","id":"47320812"},{"username":"penguin_for","bio":"Pfe!!  Mi
+        life is Your","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xaf1\/10723722_373384089496212_1849777918_a.jpg","full_name":"","id":"1525286723"},{"username":"m.photography_","bio":"Naturephotography
+        \u2661\nAll photos are taken by me \u2606","website":"","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/10601942_943228452359374_24770070_a.jpg","full_name":"","id":"1473753295"},{"username":"agayeva_gulus","bio":"","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xaf1\/10597530_336262873214956_639626801_a.jpg","full_name":"Gulus
+        Agayeva","id":"1482291306"},{"username":"camilandreaojeda","bio":"","website":"","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfp1\/10413063_262371107292356_319081505_a.jpg","full_name":"cami
+        ojeda","id":"667513071"},{"username":"bsthmt","bio":"","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xaf1\/1599648_854481667924697_217901209_a.jpg","full_name":"","id":"1542999459"},{"username":"malik96x","bio":"\u003c3
+        srk \u003c3 coke \u003c3 food \u003c3 Ian sommerhalder \u003c3 photography
+        \u003c3 - I study shit at school that gets me stressed -.- I go high on coke
+        so beware! Haahaaa","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_613433759_75sq_1398020907.jpg","full_name":"Asma
+        Malik","id":"613433759"},{"username":"_taisfernandess","bio":"Enjoy life","website":"","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/10611287_673091912759616_370703729_a.jpg","full_name":"taaai","id":"315188408"},{"username":"lil1ifejsl","bio":"","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/10727815_785469628166506_1453610477_a.jpg","full_name":"Jackie
+        Lo","id":"1522979389"},{"username":"ppitogrca","bio":"","website":"","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfa1\/10665329_697502426996986_176417438_a.jpg","full_name":"Pepito
+        Garcia","id":"1491887285"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/165640/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4&cursor=1414444718563
+  recorded_at: Thu, 30 Oct 2014 13:24:45 GMT
+recorded_with: VCR 2.9.3

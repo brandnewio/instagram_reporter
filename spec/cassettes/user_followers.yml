@@ -12,7 +12,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 404
@@ -44,7 +44,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: ! "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
         class=\"hl-en not-logged-in \">\n<head>\n    <meta charset=\"UTF-8\" />\n
         \   <title>Page Not Found &bull; Instagram</title>\n\n    <meta name=\"robots\"
         content=\"noimageindex\" />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\"
@@ -198,7 +198,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 404
@@ -230,7 +230,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: ! "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
         class=\"hl-en not-logged-in \">\n<head>\n    <meta charset=\"UTF-8\" />\n
         \   <title>Page Not Found &bull; Instagram</title>\n\n    <meta name=\"robots\"
         content=\"noimageindex\" />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\"
@@ -384,7 +384,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 404
@@ -416,7 +416,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: ! "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
+      string: "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"
         class=\"hl-en not-logged-in \">\n<head>\n    <meta charset=\"UTF-8\" />\n
         \   <title>Page Not Found &bull; Instagram</title>\n\n    <meta name=\"robots\"
         content=\"noimageindex\" />\n\n    <link rel=\"Shortcut Icon\" type=\"image/x-icon\"
@@ -570,7 +570,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
   response:
     status:
       code: 200
@@ -606,7 +606,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: ! '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/45364550\/followed-by?access_token=622268995.1fb234f.2dddf4bf03bb4e4091af3b2ea32887e4\u0026cursor=1335124316229","next_cursor":"1335124316229"},"meta":{"code":200},"data":[{"username":"dtrojanowski","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_530991023_75sq_1377855699.jpg","full_name":"Daniel
+      string: '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/45364550\/followed-by?access_token=622268995.1fb234f.2dddf4bf03bb4e4091af3b2ea32887e4\u0026cursor=1335124316229","next_cursor":"1335124316229"},"meta":{"code":200},"data":[{"username":"dtrojanowski","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_530991023_75sq_1377855699.jpg","full_name":"Daniel
         Trojanowski","id":"530991023"},{"username":"fargere","bio":"","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfp1\/10549597_569879776454137_1119085070_a.jpg","full_name":"Christopher
         Fargere","id":"1433101232"},{"username":"j_creixell","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_248435969_75sq_1368811814.jpg","full_name":"Jorge
         Creixell","id":"248435969"},{"username":"missplr","bio":"British in Berlin
@@ -690,7 +690,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: US-ASCII
-      string: ! '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/45364550\/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4\u0026cursor=1340223806352","next_cursor":"1340223806352"},"meta":{"code":200},"data":[{"username":"kaena_me","bio":"","website":"","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/10724274_334231760089181_7668590_a.jpg","full_name":"ka\u00ebNa","id":"49096233"},{"username":"tomaszgieres","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_1107014295_75sq_1392932055.jpg","full_name":"Tomasz
+      string: '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/45364550\/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4\u0026cursor=1340223806352","next_cursor":"1340223806352"},"meta":{"code":200},"data":[{"username":"kaena_me","bio":"","website":"","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/10724274_334231760089181_7668590_a.jpg","full_name":"ka\u00ebNa","id":"49096233"},{"username":"tomaszgieres","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_1107014295_75sq_1392932055.jpg","full_name":"Tomasz
         Giere\u015b","id":"1107014295"},{"username":"muszek","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_216206074_75sq_1346500952.jpg","full_name":"","id":"216206074"},{"username":"queju","bio":"Lives
         in Krakow, Poland.","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_22313760_75sq_1392033095.jpg","full_name":"Lukasz","id":"22313760"},{"username":"luismawhatakuai","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_50441659_75sq_1335902510.jpg","full_name":"","id":"50441659"},{"username":"awesomeola","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/anonymousUser.jpg","full_name":"","id":"1395084926"},{"username":"xymenka","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_848969204_75sq_1393531550.jpg","full_name":"","id":"848969204"},{"username":"dtrojanowski","bio":"","website":"","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_530991023_75sq_1377855699.jpg","full_name":"Daniel
         Trojanowski","id":"530991023"},{"username":"fargere","bio":"","website":"","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xfp1\/10549597_569879776454137_1119085070_a.jpg","full_name":"Christopher
@@ -724,4 +724,46 @@ http_interactions:
         Sarota","id":"962999"}]}'
     http_version: 
   recorded_at: Mon, 20 Oct 2014 11:34:27 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/165640/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+  response:
+    status:
+      code: 0
+      message: 
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/165640/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+  recorded_at: Thu, 30 Oct 2014 13:04:19 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/165640/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4&cursor=1414444718563
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+  response:
+    status:
+      code: 0
+      message: 
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/165640/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4&cursor=1414444718563
+  recorded_at: Thu, 30 Oct 2014 13:09:59 GMT
 recorded_with: VCR 2.9.3
