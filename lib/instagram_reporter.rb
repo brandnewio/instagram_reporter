@@ -9,7 +9,8 @@ require 'capybara'
 require 'capybara/dsl'
 require 'nokogiri'
 require 'oj'
-require 'excon'
+require 'typhoeus'
+require 'typhoeus/adapters/faraday'
 
 # InstagramReporter module (including logger)
 require 'instagram_reporter/instagram_reporter'
