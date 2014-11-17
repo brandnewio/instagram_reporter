@@ -201,6 +201,7 @@ class InstagramApiCaller < InstagramInteractionsBase
         faraday.request  :url_encoded
         faraday.use FaradayMiddleware::FollowRedirects
         faraday.adapter  :typhoeus
+        faraday.options.timeout = 5
       end
     end
 end
