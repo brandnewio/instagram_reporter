@@ -271,9 +271,11 @@ describe InstagramApiCaller do
 
   describe 'get_followers' do
     it 'returns response containing list of followers' do
-      VCR.use_cassette('user_followers') do
-          result = subject.get_followers(user_id, access_token)
-          #puts "#{result}"
+      VCR.use_cassette('get_user_followers') do
+        result = subject.get_followers('165640', access_token,'1414444718563')
+        expect(result['result']).to eq('ok')
+        expect(result['pagination']['next_cursor']).to eq('1414434213375')
+        expect(result['data'].size).to eq(50)
       end
     end
   end
