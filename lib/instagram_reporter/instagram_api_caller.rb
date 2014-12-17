@@ -95,8 +95,6 @@ class InstagramApiCaller < InstagramInteractionsBase
 
     def api_get_and_parse(uri, params, get_pagination = false)
       response = Hash.new
-    #puts "uri: #{uri}"
-    #puts "params: #{params}"
       api_response = api_connection.get(uri, params) do |req|
         req.options = DEFAULT_REQUEST_OPTIONS
       end
@@ -137,32 +135,29 @@ class InstagramApiCaller < InstagramInteractionsBase
 
     def call_api_by_access_token_for_media_info(instagram_media_id, access_token, actions)
       uri = "/v1/media/#{instagram_media_id}?access_token=#{access_token}"
-      response = api_connection.get do |req|
-        req.url uri
-        req.options = DEFAULT_REQUEST_OPTIONS
-      end
+      get_response(uri)
 
-      case response.status
+      case @response.status
       when 200
-        resp_json = parse_json(response.body)
-        response = { result: 'ok' }
+        resp_json = parse_json(@response.body)
+        @response = { result: 'ok' }
         if actions.is_a?(Array)
           actions.each do |action|
-            response[action] = resp_json[action]
+            @response[action] = resp_json[action]
           end
         else
           return {result: 'error', body: 'no location value present'} if actions == 'location' && resp_json[actions].nil?
-          response = response.merge(resp_json[actions])
+          @response = @response.merge(resp_json[actions])
         end
-        response
+        @response
       when 400, 404, 500, 502, 503, 504
         response_body = ''
         begin
-          response_body = Oj.load(response.body)
+          response_body = Oj.load(@response.body)
         rescue Oj::ParseError
-          response_body = response.body
+          response_body = @response.body
         end
-        InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
+        InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{@response.status}. Response body: #{response_body}")
         { result: 'error', body: response_body }
       else
         raise "call for media #{actions} (media_id: #{instagram_media_id}) failed with response #{response.inspect}"
@@ -170,14 +165,11 @@ class InstagramApiCaller < InstagramInteractionsBase
     end
 
     def call_api_by_api_token_for_media_file(media_id, action)
-      uri = "/v1/media/#{media_id}?client_id=#{API_TOKEN}"
-      response = api_connection.get do |req|
-        req.url uri
-        req.options = DEFAULT_REQUEST_OPTIONS
-      end
-      case response.status
+      get_response("/v1/media/#{media_id}?client_id=#{API_TOKEN}")
+
+      case @response.status
       when 200
-        resp_json = parse_json(response.body)
+        resp_json = parse_json(@response.body)
         if action == 'caption' && resp_json[action].nil?
           return {result: 'ok', text: nil}
         end
@@ -185,14 +177,21 @@ class InstagramApiCaller < InstagramInteractionsBase
       when 400, 404, 500, 502, 503, 504
         response_body = ''
         begin
-          response_body = Oj.load(response.body)
+          response_body = Oj.load(@response.body)
         rescue Oj::ParseError
-          response_body = response.body
+          response_body = @response.body
         end
         InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
         return {result: 'error', body: response_body}
       else
         raise "call for media #{action} (media_id: #{media_id}) failed with response #{response.inspect}"
+      end
+    end
+
+    def get_response(uri)
+      @response ||= api_connection.get do |req|
+        req.url uri
+        req.options = DEFAULT_REQUEST_OPTIONS
       end
     end
 
