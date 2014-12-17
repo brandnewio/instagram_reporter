@@ -1,0 +1,208 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://instagram.com/zxc323terefeere
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - text/html
+      Date:
+      - Wed, 17 Dec 2014 10:37:29 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - csrftoken=46fe4cd472135c4c99f0f45332f2e95a; expires=Wed, 16-Dec-2015 10:37:29
+        GMT; Max-Age=31449600; Path=/
+      - mid=VJFc6AAEAAFhZ2WECcItufkfiFcE; expires=Tue, 12-Dec-2034 10:37:29 GMT; Max-Age=630720000;
+        Path=/
+      - ccode=PL; Path=/
+      Vary:
+      - Cookie, Accept-Language
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '12575'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<!--[if lt IE 7]>      <html lang=\"en\" class=\"no-js
+        lt-ie9 lt-ie8 lt-ie7 not-logged-in \"> <![endif]-->\n<!--[if IE 7]>         <html
+        lang=\"en\" class=\"no-js lt-ie9 lt-ie8 not-logged-in \"> <![endif]-->\n<!--[if
+        IE 8]>         <html lang=\"en\" class=\"no-js lt-ie9 not-logged-in \"> <![endif]-->\n<!--[if
+        gt IE 8]><!--> <html lang=\"en\" class=\"no-js not-logged-in \"> <!--<![endif]-->\n
+        \   <head>\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\"
+        content=\"IE=edge\">\n\n        <title>Page Not Found &bull; Instagram</title>\n\n
+        \       <script type=\"text/javascript\">\n  WebFontConfig = {\n    custom:
+        {\n      families: ['proxima-nova:n4,n7'],\n      urls: ['//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/cache/fonts.css']\n
+        \   }\n  };\n</script>\n<script src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/scripts/webfont.js\"
+        type=\"text/javascript\" async></script>\n\n        \n    \n        <meta
+        name=\"robots\" content=\"noimageindex\">\n        \n    <meta name=\"apple-mobile-web-app-capable\"
+        content=\"yes\">\n    <meta name=\"apple-mobile-web-app-status-bar-style\"
+        content=\"black\">\n\n\n        \n    <meta id=\"viewport\" name=\"viewport\"
+        content=\"width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1,
+        maximum-scale=1\">\n\n\n        <script type=\"text/javascript\">\n        (function()
+        {\n            var docElement = document.documentElement;\n            var
+        classRE = new RegExp('(^|\\\\s)no-js(\\\\s|$)');\n            var className
+        = docElement.className;\n            docElement.className = className.replace(classRE,
+        '$1js$2');\n        })();\n        </script>\n\n        \n    \n        <script
+        type=\"text/javascript\">\n            GATEKEEPERS = {\n                banzai_logs:
+        true\n            };\n        </script>\n        \n    \n        <link rel=\"Shortcut
+        Icon\" type=\"image/x-icon\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/images/ico/favicon.ico\">\n
+        \   \n    \n        <link rel=\"apple-touch-icon-precomposed\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/images/ico/apple-touch-icon-precomposed.png\">\n
+        \       <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/images/ico/apple-touch-icon-72x72-precomposed.png\">\n
+        \       <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/images/ico/apple-touch-icon-114x114-precomposed.png\">\n
+        \       <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/images/ico/apple-touch-icon-144x144-precomposed.png\">\n
+        \   \n    \n    <link href=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/cache/distillery/dialog-main.css\"
+        type=\"text/css\" rel=\"stylesheet\"></link>\n\n    \n\n    </head>\n    <body
+        class=\" p-error dialog-404\">\n        \n    \n        <div class=\"root\">\n
+        \       \n            <div class=\"page\">\n                \n                    \n
+        \                       <header class=\"top-bar top-bar-new\">\n    <div class=\"top-bar-wrapper\">\n
+        \       <h1 class=\"logo\"><a href=\"/\">Instagram</a></h1>\n\n        <div
+        class=\"top-bar-left\">\n            <ul class=\"top-bar-actions\">\n                <li>\n
+        \                   <a class=\"top-bar-home\" href=\"/\" label=Home><i></i></a>\n
+        \               </li>\n            </ul>\n        </div>\n\n        <div class=\"top-bar-right
+        account-state\" id=\"top_bar_right\">\n            <ul class=\"top-bar-actions\">\n
+        \               \n                \n                <li id=\"link_profile\"
+        class=\"link-signin\">\n                    <a href=\"/accounts/login/\" class=\"loginLink\">\n
+        \                       <i></i>\n                        <strong>Log in</strong>\n
+        \                   </a>\n                </li>\n                \n            </ul>\n
+        \       </div>\n    </div>\n</header> <!-- .top-bar -->\n                    \n
+        \               \n\n                \n                <div class=\"main\">\n
+        \                   \n\t<div class=\"error-container\">\n\t\n\n\t<h2>Page
+        Not Found</h2>\n\n\t<p>\n        This page could not be found.\n        <br
+        />\n        You might have followed an incorrect link.\n    </p>\n\n\n\t</div>\n\n
+        \               </div> <!-- .main -->\n                \n\n            </div>
+        <!-- .page -->\n\n            \n            <footer class=\"page-footer\"
+        role=\"contentinfo\">\n                <div class=\"wrapper\">\n                    <nav>\n
+        \                       <ul>\n                            <li><a href=\"/about/us/\">About
+        us</a></li>\n                            <li><a href=\"http://help.instagram.com/\">Support</a></li>\n
+        \                           <li><a href=\"http://blog.instagram.com/\">Blog</a></li>\n
+        \                           <li><a href=\"http://instagram.com/press/\">Press</a></li>\n
+        \                           <li><a href=\"/developer/\">API</a></li>\n                            <li><a
+        href=\"/about/jobs/\">Jobs</a></li>\n                            <li><a href=\"/about/legal/privacy/\">Privacy</a></li>\n
+        \                           <li><a href=\"/about/legal/terms/\">Terms</a></li>\n
+        \                       </ul>\n                    </nav>\n\n                    <p
+        class=\"copyright\">&copy; 2014 Instagram</p>\n                </div>\n            </footer>\n
+        \           \n        \n        <div id=\"reactModalMountPoint\"></div>\n
+        \   </div> <!-- .root -->\n    \n    \n\n        \n    <script type=\"text/javascript\">\nwindow._strings
+        = {\n\n\"%(count)s comments\": \"%(count)s comments\",\n\"%(count)s followers\":
+        \"%(count)s followers\",\n\"%(count)s following\": \"%(count)s following\",\n\"%(count)s
+        likes\": \"%(count)s likes\",\n\"%(count)s more comments\": \"%(count)s more
+        comments\",\n\"%(count)s new posts\": \"%(count)s new posts\",\n\"%(count)s
+        people liked this photo\": \"%(count)s people liked this photo\",\n\"%(count)s
+        photos,\": \"%(count)s photos,\",\n\"%(count)s posts\": \"%(count)s posts\",\n\"%(count)s+
+        new posts\": \"%(count)s+ new posts\",\n\"%(day)s %(month_name)s %(year)s\":
+        \"%(day)s %(month_name)s %(year)s\",\n\"%(days)s days ago\": \"%(days)s days
+        ago\",\n\"%(days)sd\": \"%(days)sd\",\n\"%(followerCount)s followers\": \"%(followerCount)s
+        followers\",\n\"%(hours)s hours ago\": \"%(hours)s hours ago\",\n\"%(hours)sh\":
+        \"%(hours)sh\",\n\"%(likes)s likes, %(comments)s comments\": \"%(likes)s likes,
+        %(comments)s comments\",\n\"%(mediaCount)s photos\": \"%(mediaCount)s photos\",\n\"%(minutes)s
+        minutes ago\": \"%(minutes)s minutes ago\",\n\"%(minutes)sm\": \"%(minutes)sm\",\n\"%(months)s
+        months ago\": \"%(months)s months ago\",\n\"%(seconds)s seconds ago\": \"%(seconds)s
+        seconds ago\",\n\"%(seconds)ss\": \"%(seconds)ss\",\n\"%(user)s on Instagram\":
+        \"%(user)s on Instagram\",\n\"%(username)s on Instagram\": \"%(username)s
+        on Instagram\",\n\"%(weeks)s weeks ago\": \"%(weeks)s weeks ago\",\n\"%(weeks)sw\":
+        \"%(weeks)sw\",\n\"%(year)s %(month)s\": \"%(year)s %(month)s\",\n\"1\": \"1\",\n\"1
+        comment\": \"1 comment\",\n\"1 day ago\": \"1 day ago\",\n\"1 follower\":
+        \"1 follower\",\n\"1 hour ago\": \"1 hour ago\",\n\"1 like\": \"1 like\",\n\"1
+        minute ago\": \"1 minute ago\",\n\"1 month ago\": \"1 month ago\",\n\"1 more
+        comment\": \"1 more comment\",\n\"1 new post\": \"1 new post\",\n\"1 photo>\":
+        \"1 photo\\u003E\",\n\"1 second ago\": \"1 second ago\",\n\"1 week ago\":
+        \"1 week ago\",\n\"2\": \"2\",\n\"3\": \"3\",\n\"AM\": \"AM\",\n\"About us\":
+        \"About us\",\n\"Account Insights - Instagram\": \"Account Insights \\u002D
+        Instagram\",\n\"Add a caption...\": \"Add a caption...\",\n\"Add a comment\":
+        \"Add a comment\",\n\"All items loaded\": \"All items loaded\",\n\"Apr\":
+        \"Apr\",\n\"April\": \"April\",\n\"Are you sure you want to delete this comment?\":
+        \"Are you sure you want to delete this comment?\",\n\"Are you sure?\": \"Are
+        you sure?\",\n\"Audience\": \"Audience\",\n\"Aug\": \"Aug\",\n\"August\":
+        \"August\",\n\"Badges\": \"Badges\",\n\"Blog\": \"Blog\",\n\"By using this
+        embed, you agree to Instagram\\\\'s <a href=\\\"http://instagram.com/about/legal/terms/api/\\\">API
+        Terms of Use</a>.\": \"By using this embed, you agree to Instagram\\u005C\\u0027s
+        \\u003Ca href\\u003D\\u0022http://instagram.com/about/legal/terms/api/\\u0022\\u003EAPI
+        Terms of Use\\u003C/a\\u003E.\",\n\"Cancel\": \"Cancel\",\n\"Content unavailable\":
+        \"Content unavailable\",\n\"Copy Embed Code\": \"Copy Embed Code\",\n\"Copy
+        this code:\": \"Copy this code:\",\n\"Couldn\\\\'t post comment\": \"Couldn\\u005C\\u0027t
+        post comment\",\n\"Dec\": \"Dec\",\n\"December\": \"December\",\n\"Delete\":
+        \"Delete\",\n\"Edit Profile\": \"Edit Profile\",\n\"Embed\": \"Embed\",\n\"Feb\":
+        \"Feb\",\n\"February\": \"February\",\n\"Follow\": \"Follow\",\n\"Follow %(username)s
+        on Instagram\": \"Follow %(username)s on Instagram\",\n\"Follow friends and
+        interesting people to see their photos here.\": \"Follow friends and interesting
+        people to see their photos here.\",\n\"Following\": \"Following\",\n\"Forgot
+        your password?\": \"Forgot your password?\",\n\"Fri\": \"Fri\",\n\"Friday\":
+        \"Friday\",\n\"Here are some suggestions.\": \"Here are some suggestions.\",\n\"Home\":
+        \"Home\",\n\"Jan\": \"Jan\",\n\"January\": \"January\",\n\"Jobs\": \"Jobs\",\n\"Jul\":
+        \"Jul\",\n\"July\": \"July\",\n\"Jun\": \"Jun\",\n\"June\": \"June\",\n\"Leave
+        a comment...\": \"Leave a comment...\",\n\"Like\": \"Like\",\n\"Likes\": \"Likes\",\n\"Load
+        More...\": \"Load More...\",\n\"Load more\": \"Load more\",\n\"Load more...\":
+        \"Load more...\",\n\"Loading more...\": \"Loading more...\",\n\"Loading...\":
+        \"Loading...\",\n\"Log Out\": \"Log Out\",\n\"Log in\": \"Log in\",\n\"Mar\":
+        \"Mar\",\n\"March\": \"March\",\n\"May\": \"May\",\n\"Mon\": \"Mon\",\n\"Monday\":
+        \"Monday\",\n\"More\": \"More\",\n\"Next photo\": \"Next photo\",\n\"No Recent
+        Photos\": \"No Recent Photos\",\n\"No likes yet.\": \"No likes yet.\",\n\"No
+        photos to show.\": \"No photos to show.\",\n\"Nov\": \"Nov\",\n\"November\":
+        \"November\",\n\"Now\": \"Now\",\n\"Oct\": \"Oct\",\n\"October\": \"October\",\n\"Open
+        in App\": \"Open in App\",\n\"Others\": \"Others\",\n\"PM\": \"PM\",\n\"Password:\":
+        \"Password:\",\n\"Paste it on your website, blog, or wherever you want to
+        link to your profile!\": \"Paste it on your website, blog, or wherever you
+        want to link to your profile!\",\n\"People you follow\": \"People you follow\",\n\"Performance\":
+        \"Performance\",\n\"Photo by %(username)s\": \"Photo by %(username)s\",\n\"Posts\":
+        \"Posts\",\n\"Press\": \"Press\",\n\"Press Page - Instagram\": \"Press Page
+        \\u002D Instagram\",\n\"Previous Posts\": \"Previous Posts\",\n\"Previous
+        photo\": \"Previous photo\",\n\"Privacy\": \"Privacy\",\n\"Report inappropriate\":
+        \"Report inappropriate\",\n\"Requested\": \"Requested\",\n\"Retry\": \"Retry\",\n\"Sat\":
+        \"Sat\",\n\"Saturday\": \"Saturday\",\n\"Select your badge:\": \"Select your
+        badge:\",\n\"Sep\": \"Sep\",\n\"September\": \"September\",\n\"Summary\":
+        \"Summary\",\n\"Sun\": \"Sun\",\n\"Sunday\": \"Sunday\",\n\"Support\": \"Support\",\n\"Terms\":
+        \"Terms\",\n\"This user is private\": \"This user is private\",\n\"Thu\":
+        \"Thu\",\n\"Thursday\": \"Thursday\",\n\"To follow %(username)s, you need
+        to log in.\": \"To follow %(username)s, you need to log in.\",\n\"Toggle like\":
+        \"Toggle like\",\n\"Tue\": \"Tue\",\n\"Tuesday\": \"Tuesday\",\n\"Username:\":
+        \"Username:\",\n\"Video by %(username)s\": \"Video by %(username)s\",\n\"View
+        Photo Page\": \"View Photo Page\",\n\"View Profile\": \"View Profile\",\n\"View
+        Video Page\": \"View Video Page\",\n\"View on Instagram\": \"View on Instagram\",\n\"Wed\":
+        \"Wed\",\n\"Wednesday\": \"Wednesday\",\n\"When you are finished following
+        people,\": \"When you are finished following people,\",\n\"Write a comment...\":
+        \"Write a comment...\",\n\"Yes\": \"Yes\",\n\"You must log in to add a comment.\":
+        \"You must log in to add a comment.\",\n\"You must log in to like this photo.\":
+        \"You must log in to like this photo.\",\n\"You need to be following %(username)s
+        to like or comment\": \"You need to be following %(username)s to like or comment\",\n\"Your
+        username or password was incorrect.\": \"Your username or password was incorrect.\",\n\"am\":
+        \"am\",\n\"banner photo\": \"banner photo\",\n\"nd\": \"nd\",\n\"pm\": \"pm\",\n\"rd\":
+        \"rd\",\n\"reload this page\": \"reload this page\",\n\"st\": \"st\",\n\"th\":
+        \"th\"\n};\n</script>\n    <script src=//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/scripts/polyfills/es5-shim.min.js></script>\n<script
+        src=//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/scripts/polyfills/es5-sham.min.js></script>\n<script
+        type=\"text/javascript\">window._sharedData = {\"static_root\":\"\\/\\/d36xtkk24g8jdx.cloudfront.net\\/bluebar\\/4ba7600\",\"platform\":{\"is_touch\":false,\"app_platform\":\"web\"},\"hostname\":\"instagram.com\",\"entry_data\":{},\"country_code\":\"PL\",\"config\":{\"viewer\":null,\"csrf_token\":\"46fe4cd472135c4c99f0f45332f2e95a\"}};</script>\n<script
+        src=\"//d36xtkk24g8jdx.cloudfront.net/bluebar/4ba7600/cache/bundles/webpack-common.js\"></script>\n
+        \   \n    <script type=\"text/javascript\">\n        var _gaq = _gaq || [];\n
+        \       _gaq.push(['_setAccount', 'UA-18105282-1']);\n        _gaq.push(['_setDomainName',
+        'instagram.com']);\n        _gaq.push(['_setAllowLinker', true]);\n        \n
+        \       _gaq.push(['_trackPageview']);\n        (function() {\n            var
+        ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
+        = true;\n            ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+        : 'http://www') + '.google-analytics.com/ga.js';\n            var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);\n        })();\n    </script>\n    \n\n
+        \   </body>\n</html>"
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://instagram.com/zxc323terefeere
+  recorded_at: Wed, 17 Dec 2014 10:37:27 GMT
+recorded_with: VCR 2.9.3

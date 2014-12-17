@@ -23,7 +23,7 @@ class InstagramWebsiteScraper
     doc = Nokogiri::HTML(html)
     #el = JSON.parse(doc.content.match(/{"entry_data":{.*}/).to_s)
     prematched_content = doc.content.match(/"prerelease":.*"}/).to_s
-    match_for_profile_data = prematched_content.match(/{.*"id":"\d+"}/).to_s
+    match_for_profile_data = prematched_content.match(/{.*"id":"\d+"[^}]+}/).to_s
     el = JSON.parse(match_for_profile_data)
     #returnee = el['entry_data']['UserProfile'][0]['user']
     el['contact_data_email']  = contact_data_email(el['bio'])
@@ -61,7 +61,7 @@ class InstagramWebsiteScraper
     end
     returnee  = eval(doc_match.to_s.gsub(":","=>"))
     prematched_content = doc.content.match(/"prerelease":.*"}/).to_s
-    match_for_profile_picture = prematched_content.match(/{.*"id":"\d+"}/).to_s
+    match_for_profile_picture = prematched_content.match(/{.*"id":"\d+"[^}]+}/).to_s
     #el = JSON.parse(doc.content.match(/{"entry_data":{.*}/).to_s)
     el = JSON.parse(match_for_profile_picture)
     #result = el['entry_data']['UserProfile'][0]['user']
