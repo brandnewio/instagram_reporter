@@ -134,8 +134,8 @@ class InstagramApiCaller < InstagramInteractionsBase
     end
 
     def call_api_by_access_token_for_media_info(instagram_media_id, access_token, actions)
-      uri = "/v1/media/#{instagram_media_id}?access_token=#{access_token}"
-      get_response(uri)
+      @uri = "/v1/media/#{instagram_media_id}?access_token=#{access_token}"
+      get_response(@uri)
 
       case @response.status
       when 200
@@ -151,14 +151,7 @@ class InstagramApiCaller < InstagramInteractionsBase
         end
         @response
       when 400, 404, 500, 502, 503, 504
-        response_body = ''
-        begin
-          response_body = Oj.load(@response.body)
-        rescue Oj::ParseError
-          response_body = @response.body
-        end
-        InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{@response.status}. Response body: #{response_body}")
-        { result: 'error', body: response_body }
+        set_response_body
       else
         raise "call for media #{actions} (media_id: #{instagram_media_id}) failed with response #{response.inspect}"
       end
@@ -175,14 +168,7 @@ class InstagramApiCaller < InstagramInteractionsBase
         end
         return {result: 'ok'}.merge(resp_json[action])
       when 400, 404, 500, 502, 503, 504
-        response_body = ''
-        begin
-          response_body = Oj.load(@response.body)
-        rescue Oj::ParseError
-          response_body = @response.body
-        end
-        InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response_body}")
-        return {result: 'error', body: response_body}
+        set_response_body
       else
         raise "call for media #{action} (media_id: #{media_id}) failed with response #{response.inspect}"
       end
@@ -202,5 +188,16 @@ class InstagramApiCaller < InstagramInteractionsBase
         faraday.adapter  :typhoeus
         faraday.options.timeout = 5
       end
+    end
+
+    def set_response_body
+      response_body = ''
+      begin
+        response_body = Oj.load(@response.body)
+      rescue Oj::ParseError
+        response_body = @response.body
+      end
+      InstagramReporter.logger.debug("Wrong response status during GET #{@uri}: #{@response.status}. Response body: #{response_body}")
+      { result: 'error', body: response_body }
     end
 end
