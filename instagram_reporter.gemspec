@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "faraday_middleware"
   spec.add_dependency "oj"
   spec.add_dependency "typhoeus"
+  spec.add_dependency "cane"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
