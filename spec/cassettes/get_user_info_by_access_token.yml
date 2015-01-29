@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 29 Jan 2015 12:20:06 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - csrftoken=3107192ac8c4a76a2cdee3bd7f1ad94c; expires=Thu, 28-Jan-2016 12:20:06
+        GMT; Max-Age=31449600; Path=/
+      - ccode=PL; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4999'
+      Content-Length:
+      - '376'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":{"username":"xiazek","bio":"\u003e\u003e\u003e
+        Follow me \u003c\u003c\u003c \nfor sunny photos !!!","website":"http:\/\/krakow.repertuary.pl\/","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_45364550_75sq_1378321024.jpg","full_name":"Maciej
+        K.","counts":{"media":328,"followed_by":73,"follows":145},"id":"45364550"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/45364550?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+  recorded_at: Thu, 29 Jan 2015 12:20:06 GMT
+recorded_with: VCR 2.9.3
