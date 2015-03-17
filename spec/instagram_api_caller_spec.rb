@@ -287,8 +287,8 @@ describe InstagramApiCaller do
       VCR.use_cassette('get_user_followers') do
         result = subject.get_followers('165640', access_token,'1414444718563')
         expect(result['result']).to eq('ok')
-        expect(result['pagination']['next_cursor']).to eq('1414434213375')
-        expect(result['data'].size).to eq(50)
+        expect(result['pagination']['next_cursor']).to eq('1414430815337')
+        expect(result['data'].size).to eq(49)
       end
     end
   end

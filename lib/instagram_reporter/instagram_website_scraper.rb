@@ -59,6 +59,9 @@ class InstagramWebsiteScraper
       error_header  = doc.css('title').text
       return {result: 'error', body: "Did not get profile page with statistics. Obtained response page \n #{error_header} \n with \n #{error_message} \n content"}
     end
+    #string[string.index('=')+1..-1]
+    doc_match = doc_match.to_s[0..doc_match.to_s.index('}')]
+    #puts "#{doc_match.to_s[0..doc_match.to_s.index('}')]}"
     returnee  = eval(doc_match.to_s.gsub(":","=>"))
     prematched_content = doc.content.match(/"prerelease":.*"}/).to_s
     match_for_profile_picture = prematched_content.match(/{.*"id":"\d+"[^}]+}/).to_s
