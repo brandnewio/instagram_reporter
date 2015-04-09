@@ -52,6 +52,19 @@ describe InstagramApiCaller do
     end
   end
 
+  describe '#get_user_info_by_api_token' do
+    it 'returns user data with username' do
+      VCR.use_cassette('get_user_info_by_api_token') do
+        expect(subject.get_user_info_by_api_token(user_id)['data']['username']).to eq('xiazek')
+      end
+    end
+    it 'returns user data with profile picture link' do
+      VCR.use_cassette('get_user_info_by_api_token') do
+        expect(subject.get_user_info_by_api_token(user_id)['data']['profile_picture']).to eq('https://instagramimages-a.akamaihd.net/profiles/profile_45364550_75sq_1378321024.jpg')
+      end
+    end
+  end
+
   describe '#get_instagram_accounts_by_access_token' do
     it 'returns parsed data' do
       VCR.use_cassette('get_instagram_accounts_by_access_token') do

@@ -22,9 +22,14 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/tags/#{tag}/media/recent", params, true)
   end
 
+  def get_user_info_by_api_token(user_id)
+    params = query_params(nil)
+    api_get_and_parse("/v1/users/#{user_id}", params)
+  end
+
   def get_user_info_by_access_token(user_id, access_token)
     params = query_params(access_token)
-    api_get_and_parse("/v1/users/#{user_id}", params, true)
+    api_get_and_parse("/v1/users/#{user_id}", params)
   end
 
   def get_user_recent_media(user_id, access_token, max_tag_id = nil)
