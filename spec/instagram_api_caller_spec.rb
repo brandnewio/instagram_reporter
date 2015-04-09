@@ -273,6 +273,14 @@ describe InstagramApiCaller do
     let(:username) { 'goldie_berlin' }
     let(:access_token) { nil }
 
+    it 'returns proper response when called without access token' do
+      VCR.use_cassette('users_search_api_token') do
+        result = subject.get_users_by_name(username)
+        expect(result['data'].first['id']).to eq('165640')
+        expect(result['data'].first['username']).to eq('goldie_berlin')
+      end
+    end
+
     it "returns a response containing media data with image urls etc" do
       VCR.use_cassette('users_search') do
         result = subject.get_users_by_name(username, access_token)

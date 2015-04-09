@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/search?client_id=<API_TOKEN>&q=goldie_berlin
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 09 Apr 2015 13:06:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ratelimit-Remaining:
+      - '4338'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Set-Cookie:
+      - csrftoken=d0e95a725aa7003fc241616985c95e42; expires=Thu, 07-Apr-2016 13:06:07
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '243'
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":[{"username":"goldie_berlin","profile_picture":"https:\/\/igcdn-photos-a-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/10012998_905885026120712_1642658882_a.jpg","id":"165640","full_name":"Travel
+        diary by Sylvia"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/search?client_id=<API_TOKEN>&q=goldie_berlin
+  recorded_at: Thu, 09 Apr 2015 13:06:07 GMT
+recorded_with: VCR 2.9.3

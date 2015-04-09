@@ -38,7 +38,7 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/users/#{user_id}/media/recent", params, true)
   end
 
-  def get_users_by_name(username, access_token)
+  def get_users_by_name(username, access_token = nil)
     params = query_params(access_token).merge!(q: username)
     api_get_and_parse("/v1/users/search", params, true)
   end
