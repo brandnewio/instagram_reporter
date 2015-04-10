@@ -1,0 +1,167 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/653714645670132444_16192269?client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 09 Apr 2015 15:47:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ratelimit-Remaining:
+      - '4257'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Set-Cookie:
+      - csrftoken=9cc5d7d461242715e2e382079ee370af; expires=Thu, 07-Apr-2016 15:47:42
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '88'
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"error_type":"APINotFoundError","code":400,"error_message":"invalid
+        media id"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/media/653714645670132444_16192269?client_id=<API_TOKEN>
+  recorded_at: Thu, 09 Apr 2015 15:47:42 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/653714645670132444_16192269?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 09 Apr 2015 15:49:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ratelimit-Remaining:
+      - '4999'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Set-Cookie:
+      - csrftoken=1e4d3680a5ff2155616bd46368d26420; expires=Thu, 07-Apr-2016 15:49:36
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '88'
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"error_type":"APINotFoundError","code":400,"error_message":"invalid
+        media id"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/media/653714645670132444_16192269?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+  recorded_at: Thu, 09 Apr 2015 15:49:36 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/958084286559626921_264734424?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 09 Apr 2015 15:51:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ratelimit-Remaining:
+      - '4998'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Set-Cookie:
+      - csrftoken=4c4ec4c38167f7613763311707bea593; expires=Thu, 07-Apr-2016 15:51:07
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5806'
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":{"attribution":null,"tags":["wearestylists\ud83c\udf42\ud83c\udf42\ud83c\udf42"],"type":"image","location":{"latitude":51.483895,"longitude":-0.176866667},"comments":{"count":16,"data":[{"created_time":"1428435123","text":"\ud83d\ude3bMy
+        Sofy\ud83d\udc97\ud83d\udc97\ud83d\udc97","from":{"username":"mariawisdom","profile_picture":"https:\/\/igcdn-photos-b-a.akamaihd.net\/hphotos-ak-xpa1\/t51.2885-19\/1538536_1537946509786521_1615311115_a.jpg","id":"52970642","full_name":"mariawisdom\ud83c\udf3b"},"id":"958105718270272585"},{"created_time":"1428435677","text":"Woooooooow
+        very very very very very sexy sexyyyyy","from":{"username":"hashemsd","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1725377400","full_name":"hashem"},"id":"958110364997068315"},{"created_time":"1428437676","text":"@pennywebster
+        shoe","from":{"username":"laura_west_","profile_picture":"https:\/\/igcdn-photos-b-a.akamaihd.net\/hphotos-ak-xfp1\/t51.2885-19\/891525_418059871688521_252770110_a.jpg","id":"270758576","full_name":"Laura
+        West"},"id":"958127129001010213"},{"created_time":"1428445338","text":"@lofallo
+        she has my bag \u2764\ufe0f","from":{"username":"kyfallon","profile_picture":"https:\/\/igcdn-photos-e-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/10919474_744780235591452_743324382_a.jpg","id":"23604517","full_name":"Kristen
+        Fallon"},"id":"958191405938058608"},{"created_time":"1428447492","text":"@xxsophiehermannxx
+        those shoes \ud83d\ude0d","from":{"username":"ladyvi_healey","profile_picture":"https:\/\/igcdn-photos-d-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/10735130_883458415039243_504430357_a.jpg","id":"412856151","full_name":"Viv"},"id":"958209474018223858"},{"created_time":"1428475284","text":"very
+        nice","from":{"username":"waleedkhoury70","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/anonymousUser.jpg","id":"1593374315","full_name":"Waleed
+        Khoury"},"id":"958442608877970636"},{"created_time":"1428486622","text":"\ud83d\ude18","from":{"username":"sistersthelabel","profile_picture":"https:\/\/igcdn-photos-b-a.akamaihd.net\/hphotos-ak-xap1\/t51.2885-19\/925275_666286206751873_1590135904_a.jpg","id":"327902681","full_name":"SISTERSTHELABEL"},"id":"958537717623629615"},{"created_time":"1428590288","text":"@jaiminie
+        @pipii_mistry shoes \ud83d\ude0d love the outfit","from":{"username":"bhaviniepurohit","profile_picture":"https:\/\/igcdn-photos-d-a.akamaihd.net\/hphotos-ak-xpa1\/t51.2885-19\/928946_763397070412555_1738811467_a.jpg","id":"22394678","full_name":""},"id":"959407335523296385"}]},"filter":"Normal","created_time":"1428432568","link":"https:\/\/instagram.com\/p\/1LzJUdRSap\/","likes":{"count":1512,"data":[{"username":"atelierlakshmi","profile_picture":"https:\/\/igcdn-photos-a-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/11055613_443259959184224_1499693335_a.jpg","id":"1760762023","full_name":"Atelier
+        Lakshmi BCN"},{"username":"trina8290","profile_picture":"https:\/\/igcdn-photos-a-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/11098314_537719696370552_397755605_a.jpg","id":"1772837365","full_name":"Trina"},{"username":"saeed_shayeq","profile_picture":"https:\/\/igcdn-photos-f-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/11055793_449600208538381_281940318_a.jpg","id":"1758513798","full_name":"\u0633\u0639\u06cc\u062f
+        \u0634\u0627\u06cc\u0642"},{"username":"elarosa_","profile_picture":"https:\/\/igcdn-photos-f-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/11116721_773753729386877_2024544811_a.jpg","id":"1758996781","full_name":""}]},"images":{"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s306x306\/e15\/11093087_678325142294971_1997462838_n.jpg","width":306,"height":306},"thumbnail":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s150x150\/e15\/11093087_678325142294971_1997462838_n.jpg","width":150,"height":150},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/e15\/11093087_678325142294971_1997462838_n.jpg","width":640,"height":640}},"users_in_photo":[{"position":{"y":0.3046875,"x":0.6046875},"user":{"username":"bprsocial","profile_picture":"https:\/\/igcdn-photos-d-a.akamaihd.net\/hphotos-ak-xap1\/t51.2885-19\/10808985_1504546786463947_224768760_a.jpg","id":"211690487","full_name":"B
+        Public Relations PR Agency"}},{"position":{"y":0.44375,"x":0.3234375},"user":{"username":"topshop","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_4165329_75sq_1363524524.jpg","id":"4165329","full_name":"Topshop"}},{"position":{"y":0.75625,"x":0.821875},"user":{"username":"boohooofficial","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_201077985_75sq_1364903414.jpg","id":"201077985","full_name":"boohoo.com"}},{"position":{"y":0.8765625,"x":0.253125},"user":{"username":"gianvitorossiofficial","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_1101361995_75sq_1392650398.jpg","id":"1101361995","full_name":"Gianvito
+        Rossi"}}],"caption":{"created_time":"1428432568","text":"Squaw Chic. Get in
+        the game follow @boohooofficial and win a 150\u00a3 voucher,by posting your
+        styles with #WeAreStylists\ud83c\udf42\ud83c\udf42\ud83c\udf42","from":{"username":"xxsophiehermannxx","profile_picture":"https:\/\/igcdn-photos-e-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/10986230_989327354420324_542169958_a.jpg","id":"264734424","full_name":"Sophie
+        Hermann"},"id":"958084287230715252"},"user_has_liked":false,"id":"958084286559626921_264734424","user":{"username":"xxsophiehermannxx","profile_picture":"https:\/\/igcdn-photos-e-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/10986230_989327354420324_542169958_a.jpg","id":"264734424","full_name":"Sophie
+        Hermann"}}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/media/958084286559626921_264734424?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+  recorded_at: Thu, 09 Apr 2015 15:51:07 GMT
+recorded_with: VCR 2.9.3

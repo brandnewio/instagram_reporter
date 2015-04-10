@@ -64,6 +64,10 @@ class InstagramApiCaller < InstagramInteractionsBase
     call_api_by_access_token_for_media_info(instagram_media_id, access_token, ['likes', 'comments'])
   end
 
+  def call_api_by_access_token_for_media_file_stats(instagram_media_id, access_token)
+    call_api_by_access_token_for_media_info(instagram_media_id, access_token, ['likes', 'comments', 'tags'])
+  end
+
   def call_api_by_api_token_for_media_file_comments(instagram_media_id)
     call_api_by_api_token_for_media_file(instagram_media_id, 'comments')
   end

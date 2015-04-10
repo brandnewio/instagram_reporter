@@ -194,6 +194,15 @@ describe InstagramApiCaller do
     end
   end
 
+  describe '#call_api_by_access_token_for_media_file_stats' do
+    it 'returns likes and comments and hashtags' do
+      VCR.use_cassette('call_api_for_media_file_stats') do
+        response = subject.call_api_by_access_token_for_media_file_stats('958084286559626921_264734424', access_token)
+        expect(response.class).to eq(Hash)
+      end
+    end
+  end
+
   describe '#call_api_by_access_token_for_media_file_location' do
     it 'returns media file location' do
       VCR.use_cassette('call_api_by_access_token_for_media_file_location') do
