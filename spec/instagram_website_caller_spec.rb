@@ -19,7 +19,7 @@ describe InstagramWebsiteCaller do
     end
     
     it "should assign envirnomental variable to appropriate class variable if env variable is not empty" do
-      InstagramInteractionsBase::API_TOKEN ="SAMPLE_API_TOKEN"
+      InstagramInteractionsBase::API_TOKEN = "SAMPLE_API_TOKEN"
       expect(InstagramWebsiteCaller::API_TOKEN).to eq("SAMPLE_API_TOKEN") 
     end
 

@@ -42,12 +42,12 @@ describe InstagramApiCaller do
   describe '#get_user_info_by_access_token' do
     it 'returns user data with username' do
       VCR.use_cassette('get_user_info_by_access_token') do
-        expect(subject.get_user_info_by_access_token(user_id,access_token)['data']['username']).to eq('xiazek')
+        expect(subject.get_user_info_by_access_token(user_id, access_token)['data']['username']).to eq('xiazek')
       end
     end
     it 'returns user data with profile picture link' do
       VCR.use_cassette('get_user_info_by_access_token') do
-        expect(subject.get_user_info_by_access_token(user_id,access_token)['data']['profile_picture']).to eq('https://instagramimages-a.akamaihd.net/profiles/profile_45364550_75sq_1378321024.jpg')
+        expect(subject.get_user_info_by_access_token(user_id, access_token)['data']['profile_picture']).to eq('https://instagramimages-a.akamaihd.net/profiles/profile_45364550_75sq_1378321024.jpg')
       end
     end
   end
@@ -315,7 +315,7 @@ describe InstagramApiCaller do
   describe 'get_followers' do
     it 'returns response containing list of followers' do
       VCR.use_cassette('get_user_followers') do
-        result = subject.get_followers('165640', access_token,'1414444718563')
+        result = subject.get_followers('165640', access_token, '1414444718563')
         expect(result['result']).to eq('ok')
         expect(result['pagination']['next_cursor']).to eq('1414430815337')
         expect(result['data'].size).to eq(49)
