@@ -43,7 +43,7 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/users/search", params, true)
   end
 
-  def call_api_by_access_token_for_media_file_location(instagram_media_id,access_token)
+  def call_api_by_access_token_for_media_file_location(instagram_media_id, access_token)
     call_api_by_access_token_for_media_info(instagram_media_id, access_token, 'location')
   end
 
@@ -52,7 +52,7 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/locations/search", params, true)
   end
 
-  def call_api_by_access_token_for_media_file_comments(instagram_media_id,access_token)
+  def call_api_by_access_token_for_media_file_comments(instagram_media_id, access_token)
     call_api_by_access_token_for_media_info(instagram_media_id, access_token, 'comments')
   end
 

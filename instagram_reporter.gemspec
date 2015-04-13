@@ -8,12 +8,12 @@ Gem::Specification.new do |spec|
   spec.version       = InstagramReporter::VERSION
   spec.authors       = ["luki3k5" "mpikula"]
   spec.email         = ["luki3k5@gmail.com" "mariusz.pikula@gmail.com"]
-  spec.description   = %q{This gem allows to easily get data from Instagram}
-  spec.summary       = %q{This gem allows to easily get data from Instagram}
+  spec.description   = 'This gem allows to easily get data from Instagram'
+  spec.summary       = 'This gem allows to easily get data from Instagram'
   spec.homepage      = ""
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
+  spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "oj"
   spec.add_dependency "typhoeus"
   spec.add_dependency "cane"
+  spec.add_dependency "rubocop"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"

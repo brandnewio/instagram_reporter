@@ -68,7 +68,7 @@ class InstagramMediaFilesObserver < InstagramInteractionsBase
         return response.body
       else
         return { data: {error: "ERR400" }}.to_json if retries == RETRIES
-        return call_api_for_media(media_id, action, retries=retries+1)
+        return call_api_for_media(media_id, action, retries = retries + 1)
       end
     end
 end

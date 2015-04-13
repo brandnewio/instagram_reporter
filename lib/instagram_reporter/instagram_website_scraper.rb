@@ -10,7 +10,7 @@ class InstagramWebsiteScraper
   end
 
   def find_other_contact_means(data)
-    return data.gsub(',', '') if data.match(EMAIL_PATTERN_MATCH) != nil
+    return data.gsub(',', '') if !data.match(EMAIL_PATTERN_MATCH).nil?
 
     SEARCHABLE_KEYWORDS.each do |ci|
       return data.gsub(',', '') if data.include?(ci)
@@ -53,7 +53,7 @@ class InstagramWebsiteScraper
 
   def get_profile_statistic(html)
     doc = Nokogiri::HTML(html)
-    doc_match =doc.content.match(/{"media":.*\d}/)
+    doc_match = doc.content.match(/{"media":.*\d}/)
     if doc_match.nil?
       error_message = doc.css("div[class=error-container]").text
       error_header  = doc.css('title').text
@@ -62,7 +62,7 @@ class InstagramWebsiteScraper
     #string[string.index('=')+1..-1]
     doc_match = doc_match.to_s[0..doc_match.to_s.index('}')]
     #puts "#{doc_match.to_s[0..doc_match.to_s.index('}')]}"
-    returnee  = eval(doc_match.to_s.gsub(":","=>"))
+    returnee  = eval(doc_match.to_s.gsub(":", "=>"))
     prematched_content = doc.content.match(/"prerelease":.*"}/).to_s
     match_for_profile_picture = prematched_content.match(/{.*"id":"\d+"[^}]+}/).to_s
     #el = JSON.parse(doc.content.match(/{"entry_data":{.*}/).to_s)

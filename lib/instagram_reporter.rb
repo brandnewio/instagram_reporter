@@ -11,6 +11,7 @@ require 'nokogiri'
 require 'oj'
 require 'typhoeus'
 require 'typhoeus/adapters/faraday'
+require 'rubocop'
 
 # InstagramReporter module (including logger)
 require 'instagram_reporter/instagram_reporter'
