@@ -121,6 +121,22 @@ describe InstagramApiCaller do
     end
   end
 
+  describe '#get_hashtag_media_count_by_access_token' do
+    it 'returns the hashtag media count' do
+      VCR.use_cassette('get_hashtag_media_count_by_access_token') do
+        expect(subject.get_hashtag_media_count_by_access_token(test_hashtag, access_token)['data']['media_count']).to eq(54271)
+      end
+    end
+  end
+
+  describe '#get_hashtag_media_count_by_api_token' do
+    it 'returns the hashtag media count' do
+      VCR.use_cassette('get_hashtag_media_count_by_api_token') do
+        expect(subject.get_hashtag_media_count_by_api_token(test_hashtag)['data']['media_count']).to eq(54271)
+      end
+    end
+  end
+
   describe '#call_api_by_api_token_for_media_file_comments' do
     it 'returns parsed comments' do
       VCR.use_cassette('call_api_by_api_token_for_media_file_comments') do
