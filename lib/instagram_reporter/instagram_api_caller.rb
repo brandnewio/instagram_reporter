@@ -32,6 +32,16 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/tags/#{tag}", params)
   end
 
+  def get_similar_hashtags_by_access_token(tag, access_token)
+    params = query_params(access_token)
+    api_get_and_parse("/v1/tags/search?q=#{tag}", params)
+  end
+
+  def get_similar_hashtags_by_api_token(tag)
+    params = query_params(nil)
+    api_get_and_parse("/v1/tags/search?q=#{tag}", params)
+  end
+
   def get_user_info_by_api_token(user_id)
     params = query_params(nil)
     api_get_and_parse("/v1/users/#{user_id}", params)
