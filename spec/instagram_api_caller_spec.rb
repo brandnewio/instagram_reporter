@@ -137,6 +137,34 @@ describe InstagramApiCaller do
     end
   end
 
+  describe '#get_similar_hashtags_by_access_token' do
+    it 'returns list of similar hashtags' do
+      VCR.use_cassette('get_similar_hashtags_by_access_token') do
+        expect(subject.get_similar_hashtags_by_access_token(test_hashtag, access_token)['data'].size).to eq(50)
+      end
+    end
+
+    it 'returns only one hashtag if tag_name is too short' do
+      VCR.use_cassette('get_similar_hashtags_by_access_token') do
+        expect(subject.get_similar_hashtags_by_access_token("sun", access_token)['data'].size).to eq(1)
+      end
+    end
+  end
+
+  describe '#get_similar_hashtags_by_api_token' do
+    it 'returns list of similar hashtags' do
+      VCR.use_cassette('get_similar_hashtags_by_api_token') do
+        expect(subject.get_similar_hashtags_by_api_token(test_hashtag)['data'].size).to eq(50)
+      end
+    end
+
+    it 'returns only one hashtag if tag_name is too short' do
+      VCR.use_cassette('get_similar_hashtags_by_access_token') do
+        expect(subject.get_similar_hashtags_by_access_token("sun", access_token)['data'].size).to eq(1)
+      end
+    end
+  end
+
   describe '#call_api_by_api_token_for_media_file_comments' do
     it 'returns parsed comments' do
       VCR.use_cassette('call_api_by_api_token_for_media_file_comments') do
@@ -281,7 +309,7 @@ describe InstagramApiCaller do
     end
 
     context 'when using access_token' do
-      
+
 
       it "returns a response containing media data with image urls etc" do
         VCR.use_cassette('users_user-id_media_recent_by_access_token') do
