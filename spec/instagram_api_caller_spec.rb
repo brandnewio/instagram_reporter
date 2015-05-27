@@ -353,7 +353,6 @@ describe InstagramApiCaller do
         end
       end
     end
-
   end
 
   describe 'get_followers' do
@@ -367,4 +366,25 @@ describe InstagramApiCaller do
     end
   end
 
+  describe 'get_media_likes_by_access_token' do
+    it 'returns list of likes for media file' do
+      VCR.use_cassette('get_media_likes_by_access_token') do
+        result =
+          subject.get_media_likes_by_access_token("696433196675953608_225072619", access_token)
+        expect(result['result']).to eq('ok')
+        expect(result['data'].size).to eq(15)
+      end
+    end
+  end
+
+  describe 'get_media_comments_by_access_token' do
+    it 'returns list of comments for media file' do
+      VCR.use_cassette('get_media_comments_by_access_token') do
+        result =
+          subject.get_media_comments_by_access_token("696433196675953608_225072619", access_token)
+        expect(result['result']).to eq('ok')
+        expect(result['data'].size).to eq(1)
+      end
+    end
+  end
 end

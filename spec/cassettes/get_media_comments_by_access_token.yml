@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/696433196675953608_225072619/comments?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4994'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 27 May 2015 15:41:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=90bc0af33753cf0b7d3efdc4087d8382; expires=Wed, 25-May-2016 15:41:33
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '283'
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":[{"created_time":"1432741245","text":"\ue022","from":{"username":"letsleaveitempty","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_225072619_75sq_1348157237.jpg","id":"225072619","full_name":""},"id":"994228084496986729"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/media/696433196675953608_225072619/comments?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+  recorded_at: Wed, 27 May 2015 15:41:33 GMT
+recorded_with: VCR 2.9.3

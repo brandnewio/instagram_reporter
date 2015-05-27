@@ -58,6 +58,16 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/users/#{user_id}/media/recent", params, true)
   end
 
+  def get_media_likes_by_access_token(media_id, access_token)
+    params = query_params(access_token)
+    api_get_and_parse("/v1/media/#{media_id}/likes", params)
+  end
+
+  def get_media_comments_by_access_token(media_id, access_token)
+    params = query_params(access_token)
+    api_get_and_parse("/v1/media/#{media_id}/comments", params)
+  end
+
   def get_users_by_name(username, access_token = nil)
     params = query_params(access_token).merge!(q: username)
     api_get_and_parse("/v1/users/search", params, true)
