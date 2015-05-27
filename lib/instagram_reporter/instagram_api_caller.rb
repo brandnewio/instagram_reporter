@@ -161,7 +161,9 @@ class InstagramApiCaller < InstagramInteractionsBase
       when 200
         parse_json(response.body)
       when 400, 404, 500, 502, 503, 504
-        InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response.body}")
+        if response.body.to_s !~ /you cannot view this resource/
+          InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response.body}")
+        end
         {
           result: 'error',
           body: response.body,
@@ -241,7 +243,9 @@ class InstagramApiCaller < InstagramInteractionsBase
       rescue Oj::ParseError
         response_body = @response.body
       end
-      InstagramReporter.logger.debug("Wrong response status during GET #{@uri}: #{@response.status}. Response body: #{response_body}")
+      if response_body.to_s !~ /you cannot view this resource/
+        InstagramReporter.logger.debug("Wrong response status during GET #{@uri}: #{@response.status}. Response body: #{response_body}")
+      end
       { result: 'error', body: response_body }
     end
 end
