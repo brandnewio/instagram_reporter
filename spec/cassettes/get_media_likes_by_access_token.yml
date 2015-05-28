@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/696433196675953608_225072619/likes?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4995'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 27 May 2015 15:41:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=0ed1e1b1225968bb997d34f01d671a42; expires=Wed, 25-May-2016 15:41:33
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2933'
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":[{"username":"c_ristiano07","profile_picture":"https:\/\/igcdn-photos-b-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/1596882_935052406524361_329510951_a.jpg","id":"1120668581","full_name":""},{"username":"lifestyle_mallorca","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_646026213_75sq_1395738798.jpg","id":"646026213","full_name":"I
+        \u2764\ufe0f MALLORCA"},{"username":"albert_fiol","profile_picture":"https:\/\/igcdn-photos-e-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/10683772_708889945846228_392256375_a.jpg","id":"366176478","full_name":"Albert
+        Fiol"},{"username":"ainwen8","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_359601507_75sq_1390038163.jpg","id":"359601507","full_name":"Marianna"},{"username":"frdnd","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_341872543_75sq_1394578418.jpg","id":"341872543","full_name":"Ferdinand"},{"username":"faustomartin","profile_picture":"https:\/\/igcdn-photos-b-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/11251290_1380140158960409_1125395651_a.jpg","id":"274509399","full_name":"Fausto
+        Mart\u00edn"},{"username":"bihotzbi","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_248618618_75sq_1367423138.jpg","id":"248618618","full_name":"Bihotz
+        bi"},{"username":"forn_sant_francesc","profile_picture":"https:\/\/igcdn-photos-a-a.akamaihd.net\/hphotos-ak-xtf1\/t51.2885-19\/10249224_1580893742153032_1995213335_a.jpg","id":"215345447","full_name":"Joan
+        Segu\u00ed"},{"username":"beautyallaround","profile_picture":"https:\/\/igcdn-photos-e-a.akamaihd.net\/hphotos-ak-xap1\/t51.2885-19\/10932447_726692870772100_946927377_a.jpg","id":"194292045","full_name":""},{"username":"xiazek","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_45364550_75sq_1378321024.jpg","id":"45364550","full_name":"Maciej
+        K."},{"username":"albertllabres","profile_picture":"https:\/\/igcdn-photos-e-a.akamaihd.net\/hphotos-ak-xtf1\/t51.2885-19\/10735051_730062253698444_314689317_a.jpg","id":"30644266","full_name":"Albert
+        Llabr\u00e9s"},{"username":"fernandaveloso","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_6121733_75sq_1360876222.jpg","id":"6121733","full_name":"fernandaveloso"},{"username":"marcinb","profile_picture":"https:\/\/igcdn-photos-c-a.akamaihd.net\/hphotos-ak-xpf1\/t51.2885-19\/10946330_1549786645305170_2031138579_a.jpg","id":"811568","full_name":"Marcin
+        Bali\u0144ski"},{"username":"b_lassen","profile_picture":"https:\/\/igcdn-photos-a-a.akamaihd.net\/hphotos-ak-xfa1\/t51.2885-19\/10895444_1411182669174840_17509398_a.jpg","id":"267565","full_name":""},{"username":"goldie_berlin","profile_picture":"https:\/\/igcdn-photos-h-a.akamaihd.net\/hphotos-ak-xpa1\/t51.2885-19\/11142385_423654037812559_1088657895_a.jpg","id":"165640","full_name":"Travel
+        diary by Sylvia"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/media/696433196675953608_225072619/likes?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+  recorded_at: Wed, 27 May 2015 15:41:33 GMT
+recorded_with: VCR 2.9.3

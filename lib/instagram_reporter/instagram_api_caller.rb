@@ -58,6 +58,16 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/users/#{user_id}/media/recent", params, true)
   end
 
+  def get_media_likes_by_access_token(media_id, access_token)
+    params = query_params(access_token)
+    api_get_and_parse("/v1/media/#{media_id}/likes", params)
+  end
+
+  def get_media_comments_by_access_token(media_id, access_token)
+    params = query_params(access_token)
+    api_get_and_parse("/v1/media/#{media_id}/comments", params)
+  end
+
   def get_users_by_name(username, access_token = nil)
     params = query_params(access_token).merge!(q: username)
     api_get_and_parse("/v1/users/search", params, true)
@@ -72,28 +82,8 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/locations/search", params, true)
   end
 
-  def call_api_by_access_token_for_media_file_comments(instagram_media_id, access_token)
-    call_api_by_access_token_for_media_info(instagram_media_id, access_token, 'comments')
-  end
-
-  def call_api_by_access_token_for_media_file_likes(instagram_media_id, access_token)
-    call_api_by_access_token_for_media_info(instagram_media_id, access_token, 'likes')
-  end
-
-  def call_api_by_access_token_for_media_file_likes_and_comments(instagram_media_id, access_token)
-    call_api_by_access_token_for_media_info(instagram_media_id, access_token, ['likes', 'comments'])
-  end
-
   def call_api_by_access_token_for_media_file_stats(instagram_media_id, access_token)
     call_api_by_access_token_for_media_info(instagram_media_id, access_token, ['likes', 'comments', 'tags'])
-  end
-
-  def call_api_by_api_token_for_media_file_comments(instagram_media_id)
-    call_api_by_api_token_for_media_file(instagram_media_id, 'comments')
-  end
-
-  def call_api_by_api_token_for_media_file_likes(instagram_media_id)
-    call_api_by_api_token_for_media_file(instagram_media_id, 'likes')
   end
 
   def call_api_by_api_token_for_media_file_caption(instagram_media_id)
@@ -151,9 +141,6 @@ class InstagramApiCaller < InstagramInteractionsBase
       when 200
         parse_json(response.body)
       when 400, 404, 500, 502, 503, 504
-        if response.body.to_s !~ /you cannot view this resource/
-          InstagramReporter.logger.debug("Wrong response status during GET #{uri}: #{response.status}. Response body: #{response.body}")
-        end
         {
           result: 'error',
           body: response.body,
@@ -232,9 +219,6 @@ class InstagramApiCaller < InstagramInteractionsBase
         response_body = Oj.load(@response.body)
       rescue Oj::ParseError
         response_body = @response.body
-      end
-      if response_body.to_s !~ /you cannot view this resource/
-        InstagramReporter.logger.debug("Wrong response status during GET #{@uri}: #{@response.status}. Response body: #{response_body}")
       end
       { result: 'error', body: response_body }
     end
