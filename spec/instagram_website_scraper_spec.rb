@@ -74,27 +74,27 @@ describe InstagramWebsiteScraper do
   end
 
   describe "#get profile page data" do
-    # it 'returns error if unable to fetch profile page data' do
-    #   VCR.use_cassette('unable to get data') do
-    #     expect(subject.get_profile_statistic(non_existent_web_profile)[:result]).to eq("error")
-    #   end
-    # end
+    it 'returns error if unable to fetch profile page data' do
+      VCR.use_cassette('unable to get data') do
+        expect(subject.get_profile_statistic(non_existent_web_profile)[:result]).to eq("error")
+      end
+    end
     
-    # it 'returns number of media files' do
-    #   VCR.use_cassette('get_number_of_media_files') do
-    #     expect(subject.get_profile_statistic(luki3k5_web_profile)["media"].to_s).to eq("37")
-    #   end
-    # end
-    # it 'returns number of followers' do
-    #   VCR.use_cassette('get_number_of_followers') do
-    #     expect(subject.get_profile_statistic(luki3k5_web_profile)["followed_by"].to_s).to eq("34")
-    #   end
-    # end
-    # it 'returns number of followed profiles' do
-    #   VCR.use_cassette('get_number_of_followed_profiles') do
-    #     expect(subject.get_profile_statistic(luki3k5_web_profile)["follows"].to_s).to eq("3")
-    #   end
-    # end
+    it 'returns number of media files' do
+      VCR.use_cassette('get_number_of_media_files') do
+        expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["media"].to_s).to eq("37")
+      end
+    end
+    it 'returns number of followers' do
+      VCR.use_cassette('get_number_of_followers') do
+        expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["followed_by"].to_s).to eq("35")
+      end
+    end
+    it 'returns number of followed profiles' do
+      VCR.use_cassette('get_number_of_followed_profiles') do
+        expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["follows"].to_s).to eq("4")
+      end
+    end
 
     it 'returns number of commets and likes for media file with given media_id for given profile' do
       VCR.use_cassette('get_likes_and_comments') do
