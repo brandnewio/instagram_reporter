@@ -18,16 +18,38 @@ class InstagramWebsiteScraper
     nil
   end
 
+# {
+#  "username"=>"luki3k5”,
+#  "bio"=>”",
+#  "website"=>”",
+#  "profile_picture"=>"https://instagramimages-a.akamaihd.net/profiles/profile_4907942_75sq_1392804574.jpg”,
+#  "full_name"=>”",
+#  "counts"=>{"media"=>37, "followed_by"=>34, "follows"=>3},
+#  "id"=>"4907942”,
+#  "isVerified"=>false,
+#  "contact_data_email"=>nil,
+#  "other_contact_means"=>nil
+#  }
   def scrape_data_for_profile_page(html)
     returnee = nil
+    el = Hash.new
     doc = Nokogiri::HTML(html)
-    #el = JSON.parse(doc.content.match(/{"entry_data":{.*}/).to_s)
-    prematched_content = doc.content.match(/"prerelease":.*"}/).to_s
-    match_for_profile_data = prematched_content.match(/{.*"id":"\d+"[^}]+}/).to_s
-    el = JSON.parse(match_for_profile_data)
-    #returnee = el['entry_data']['UserProfile'][0]['user']
-    el['contact_data_email']  = contact_data_email(el['bio'])
-    el['other_contact_means'] = find_other_contact_means(el['bio'])
+    prematched_content = "{" + doc.content.match(/"user":{.*"external_url".*?}/).to_s + "}"
+    profile_data = JSON.parse(prematched_content)
+    el['counts']= {
+      'followed_by' => profile_data['user']['followed_by']['count'],
+      'media'       => profile_data['user']['media']['count'],
+      'follows'     => profile_data['user']['follows']['count']
+    }
+    el['username'] = profile_data['user']['username']
+    el['full_name'] = profile_data['user']['full_name'].to_s
+    el['isVerified'] = profile_data['user']['is_verified']
+    el['id'] = profile_data['user']['id']
+    el['profile_picture'] = profile_data['user']['profile_pic_url']
+    el['contact_data_email']  = contact_data_email(profile_data['user']['biography'].to_s)
+    el['other_contact_means'] = find_other_contact_means(profile_data['user']['biography'].to_s)
+    el['website'] = profile_data['user']['external_url'].to_s
+    el['bio'] = profile_data['user']['biography'].to_s
     el
   end
 
@@ -51,23 +73,29 @@ class InstagramWebsiteScraper
     end
   end
 
-  def get_profile_statistic(html)
-    doc = Nokogiri::HTML(html)
-    doc_match = doc.content.match(/{"media":.*\d}/)
-    if doc_match.nil?
-      error_message = doc.css("div[class=error-container]").text
-      error_header  = doc.css('title').text
-      return {result: 'error', body: "Did not get profile page with statistics. Obtained response page \n #{error_header} \n with \n #{error_message} \n content"}
-    end
-    #string[string.index('=')+1..-1]
-    doc_match = doc_match.to_s[0..doc_match.to_s.index('}')]
-    #puts "#{doc_match.to_s[0..doc_match.to_s.index('}')]}"
-    returnee  = eval(doc_match.to_s.gsub(":", "=>"))
-    prematched_content = doc.content.match(/"prerelease":.*"}/).to_s
-    match_for_profile_picture = prematched_content.match(/{.*"id":"\d+"[^}]+}/).to_s
-    #el = JSON.parse(doc.content.match(/{"entry_data":{.*}/).to_s)
-    el = JSON.parse(match_for_profile_picture)
-    #result = el['entry_data']['UserProfile'][0]['user']
-    return returnee.merge!({result: 'ok', profile_picture: el['profile_picture']})
-  end
+  # def get_profile_statistic(html)
+  #   el = Hash.new
+
+  #   doc = Nokogiri::HTML(html)
+  #   prematched_content = "{" + doc.content.match(/"user":{.*"external_url".*?}/).to_s + "}"
+
+  #   #doc_match = doc.content.match(/{"media":.*\d}/)
+  #   if prematched_content.nil?
+  #     error_message = doc.css("div[class=error-container]").text
+  #     error_header  = doc.css('title').text
+  #     return {result: 'error', body: "Did not get profile page with statistics. Obtained response page \n #{error_header} \n with \n #{error_message} \n content"}
+  #   end
+  #   profile_data = JSON.parse(prematched_content)
+    
+  #   #string[string.index('=')+1..-1]
+  #   doc_match = doc_match.to_s[0..doc_match.to_s.index('}')]
+  #   #puts "#{doc_match.to_s[0..doc_match.to_s.index('}')]}"
+  #   returnee  = eval(doc_match.to_s.gsub(":", "=>"))
+  #   prematched_content = doc.content.match(/"prerelease":.*"}/).to_s
+  #   match_for_profile_picture = prematched_content.match(/{.*"id":"\d+"[^}]+}/).to_s
+  #   #el = JSON.parse(doc.content.match(/{"entry_data":{.*}/).to_s)
+  #   el = JSON.parse(match_for_profile_picture)
+  #   #result = el['entry_data']['UserProfile'][0]['user']
+  #   return returnee.merge!({result: 'ok', profile_picture: el['profile_picture']})
+  # end
 end
