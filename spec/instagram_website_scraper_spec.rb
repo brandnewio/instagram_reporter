@@ -58,7 +58,7 @@ describe InstagramWebsiteScraper do
       "website"             => "",
       "profile_picture"     => "https://instagramimages-a.akamaihd.net/profiles/profile_4907942_75sq_1392804574.jpg",
       "full_name"           => "",
-      "counts"              => { "media" => 37, "followed_by" => 34, "follows" => 3 },
+      "counts"              => { "media" => 37, "followed_by" => 35, "follows" => 4 },
       "id"                  => "4907942",
       "isVerified" => false,
       "contact_data_email"  => nil,
@@ -82,17 +82,17 @@ describe InstagramWebsiteScraper do
     
     it 'returns number of media files' do
       VCR.use_cassette('get_number_of_media_files') do
-        expect(subject.get_profile_statistic(luki3k5_web_profile)["media"].to_s).to eq("37")
+        expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["media"].to_s).to eq("37")
       end
     end
     it 'returns number of followers' do
       VCR.use_cassette('get_number_of_followers') do
-        expect(subject.get_profile_statistic(luki3k5_web_profile)["followed_by"].to_s).to eq("34")
+        expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["followed_by"].to_s).to eq("35")
       end
     end
     it 'returns number of followed profiles' do
       VCR.use_cassette('get_number_of_followed_profiles') do
-        expect(subject.get_profile_statistic(luki3k5_web_profile)["follows"].to_s).to eq("3")
+        expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["follows"].to_s).to eq("4")
       end
     end
 
