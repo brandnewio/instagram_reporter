@@ -176,7 +176,7 @@ class InstagramApiCaller < InstagramInteractionsBase
       when 400, 404, 500, 502, 503, 504
         set_response_body
       else
-        raise "call for media #{actions} (media_id: #{instagram_media_id}) failed with response #{response.inspect}"
+        raise "call for media #{actions} (media_id: #{instagram_media_id}) failed with response #{@response.inspect}"
       end
     end
 
@@ -193,7 +193,7 @@ class InstagramApiCaller < InstagramInteractionsBase
       when 400, 404, 500, 502, 503, 504
         set_response_body
       else
-        raise "call for media #{action} (media_id: #{media_id}) failed with response #{response.inspect}"
+        raise "call for media #{action} (media_id: #{media_id}) failed with response #{@response.inspect}"
       end
     end
 
