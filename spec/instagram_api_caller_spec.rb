@@ -241,6 +241,7 @@ describe InstagramApiCaller do
     it "returns a response containing media data with image urls etc" do
       VCR.use_cassette('users_search') do
         result = subject.get_users_by_name(username, access_token)
+        puts "#{result.inspect}"
         expect(result['data'].first['id']).to eq('165640')
         expect(result['data'].first['username']).to eq('goldie_berlin')
       end

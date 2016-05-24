@@ -8,11 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.9
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - Faraday v0.9.1
   response:
     status:
       code: 200
@@ -25,33 +21,76 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 30 Apr 2014 21:34:51 GMT
+      - Tue, 15 Sep 2015 15:15:42 GMT
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Pragma:
       - no-cache
-      Server:
-      - nginx
       Set-Cookie:
-      - ccode=PL; Path=/
-      - csrftoken=263475926a99d80d63ce1ce6e6920a64; expires=Wed, 29-Apr-2015 21:34:51
+      - csrftoken=b6d17f7177ed3799a3fdf67b83824c50; expires=Tue, 13-Sep-2016 15:15:42
         GMT; Max-Age=31449600; Path=/
       Vary:
       - Cookie, Accept-Language, Accept-Encoding
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4848'
+      - '4999'
       Content-Length:
-      - '296'
+      - '870'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"meta":{"code":200},"data":[{"username":"goldie_berlin","bio":"Instagramer
-        from Germany \/Berlin \u2728MY DIARY AROUND THE WORLD IN COLORS \u2728 travel
-        with me on Instagram \u2728sylvia@brandnew.io \u2728","website":"http:\/\/www.InstagramerFromGermany.com","profile_picture":"http:\/\/images.ak.instagram.com\/profiles\/profile_165640_75sq_1380875972.jpg","full_name":"!
-        Sylvia","id":"165640"}]}'
-    http_version: 
-  recorded_at: Wed, 30 Apr 2014 21:34:50 GMT
-recorded_with: VCR 2.8.0
+      string: '{"meta":{"code":200},"data":[{"username":"goldie_berlin","profile_picture":"https:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/11142385_423654037812559_1088657895_a.jpg","id":"165640","full_name":"Travel
+        diary by Sylvia"},{"username":"goldie_bel","profile_picture":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11256929_1585007381777011_1759330533_a.jpg","id":"258235111","full_name":"Berlinda
+        Nyarkoh"},{"username":"sonogoldiecom","profile_picture":"https:\/\/igcdn-photos-g-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11242389_1635098436708478_1242081805_a.jpg","id":"968427454","full_name":"#Berlin#Hamburg#K\u00f6ln"},{"username":"berlinghofgoldie","profile_picture":"https:\/\/igcdn-photos-d-a.akamaihd.net\/hphotos-ak-xpa1\/t51.2885-19\/925967_1375584696076243_1461439265_a.jpg","id":"1656792739","full_name":"Goldie"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/search?client_id=<API_TOKEN>&q=goldie_berlin
+  recorded_at: Tue, 15 Sep 2015 15:15:49 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/search?access_token%5Baccess_token%5D=&q=goldie_berlin
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 30 Sep 2015 13:22:35 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - csrftoken=7326c1e5e22f31bd97948615582f2f9b; expires=Wed, 28-Sep-2016 13:22:35
+        GMT; Max-Age=31449600; Path=/
+      - mid=VgviGwAEAAGK7ump7kLJnoWCzTCk; expires=Tue, 25-Sep-2035 13:22:35 GMT; Max-Age=630720000;
+        Path=/
+      Vary:
+      - Cookie, Accept-Language
+      Content-Length:
+      - '127'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"error_type":"OAuthParameterException","code":400,"error_message":"Missing
+        client_id or access_token URL parameter."}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/search?access_token%5Baccess_token%5D=&q=goldie_berlin
+  recorded_at: Wed, 30 Sep 2015 13:22:35 GMT
+recorded_with: VCR 2.9.3

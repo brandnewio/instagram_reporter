@@ -70,6 +70,7 @@ class InstagramApiCaller < InstagramInteractionsBase
 
   def get_users_by_name(username, access_token = nil)
     params = query_params(access_token).merge!(q: username)
+    puts "params: #{params}"
     api_get_and_parse("/v1/users/search", params, true)
   end
 
@@ -118,11 +119,12 @@ class InstagramApiCaller < InstagramInteractionsBase
     end
 
     def api_get_and_parse(uri, params, get_pagination = false)
+
       response = Hash.new
       api_response = api_connection.get(uri, params) do |req|
         req.options = DEFAULT_REQUEST_OPTIONS
       end
-
+       puts "#{params} #{uri} #{api_response.inspect}"
       if(api_response.status == 200)
         response['data']       = parse_response(api_response, uri)
         response['pagination'] = get_pagination(api_response.body) if get_pagination

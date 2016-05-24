@@ -34,15 +34,16 @@ class InstagramWebsiteScraper
     returnee = nil
     el = Hash.new
     doc = Nokogiri::HTML(html)
-    prematched_content = "{" + doc.content.match(/"user":{.*"external_url".*?}/).to_s + "}"
-    profile_data = JSON.parse(prematched_content)
-    el['counts']= {
+    prematched_content = doc.content.match(/{"ProfilePage":.*}\]}/).to_s
+    profile_data = JSON.parse(prematched_content)['ProfilePage'][0]
+
+    el['counts'] = {
       'followed_by' => profile_data['user']['followed_by']['count'],
       'media'       => profile_data['user']['media']['count'],
       'follows'     => profile_data['user']['follows']['count']
     }
     el['username'] = profile_data['user']['username']
-    el['full_name'] = profile_data['user']['full_name'].to_s
+    el['full_name'] = ''
     el['isVerified'] = profile_data['user']['is_verified']
     el['id'] = profile_data['user']['id']
     el['profile_picture'] = profile_data['user']['profile_pic_url']
