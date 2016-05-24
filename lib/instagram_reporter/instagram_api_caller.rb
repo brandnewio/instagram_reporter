@@ -108,10 +108,16 @@ class InstagramApiCaller < InstagramInteractionsBase
 
     def parse_json(data)
       begin
+        data = clear_data(data)
         Oj.load(data)['data']
       rescue Oj::ParseError
         raise "Oj Parser Error: unable to parse instagram api response data #{data}"
       end
+    end
+
+    def clear_data(data)
+      # Clear first byte of emoji if there is no second byte in unicode
+      data.gsub(/\\ud83d([^\\])/i, "\\1")
     end
 
     def get_pagination(data)
@@ -178,7 +184,7 @@ class InstagramApiCaller < InstagramInteractionsBase
       when 400, 404, 500, 502, 503, 504
         set_response_body
       else
-        raise "call for media #{actions} (media_id: #{instagram_media_id}) failed with response #{response.inspect}"
+        raise "call for media #{actions} (media_id: #{instagram_media_id}) failed with response #{@response.inspect}"
       end
     end
 
@@ -195,7 +201,7 @@ class InstagramApiCaller < InstagramInteractionsBase
       when 400, 404, 500, 502, 503, 504
         set_response_body
       else
-        raise "call for media #{action} (media_id: #{media_id}) failed with response #{response.inspect}"
+        raise "call for media #{action} (media_id: #{media_id}) failed with response #{@response.inspect}"
       end
     end
 

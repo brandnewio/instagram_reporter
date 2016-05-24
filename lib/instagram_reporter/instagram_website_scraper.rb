@@ -57,7 +57,7 @@ class InstagramWebsiteScraper
   def get_likes_and_comments(html)
     returnee         = { status: 'online' }
     doc              = Nokogiri::HTML(html)
-    
+
     if !doc.content.match(/Page Not Found/).nil?
       returnee.merge!({ status: 'offline', result: 'error', body: 'Page not found for media file' })
     else
@@ -86,7 +86,7 @@ class InstagramWebsiteScraper
       return {result: 'error', body: "Did not get profile page with statistics. Obtained response page \n #{error_header} \n with \n #{error_message} \n content"}
     end
     profile_data = JSON.parse(content)
-    
+
     el['counts']= {
       'followed_by' => profile_data['user']['followed_by']['count'],
       'media'       => profile_data['user']['media']['count'],
