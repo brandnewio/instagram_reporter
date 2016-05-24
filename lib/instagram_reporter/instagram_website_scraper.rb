@@ -43,7 +43,7 @@ class InstagramWebsiteScraper
       'follows'     => profile_data['user']['follows']['count']
     }
     el['username'] = profile_data['user']['username']
-    el['full_name'] = ''
+    el['full_name'] = profile_data['user']['full_name'].to_s
     el['isVerified'] = profile_data['user']['is_verified']
     el['id'] = profile_data['user']['id']
     el['profile_picture'] = profile_data['user']['profile_pic_url']
