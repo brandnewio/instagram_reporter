@@ -132,19 +132,19 @@ class InstagramApiCaller < InstagramInteractionsBase
       end
        puts "#{params} #{uri} #{api_response.inspect}"
       if(api_response.status == 200)
-        response['data']       = parse_response(api_response, uri)
+        response['data']       = parse_response(api_response, uri, params)
         response['pagination'] = get_pagination(api_response.body) if get_pagination
         response['result']     = 'ok'
         response['status']     = api_response.status
       else
-        response = parse_response(api_response, uri)
+        response = parse_response(api_response, uri, params)
       end
 
       return response
 
     end
 
-    def parse_response(response, uri)
+    def parse_response(response, uri, params)
       case response.status
       when 200
         parse_json(response.body)
@@ -156,7 +156,7 @@ class InstagramApiCaller < InstagramInteractionsBase
           url: uri
         }
       else
-        raise "unsupported response status during GET #{uri}: #{response.status}. response body : #{response.body}"
+        raise "unsupported response status during GET #{uri}: #{response.status}. Request params #{params}. response body : #{response.body}"
       end
     end
 
@@ -189,6 +189,7 @@ class InstagramApiCaller < InstagramInteractionsBase
     end
 
     def call_api_by_api_token_for_media_file(media_id, action)
+      @uri="/v1/media/#{media_id}?client_id=#{API_TOKEN}"
       get_response("/v1/media/#{media_id}?client_id=#{API_TOKEN}")
 
       case @response.status
