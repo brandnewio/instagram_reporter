@@ -9,6 +9,7 @@ describe InstagramApiCaller do
   let(:test_media_file_with_location_id) {'831138234853764564_4168338'}
   let(:access_token) { '1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4' }
   let(:user_id) { '45364550' }
+  let(:emoji_user_id) { '3537544360' }
 
   describe '#initialize' do
     before(:all) do
@@ -48,6 +49,11 @@ describe InstagramApiCaller do
     it 'returns user data with profile picture link' do
       VCR.use_cassette('get_user_info_by_access_token') do
         expect(subject.get_user_info_by_access_token(user_id, access_token)['data']['profile_picture']).to eq('https://instagramimages-a.akamaihd.net/profiles/profile_45364550_75sq_1378321024.jpg')
+      end
+    end
+    it 'returns user data with profile picture link' do
+      VCR.use_cassette('get_user_info_by_access_token_with_emoji') do
+        expect(subject.get_user_info_by_access_token(emoji_user_id, access_token)['data']['profile_picture']).to eq('https://scontent.cdninstagram.com/t51.2885-19/s150x150/13628486_630123880487962_679184041_a.jpg')
       end
     end
   end
