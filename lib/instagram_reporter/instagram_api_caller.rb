@@ -142,8 +142,9 @@ class InstagramApiCaller < InstagramInteractionsBase
     end
 
     def clear_data(data)
-      # Clear first byte of emoji if there is no second byte in unicode
-      data.gsub(/\\ud83d([^\\])/i, "\\1").gsub(EMOJI_AND_SKIN_TONES_REGEXP, "")
+      data = data.gsub(EMOJI_AND_SKIN_TONES_REGEXP, "")
+      # Escape special form of multibyte UTF in format \u{}
+      data.gsub(/\\u{(\w+)}/, '\u\1')
     end
 
     def get_pagination(data)
