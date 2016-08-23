@@ -298,4 +298,12 @@ describe InstagramApiCaller do
       end
     end
   end
+
+  describe 'get_user_info_by_api_token_with_invalid_bio' do
+    it 'returns user data with coorect bio' do
+      VCR.use_cassette('get_user_info_by_api_token_with_invalid_bio') do
+        expect(subject.get_user_info_by_api_token(user_id)['data']['bio']).to eq('bemyself💎😏')
+      end
+    end
+  end
 end
