@@ -142,6 +142,11 @@ class InstagramApiCaller < InstagramInteractionsBase
     end
 
     def clear_data(data)
+      # Remove extra `\ud83d` code because each emoji starts with `\ud83d` and
+      # then comes with it's own code, like: \ud83d\ude21 for 😡
+      # but sometimes instagram is sending incorrect code, i.e. sending 2
+      # `\\ud83d` code without original emoiji code.
+      data = data.gsub(/\\ud83d\\ud83d/i, '\\ud83d')
       data = data.gsub(/\\ud83d([^\\])/i, "\\1").gsub(EMOJI_AND_SKIN_TONES_REGEXP, "")
       # Escape special form of multibyte UTF in format \u{}
       data.gsub(/\\u{(\w+)}/, '\u\1')
