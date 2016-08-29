@@ -12,17 +12,13 @@ describe InstagramApiCaller do
   let(:emoji_user_id) { '3537544360' }
 
   describe '#initialize' do
-    before(:all) do
-      @current_token = InstagramInteractionsBase::API_TOKEN
+    before do
+      stub_const("InstagramInteractionsBase::API_TOKEN", nil)
     end
 
     it "should raise error if environmental variable INSTAGRAM_API_TOKEN is not set on class initialization" do
-      InstagramInteractionsBase::API_TOKEN = nil
-      expect { InstagramApiCaller.new }.to raise_error(ArgumentError, 'INSTAGRAM_API_TOKEN environment variable not set')
-    end
 
-    after(:all) do
-      InstagramInteractionsBase::API_TOKEN = @current_token
+      expect { InstagramApiCaller.new }.to raise_error(ArgumentError, 'INSTAGRAM_API_TOKEN environment variable not set')
     end
   end
 
