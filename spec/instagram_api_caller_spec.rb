@@ -12,17 +12,13 @@ describe InstagramApiCaller do
   let(:emoji_user_id) { '3537544360' }
 
   describe '#initialize' do
-    before(:all) do
-      @current_token = InstagramInteractionsBase::API_TOKEN
+    before do
+      stub_const("InstagramInteractionsBase::API_TOKEN", nil)
     end
 
     it "should raise error if environmental variable INSTAGRAM_API_TOKEN is not set on class initialization" do
-      InstagramInteractionsBase::API_TOKEN = nil
-      expect { InstagramApiCaller.new }.to raise_error(ArgumentError, 'INSTAGRAM_API_TOKEN environment variable not set')
-    end
 
-    after(:all) do
-      InstagramInteractionsBase::API_TOKEN = @current_token
+      expect { InstagramApiCaller.new }.to raise_error(ArgumentError, 'INSTAGRAM_API_TOKEN environment variable not set')
     end
   end
 
@@ -300,9 +296,17 @@ describe InstagramApiCaller do
   end
 
   describe 'get_user_info_by_api_token_with_invalid_bio' do
-    it 'returns user data with coorect bio' do
+    it 'returns user data with correct bio' do
       VCR.use_cassette('get_user_info_by_api_token_with_invalid_bio') do
         expect(subject.get_user_info_by_api_token(user_id)['data']['bio']).to eq('bemyself💎😏')
+      end
+    end
+  end
+
+  describe 'get_user_info_by_api_token_with_invalid_bios' do
+    it 'returns user data with correct bios' do
+      VCR.use_cassette('get_user_info_by_api_token_with_invalid_bios') do
+        expect(subject.get_user_info_by_api_token(user_id)['data']['bio']).to_not be_empty
       end
     end
   end
