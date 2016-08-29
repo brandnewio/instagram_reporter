@@ -27,6 +27,24 @@ class InstagramApiCaller < InstagramInteractionsBase
     \u{1F980}-\u{1F984}\u{1F9C0}]|\\u{1F3FB}|\\u{1F3FC}|\\u{1F3FD}|\\u{1F3FF}
     /x
 
+  # Replacement Character:
+  # The replacement character � (often a black diamond with a white question mark
+  # or an empty square box) is a symbol found in the Unicode standard at codepoint
+  # U+FFFD in the Specials table. It is used to indicate problems when a system
+  # is unable to render a stream of data to a correct symbol. It is usually seen
+  # when the data is invalid and does not match any character.
+
+  # refer: http://www.utf8icons.com/character/56845/UTF-8-character
+  #
+  # `\ude0d` is replacement character( � ) unicode in UTF-8
+
+  # refer:
+  #   http://unicode.scarfboy.com/?s=U%2BDC8B
+  #   http://www.charbase.com/dc8b-unicode-invalid-character
+  #
+  # `\udc8b` is unicode string of �
+  REPLACEMENT_CHARACTER_UNICODES = ['\ude0d', '\udc8b']
+
 
   def get_instagram_accounts_by_api_token
     api_get_and_parse(POPULAR_INSTAGRAM_MEDIA_URL, query_params(nil))
@@ -134,8 +152,8 @@ class InstagramApiCaller < InstagramInteractionsBase
 
     def parse_json(data)
       begin
-        data = clear_data(data)
-        Oj.load(data)['data']
+        cleaned_data = clear_data(data)
+        Oj.load(cleaned_data)['data']
       rescue Oj::ParseError
         raise "Oj Parser Error: unable to parse instagram api response data #{data}"
       end
@@ -147,9 +165,25 @@ class InstagramApiCaller < InstagramInteractionsBase
       # but sometimes instagram is sending incorrect code, i.e. sending 2
       # `\\ud83d` code without original emoiji code.
       data = data.gsub(/\\ud83d\\ud83d/i, '\\ud83d')
-      data = data.gsub(/\\ud83d([^\\])/i, "\\1").gsub(EMOJI_AND_SKIN_TONES_REGEXP, "")
+
+      data = remove_replacement_character(data)
+                .gsub(/\\ud83d([^\\])/i, "\\1")
+                .gsub(EMOJI_AND_SKIN_TONES_REGEXP, "")
+
       # Escape special form of multibyte UTF in format \u{}
       data.gsub(/\\u{(\w+)}/, '\u\1')
+    end
+
+    def remove_replacement_character(data)
+      REPLACEMENT_CHARACTER_UNICODES.each do |replacement_character_unicode|
+        data = remove_replacement_character_unicode(data, replacement_character_unicode)
+      end
+      data
+    end
+
+    def remove_replacement_character_unicode(data, replacement_character_unicode)
+      replacement_regex = Regexp.new("\\#{replacement_character_unicode}([^\\\\])", "i")
+      data.gsub(replacement_regex, "\\1")
     end
 
     def get_pagination(data)

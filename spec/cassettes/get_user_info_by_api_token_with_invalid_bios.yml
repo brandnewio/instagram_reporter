@@ -1,0 +1,141 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 09 Apr 2015 11:54:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ratelimit-Remaining:
+      - '4383'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Set-Cookie:
+      - csrftoken=e90f95afede17a1bda9a4ccde0379d24; expires=Thu, 07-Apr-2016 11:54:22
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '376'
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"code":200},"data":{"username":"yoh_miyhu","bio":"00Line\u7684\u5c0f\u5973\u5b69\ud83d\ude18\u5f9e2013/7/16\u958b\u59cb\u611b\u4e0aBIGANG\ude0d2014\u760b\u72c2\u611b\u4e0aYGFamily\ud83d\ude1aI am VIP+BLACKJACKET+\u6c38\u611bYGFamily\ud83d\ude01FB\u641c\u5c0b\uff1a\u5f35\u6d93\u6d93\u6b61\u8fce++\u4f60\u8ffd\u8e64\u6211\u6211\u4e5f\u8ffd\u8e64\u4f60\u4f60\u9000\u8ffd\u6211\u6211\u4e5f\u9000\u8ffd\u4f60\u4e0d\u559c\u6b61\u8ffd\u4e86\u53c8\u9000\u8ffd\u62dc\u8a17\u5225\u9000\u8ffd","bio2":"I amVV.I.P\ud83d\udc51+\u2660\ufe0f\ud83c\uddf0\ud83c\uddf7\ud83c\uddf0\ud83c\uddf7\ud83c\uddf0\ud83c\uddf7\ube45\ubc45\uc740\uc0ac\ub791\ud83d\udc9b\ud83d\udc99\u2764\ufe0f\ud83d\udc9a\ud83d\udc9c\ud83d\udc8b\udc8bwanttogetalongwithallV.I.Psintheworld\ud83d\ude0dc\u1ea3m\u01a1n\ud83c\udf38","website":"","profile_picture":"https://scontent.cdninstagram.com/t51.2885-19/11906329_960233084022564_1448528159_a.jpg","full_name":"\u6c6a\u795dSallyanne","counts":{"media":0,"followed_by":0,"follows":208},"id":"45364550"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+  recorded_at: Thu, 09 Apr 2015 11:54:22 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Tue, 23 Aug 2016 14:44:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=v8Yysimip1pXBwoatbiPflwlT304BOZ6; expires=Tue, 22-Aug-2017 14:44:26
+        GMT; Max-Age=31449600; Path=/; secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"error_type": "OAuthAccessTokenException", "code": 400, "error_message":
+        "The access_token provided is invalid."}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+  recorded_at: Tue, 23 Aug 2016 14:44:26 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Tue, 23 Aug 2016 14:44:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=wpXqXAQLlUxCO7vfDdQHXheHddvJGSym; expires=Tue, 22-Aug-2017 14:44:29
+        GMT; Max-Age=31449600; Path=/; secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"error_type": "OAuthAccessTokenException", "code": 400, "error_message":
+        "The access_token provided is invalid."}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+  recorded_at: Tue, 23 Aug 2016 14:44:29 GMT
+recorded_with: VCR 3.0.3
