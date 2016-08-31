@@ -310,4 +310,20 @@ describe InstagramApiCaller do
       end
     end
   end
+
+  describe 'get_user_info_by_api_token_with_extra_back_slash' do
+    it 'returns user data' do
+      VCR.use_cassette('get_user_info_by_api_token_with_extra_back_slash') do
+        expect(subject.get_user_info_by_api_token(user_id)['data']['bio']).to_not be_empty
+      end
+    end
+  end
+
+  describe 'get_user_info_by_api_token_with_emojis_unicode_in_bio' do
+    it 'returns user data' do
+      VCR.use_cassette('get_user_info_by_api_token_with_emojis_unicode_in_bio') do
+        expect(subject.get_user_info_by_api_token(user_id)['data']['bio']).to_not be_empty
+      end
+    end
+  end
 end
