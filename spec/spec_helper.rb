@@ -22,3 +22,5 @@ VCR.configure do |c|
   c.default_cassette_options = { :record => :new_episodes }
   c.filter_sensitive_data('<API_TOKEN>') { ENV['INSTAGRAM_API_TOKEN'] }
 end
+
+def puts(*args); end unless ENV['VERBOSE']
