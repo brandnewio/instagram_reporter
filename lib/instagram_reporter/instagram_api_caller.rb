@@ -43,7 +43,7 @@ class InstagramApiCaller < InstagramInteractionsBase
   #   http://www.charbase.com/dc8b-unicode-invalid-character
   #
   # `\udc8b` is unicode string of �
-  REPLACEMENT_CHARACTER_UNICODES = ['\ude0d', '\udc8b']
+  REPLACEMENT_CHARACTER_UNICODES = ['\ude0d', '\udc8b', '\ud83d']
 
 
   def get_instagram_accounts_by_api_token
@@ -167,7 +167,6 @@ class InstagramApiCaller < InstagramInteractionsBase
       data = data.gsub(/\\ud83d\\ud83d/i, '\\ud83d')
 
       data = remove_replacement_character(data)
-                .gsub(/\\ud83d([^\\])/i, "\\1")
                 .gsub(EMOJI_AND_SKIN_TONES_REGEXP, "")
                 .gsub(/\\+["],/, '",') # to clean up any extra back slash left
 
@@ -183,7 +182,7 @@ class InstagramApiCaller < InstagramInteractionsBase
     end
 
     def remove_replacement_character_unicode(data, replacement_character_unicode)
-      replacement_regex = Regexp.new("\\#{replacement_character_unicode}([^\\\\])", "i")
+      replacement_regex = Regexp.new("\\\\*\\#{replacement_character_unicode}([^\\\\])", "i")
       data.gsub(replacement_regex, "\\1")
     end
 
