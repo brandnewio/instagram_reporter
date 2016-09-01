@@ -78,7 +78,7 @@ class InstagramWebsiteScraper
     el = Hash.new
 
     doc = Nokogiri::HTML(html)
-    prematched_content = doc.content.match(/"user":{.*"external_url".*?}/)
+    prematched_content = doc.content.match(/"user":\s{0,1}{.*"external_url".*?}/)
     content = "{" + prematched_content.to_s + "}"
     if prematched_content.nil?
       error_message = doc.css("div[class=error-container]").text
