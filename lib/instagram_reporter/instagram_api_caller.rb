@@ -168,7 +168,6 @@ class InstagramApiCaller < InstagramInteractionsBase
 
       data = remove_replacement_character(data)
                 .gsub(EMOJI_AND_SKIN_TONES_REGEXP, "")
-                .gsub(/\\+["],/, '",') # to clean up any extra back slash left
 
       # Escape special form of multibyte UTF in format \u{}
       data.gsub(/\\u{(\w+)}/, '\u\1')
