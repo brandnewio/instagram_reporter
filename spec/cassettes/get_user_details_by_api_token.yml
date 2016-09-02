@@ -1,0 +1,150 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 29 Jan 2015 12:20:06 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - csrftoken=3107192ac8c4a76a2cdee3bd7f1ad94c; expires=Thu, 28-Jan-2016 12:20:06
+        GMT; Max-Age=31449600; Path=/
+      - ccode=PL; Path=/
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4999'
+      Content-Length:
+      - '376'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"code": 200}, "data": {"username": "zhenechkaguseva", "bio":
+        "Model, actress \u0420\u0435\u043a\u043b\u0430\u043c\u0430 +79096666652 \ud83d\udce9gusevaevgeniia@gmail.com
+        \u0412\u043b\u0430\u0434\u0435\u043b\u0438\u0446\u0430 Boutique GUSEVY Moscow
+        \u0422\u0426\"\u041f\u0440\u0438\u043d\u0446 \u041f\u043b\u0430\u0437\u0430\",
+        \u043c.\u0422\u0435\u043f\u043b\u044b\u0439 \u0441\u0442\u0430\u043d, 2 \u044d\u0442\u0430\u0436.
+        8(499)343-43-84", "website": "https://vk.com/id96545624", "profile_picture":
+        "https://scontent.cdninstagram.com/t51.2885-19/s150x150/13734359_1755933124685271_626363376_a.jpg",
+        "full_name": "EVGENIIA GUSEVA", "counts": {"media": 2745, "followed_by": 1012915,
+        "follows": 220}, "id": "533244285"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/45364550?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+  recorded_at: Thu, 29 Jan 2015 12:20:06 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Fri, 02 Sep 2016 06:45:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=d0JuFBMpV6oVJDsmBLvmnCmvKGVvMvQL; expires=Fri, 01-Sep-2017 06:45:27
+        GMT; Max-Age=31449600; Path=/; secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"error_type": "OAuthAccessTokenException", "code": 400, "error_message":
+        "The access_token provided is invalid."}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+  recorded_at: Fri, 02 Sep 2016 06:45:29 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Fri, 02 Sep 2016 06:47:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=R1Sg2JZ7cxvDzDphtHYFadxK0K6Fm6oe; expires=Fri, 01-Sep-2017 06:47:21
+        GMT; Max-Age=31449600; Path=/; secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"error_type": "OAuthAccessTokenException", "code": 400, "error_message":
+        "The access_token provided is invalid."}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+  recorded_at: Fri, 02 Sep 2016 06:47:23 GMT
+recorded_with: VCR 3.0.3
