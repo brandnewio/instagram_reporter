@@ -152,6 +152,8 @@ class InstagramApiCaller < InstagramInteractionsBase
 
     def parse_json(data)
       begin
+        Oj.load(data)['data']
+      rescue Oj::ParseError
         cleaned_data = clear_data(data)
         Oj.load(cleaned_data)['data']
       rescue Oj::ParseError

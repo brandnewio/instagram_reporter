@@ -1,0 +1,141 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 09 Apr 2015 11:54:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ratelimit-Remaining:
+      - '4383'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Set-Cookie:
+      - csrftoken=e90f95afede17a1bda9a4ccde0379d24; expires=Thu, 07-Apr-2016 11:54:22
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '376'
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"code": 200}, "data": {"username": "yuvkariaiin83", "bio": "\u2b50\ud83d\ude03\ud83d\ud83d\ude1d\ud83d\udc67\u2764\ud83d\udc78\ud83d\ude18\ud83d\ud83d\ude04\udf19", "website": "", "profile_picture": "https://scontent.cdninstagram.com/t51.2885-19/s150x150/14145461_276260772757908_1816640937_a.jpg", "full_name": "\u3086\u3046\u3060\u3044", "counts": {"media": 0, "followed_by": 2, "follows": 289}, "id": "45364550"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+  recorded_at: Thu, 09 Apr 2015 11:54:22 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Tue, 23 Aug 2016 14:44:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=v8Yysimip1pXBwoatbiPflwlT304BOZ6; expires=Tue, 22-Aug-2017 14:44:26
+        GMT; Max-Age=31449600; Path=/; secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"error_type": "OAuthAccessTokenException", "code": 400, "error_message":
+        "The access_token provided is invalid."}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+  recorded_at: Tue, 23 Aug 2016 14:44:26 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Tue, 23 Aug 2016 14:44:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=wpXqXAQLlUxCO7vfDdQHXheHddvJGSym; expires=Tue, 22-Aug-2017 14:44:29
+        GMT; Max-Age=31449600; Path=/; secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"error_type": "OAuthAccessTokenException", "code": 400, "error_message":
+        "The access_token provided is invalid."}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/45364550?client_id=<API_TOKEN>
+  recorded_at: Tue, 23 Aug 2016 14:44:29 GMT
+recorded_with: VCR 3.0.3
