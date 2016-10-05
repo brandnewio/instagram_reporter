@@ -181,7 +181,8 @@ class InstagramApiCaller < InstagramInteractionsBase
     end
 
     def remove_replacement_character_unicode(data, replacement_character_unicode)
-      replacement_regex = Regexp.new("\\\\*\\#{replacement_character_unicode}([^\\\\])", "i")
+      quoted_code = Regexp.quote(replacement_character_unicode)
+      replacement_regex = /\\*#{quoted_code}([^\\])/i
       data.gsub(replacement_regex, "\\1")
     end
 
