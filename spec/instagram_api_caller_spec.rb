@@ -346,4 +346,16 @@ describe InstagramApiCaller do
       end
     end
   end
+
+  describe 'get_invalid_user_details_by_api_token' do
+    it 'raises error' do
+
+      VCR.use_cassette('get_invalid_user_details_by_api_token') do
+        disable_rspec_warning do
+          expect { subject.get_user_info_by_api_token(user_id)['data']['bio'] }.to \
+          raise_error(/Oj Parser Error: unable to parse instagram api response data/)
+        end
+      end
+    end
+  end
 end
