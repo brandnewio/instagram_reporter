@@ -154,10 +154,12 @@ class InstagramApiCaller < InstagramInteractionsBase
       begin
         Oj.load(data)['data']
       rescue Oj::ParseError
-        cleaned_data = clear_data(data)
-        Oj.load(cleaned_data)['data']
-      rescue Oj::ParseError
-        raise "Oj Parser Error: unable to parse instagram api response data #{data}"
+        begin
+          cleaned_data = clear_data(data)
+          Oj.load(cleaned_data)['data']
+        rescue Oj::ParseError
+          raise "Oj Parser Error: unable to parse instagram api response data #{data}"
+        end
       end
     end
 
