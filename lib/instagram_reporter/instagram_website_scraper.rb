@@ -2,6 +2,7 @@ class InstagramWebsiteScraper
 
   SEARCHABLE_KEYWORDS = %w(contact business Business Facebook facebook fb email Twitter twitter Contact FB tumblr Blog blog mail http www)
   EMAIL_PATTERN_MATCH = /([^@\s*]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})/i
+  PROFILE_STATS_REGEXP = /window\._sharedData\ \=(?<data>.*);/
 
   def contact_data_email(data)
     matched = data.match(EMAIL_PATTERN_MATCH)
@@ -78,14 +79,18 @@ class InstagramWebsiteScraper
     el = Hash.new
 
     doc = Nokogiri::HTML(html)
-    prematched_content = doc.content.match(/"user":\s{0,1}{.*"external_url".*?}/)
-    content = "{" + prematched_content.to_s + "}"
-    if prematched_content.nil?
+    prematched_content = doc.content.match(PROFILE_STATS_REGEXP)
+
+    content = JSON.parse(prematched_content['data']) if prematched_content
+    profile_data = content.fetch('entry_data', {}).fetch('ProfilePage', []) if content
+
+    if profile_data.nil? || profile_data[0].nil?
       error_message = doc.css("div[class=error-container]").text
       error_header  = doc.css('title').text
       return {result: 'error', body: "Did not get profile page with statistics. Obtained response page \n #{error_header} \n with \n #{error_message} \n content"}
     end
-    profile_data = JSON.parse(content)
+
+    profile_data = profile_data[0]
 
     el['counts']= {
       'followed_by' => profile_data['user']['followed_by']['count'],

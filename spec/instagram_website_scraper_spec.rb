@@ -75,39 +75,36 @@ describe InstagramWebsiteScraper do
 
   describe "#get profile page data" do
     it 'returns error if unable to fetch profile page data' do
-      VCR.use_cassette('unable to get data') do
-        expect(subject.get_profile_statistic(non_existent_web_profile)[:result]).to eq("error")
-      end
+      expect(subject.get_profile_statistic(non_existent_web_profile)[:result]).to eq("error")
     end
-    
+
     it 'returns number of media files' do
-      VCR.use_cassette('get_number_of_media_files') do
-        expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["media"].to_s).to eq("37")
-      end
+      expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["media"].to_s).to eq("37")
     end
+
     it 'returns number of followers' do
-      VCR.use_cassette('get_number_of_followers') do
-        expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["followed_by"].to_s).to eq("35")
-      end
+      expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["followed_by"].to_s).to eq("35")
     end
+
     it 'returns number of followed profiles' do
-      VCR.use_cassette('get_number_of_followed_profiles') do
-        expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["follows"].to_s).to eq("4")
-      end
+      expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["follows"].to_s).to eq("4")
     end
 
     it 'returns number of commets and likes for media file with given media_id for given profile' do
-      VCR.use_cassette('get_likes_and_comments') do
-        expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:likes_count]).to eq("9")
-        expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:comments_count]).to eq("2")
-      end
+      expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:likes_count]).to eq("9")
+      expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:comments_count]).to eq("2")
     end
 
     it 'returns number of commets and likes for media file with given media_id for given profile' do
-      VCR.use_cassette('likes_comments_non_existing_media_file') do
-        expect(subject.get_likes_and_comments(luki3k5_media_file_page_no_likes_no_comments)[:likes_count]).to eq("0")
-        expect(subject.get_likes_and_comments(luki3k5_media_file_page_no_likes_no_comments)[:comments_count]).to eq("0")
+      expect(subject.get_likes_and_comments(luki3k5_media_file_page_no_likes_no_comments)[:likes_count]).to eq("0")
+      expect(subject.get_likes_and_comments(luki3k5_media_file_page_no_likes_no_comments)[:comments_count]).to eq("0")
+    end
+
+    it 'parses the data correctly' do
+      result = VCR.use_cassette('get_profile_page1') do
+         InstagramWebsiteCaller.new.get_profile_page('luki3k5')
       end
+      subject.get_profile_statistic(result)
     end
   end
 end
