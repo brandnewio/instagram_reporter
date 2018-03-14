@@ -46,10 +46,6 @@ class InstagramApiCaller < InstagramInteractionsBase
   REPLACEMENT_CHARACTER_UNICODES = ['\ude0d', '\udc8b', '\ud83d']
 
 
-  def get_instagram_accounts_by_api_token
-    api_get_and_parse(POPULAR_INSTAGRAM_MEDIA_URL, query_params(nil))
-  end
-
   def get_instagram_accounts_by_access_token(access_token)
     api_get_and_parse(POPULAR_INSTAGRAM_MEDIA_URL, query_params(access_token))
   end
@@ -60,35 +56,14 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/tags/#{tag}/media/recent", params, true)
   end
 
-  def get_hashtag_info_by_api_token(tag, max_tag_id = nil)
-    params = query_params(nil)
-    params.merge!(max_tag_id: max_tag_id) unless max_tag_id.nil?
-    api_get_and_parse("/v1/tags/#{tag}/media/recent", params, true)
-  end
-
   def get_hashtag_media_count_by_access_token(tag, access_token)
     params = query_params(access_token)
-    api_get_and_parse("/v1/tags/#{tag}", params)
-  end
-
-  def get_hashtag_media_count_by_api_token(tag)
-    params = query_params(nil)
     api_get_and_parse("/v1/tags/#{tag}", params)
   end
 
   def get_similar_hashtags_by_access_token(tag, access_token)
     params = query_params(access_token)
     api_get_and_parse("/v1/tags/search?q=#{tag}", params)
-  end
-
-  def get_similar_hashtags_by_api_token(tag)
-    params = query_params(nil)
-    api_get_and_parse("/v1/tags/search?q=#{tag}", params)
-  end
-
-  def get_user_info_by_api_token(user_id)
-    params = query_params(nil)
-    api_get_and_parse("/v1/users/#{user_id}", params)
   end
 
   def get_user_info_by_access_token(user_id, access_token)

@@ -11,41 +11,41 @@ http_interactions:
       - Faraday v0.9.1
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
-      Content-Language:
-      - en
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Tue, 15 Sep 2015 15:15:42 GMT
-      Expires:
-      - Sat, 01 Jan 2000 00:00:00 GMT
+      x-ratelimit-limit:
+      - '500'
+      x-ratelimit-remaining:
+      - '455'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
       Pragma:
       - no-cache
-      Set-Cookie:
-      - csrftoken=c3bb4caab69f9ea20a05840b5580a124; expires=Tue, 13-Sep-2016 15:15:42
-        GMT; Max-Age=31449600; Path=/
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
       Vary:
-      - Cookie, Accept-Language, Accept-Encoding
-      X-Ratelimit-Limit:
-      - '5000'
-      X-Ratelimit-Remaining:
-      - '4998'
-      Content-Length:
-      - '870'
+      - Cookie, Accept-Language
+      Content-Language:
+      - en
+      Date:
+      - Wed, 14 Mar 2018 07:59:14 GMT
+      Set-Cookie:
+      - rur=FTW; Path=/
+      - csrftoken=dgBoccsxyV9QBRAJC2jbXLuwNaPfov5Y; expires=Wed, 13-Mar-2019 07:59:14
+        GMT; Max-Age=31449600; Path=/; Secure
       Connection:
       - keep-alive
+      Content-Length:
+      - '124'
     body:
       encoding: UTF-8
-      string: '{"meta":{"code":200},"data":[{"username":"goldie_berlin","profile_picture":"https:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/11142385_423654037812559_1088657895_a.jpg","id":"165640","full_name":"Travel
-        diary by Sylvia"},{"username":"goldie_bel","profile_picture":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11256929_1585007381777011_1759330533_a.jpg","id":"258235111","full_name":"Berlinda
-        Nyarkoh"},{"username":"sonogoldiecom","profile_picture":"https:\/\/igcdn-photos-g-a.akamaihd.net\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11242389_1635098436708478_1242081805_a.jpg","id":"968427454","full_name":"#Berlin#Hamburg#K\u00f6ln"},{"username":"berlinghofgoldie","profile_picture":"https:\/\/igcdn-photos-d-a.akamaihd.net\/hphotos-ak-xpa1\/t51.2885-19\/925967_1375584696076243_1461439265_a.jpg","id":"1656792739","full_name":"Goldie"}]}'
+      string: '{"meta": {"code": 400, "error_type": "OAuthAccessTokenException", "error_message":
+        "The access_token provided is invalid."}}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://api.instagram.com/v1/users/search?client_id=<API_TOKEN>&q=goldie_berlin
-  recorded_at: Tue, 15 Sep 2015 15:15:49 GMT
+  recorded_at: Wed, 14 Mar 2018 07:59:14 GMT
 recorded_with: VCR 2.9.3

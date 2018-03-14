@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/165640/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4&cursor=1414444718563
+    uri: https://api.instagram.com/v1/users/165640/followed-by?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd&cursor=1414444718563
     body:
       encoding: US-ASCII
       string: ''
@@ -72,6 +72,5 @@ http_interactions:
         Mate"}]}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.instagram.com/v1/users/165640/followed-by?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4&cursor=1414444718563
-  recorded_at: Tue, 17 Mar 2015 18:32:47 GMT
-recorded_with: VCR 2.9.3
+      effective_url: https://api.instagram.com/v1/users/165640/followed-by?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd&cursor=1414444718563
+  recorded_at: Wed, 14 Mar 2018 08:48:40 GMT

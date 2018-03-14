@@ -2,7 +2,55 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/3537544360?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    uri: https://api.instagram.com/v1/users/3537544360?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      x-ratelimit-limit:
+      - '5000'
+      x-ratelimit-remaining:
+      - '4962'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      Content-Language:
+      - en
+      Date:
+      - Wed, 14 Mar 2018 07:59:13 GMT
+      Set-Cookie:
+      - rur=FTW; Path=/
+      - csrftoken=XaZc2jIxfzO2ibxuB6KumyRFWu7CiCs4; expires=Wed, 13-Mar-2019 07:59:13
+        GMT; Max-Age=31449600; Path=/; Secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '102'
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"code": 400, "error_type": "APINotFoundError", "error_message":
+        "this user does not exist"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/users/3537544360?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd
+  recorded_at: Wed, 14 Mar 2018 07:59:13 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/3899278747?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd
     body:
       encoding: US-ASCII
       string: ''
@@ -14,44 +62,46 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      x-ratelimit-limit:
+      - '5000'
       x-ratelimit-remaining:
-      - '4978'
-      Content-Language:
-      - en
+      - '4950'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Vary:
       - Cookie, Accept-Language, Accept-Encoding
-      x-ratelimit-limit:
-      - '5000'
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
       Date:
-      - Thu, 14 Jul 2016 10:24:03 GMT
-      Content-Type:
-      - application/json; charset=utf-8
+      - Wed, 14 Mar 2018 08:43:07 GMT
       Set-Cookie:
-      - csrftoken=9jy3jq7UxKVfHUljBLugnxXejfMTupMg; expires=Thu, 13-Jul-2017 10:24:03
-        GMT; Max-Age=31449600; Path=/
-      - s_network=; expires=Thu, 14-Jul-2016 11:24:03 GMT; Max-Age=3600; Path=/
-      - sessionid=IGSCbb308b4fd187cbb134e4410cb7f6e1fbc3b597af751e086c375e36562e0c6e0c%3ArEwu71KlEqRKk6cVKja1bNBp6G3trjVh%3A%7B%22asns%22%3A%7B%2295.49.50.155%22%3A5617%2C%22time%22%3A1468491843%7D%7D;
-        expires=Wed, 12-Oct-2016 10:24:03 GMT; httponly; Max-Age=7776000; Path=/;
-        secure
+      - rur=FTW; Path=/
+      - csrftoken=hVnrez4tXpUzUHf1ZhyRJBZDtzCjAbJO; expires=Wed, 13-Mar-2019 08:43:07
+        GMT; Max-Age=31449600; Path=/; Secure
+      - 'urlgen="{\"time\": 1521016987\054 \"109.232.29.156\": 8477}:1ew203:WBV5kwSLe9_hts1KctPrNHGbk9A";
+        Path=/'
       Connection:
       - keep-alive
       Content-Length:
-      - '447'
+      - '644'
     body:
       encoding: UTF-8
-      string: '{"meta": {"code": 200}, "data": {"username": "y_myargaaretfha88", "bio":
-        "When you smile,sun shine.   \ud83d\udc3c \ud83c\udf6d \ud83c\udfa0 \ud83c
-        \u26ea Thanks forfollwing \u2728", "website": "", "profile_picture": "https://scontent.cdninstagram.com/t51.2885-19/s150x150/13628486_630123880487962_679184041_a.jpg",
-        "full_name": "\u3086\u308a\u308a\u3093\u2605\u2606", "counts": {"media": 0,
-        "followed_by": 0, "follows": 266}, "id": "3537544360"}}'
+      string: '{"data": {"id": "3899278747", "username": "kkempin", "profile_picture":
+        "https://scontent.cdninstagram.com/vp/29fba906643aaef54adce1e494fd8ef2/5B371138/t51.2885-19/s150x150/14156298_905610876252361_2101762856_a.jpg",
+        "full_name": "Krzysztof Kempi\u0144ski", "bio": "* Head of IT @ Brandnew IO
+        \ud83d\udc68\u200d\ud83d\udcbc\n* Ruby/Elixir/iOS dev \ud83d\udc68\u200d\ud83d\udcbb\n*
+        Blog kkempin.pl \u270d\ufe0f\n* YouTube swiatoczamiprogramisty.pl \ud83d\udcf9\n*
+        Podcast porozmawiajmyoit.pl \ud83c\udf99", "website": "http://kkempin.pl/",
+        "is_business": true, "counts": {"media": 88, "follows": 253, "followed_by":
+        128}}, "meta": {"code": 200}}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.instagram.com/v1/users/3537544360?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
-  recorded_at: Thu, 14 Jul 2016 10:24:03 GMT
+      effective_url: https://api.instagram.com/v1/users/3899278747?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd
+  recorded_at: Wed, 14 Mar 2018 08:43:07 GMT
 recorded_with: VCR 2.9.3

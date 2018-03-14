@@ -6,10 +6,10 @@ describe InstagramApiCaller do
   let(:test_hashtag) { "inspiredby" }
   let(:test_media_file_id) { '653714645670132444_16192269' }
   let(:non_existent_media_file_id) { '669371381316733323_213058217' }
-  let(:test_media_file_with_location_id) {'831138234853764564_4168338'}
-  let(:access_token) { '1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4' }
+  let(:test_media_file_with_location_id) {'1733976787169752478'}
+  let(:access_token) { '441979517.b4d2505.74433001c61845adba716152a0e1d3dd' }
   let(:user_id) { '45364550' }
-  let(:emoji_user_id) { '3537544360' }
+  let(:emoji_user_id) { '3899278747' }
 
   describe '#initialize' do
     before do
@@ -22,20 +22,6 @@ describe InstagramApiCaller do
     end
   end
 
-  describe '#get_instagram_accounts_by_api_token' do
-    it 'returns parsed data' do
-      VCR.use_cassette('get_instagram_accounts_by_api_token') do
-        expect(subject.get_instagram_accounts_by_api_token['data'].class).to eq(Array)
-      end
-    end
-
-    it 'returns parsed data' do
-      VCR.use_cassette('get_instagram_accounts_by_api_token') do
-        expect(subject.get_instagram_accounts_by_api_token['data'].size).to eq(20)
-      end
-    end
-  end
-
   describe '#get_user_info_by_access_token' do
     it 'returns user data with username' do
       VCR.use_cassette('get_user_info_by_access_token') do
@@ -44,65 +30,12 @@ describe InstagramApiCaller do
     end
     it 'returns user data with profile picture link' do
       VCR.use_cassette('get_user_info_by_access_token') do
-        expect(subject.get_user_info_by_access_token(user_id, access_token)['data']['profile_picture']).to eq('https://instagramimages-a.akamaihd.net/profiles/profile_45364550_75sq_1378321024.jpg')
+        expect(subject.get_user_info_by_access_token(user_id, access_token)['data']['profile_picture']).to eq('https://scontent.cdninstagram.com/vp/698235dada678c005f20ed7cdca89f91/5B3BB0AB/t51.2885-19/11939555_723875314425165_599316154_a.jpg')
       end
     end
     it 'returns user data with profile picture link' do
       VCR.use_cassette('get_user_info_by_access_token_with_emoji') do
-        expect(subject.get_user_info_by_access_token(emoji_user_id, access_token)['data']['profile_picture']).to eq('https://scontent.cdninstagram.com/t51.2885-19/s150x150/13628486_630123880487962_679184041_a.jpg')
-      end
-    end
-  end
-
-  describe '#get_user_info_by_api_token' do
-    it 'returns user data with username' do
-      VCR.use_cassette('get_user_info_by_api_token') do
-        expect(subject.get_user_info_by_api_token(user_id)['data']['username']).to eq('xiazek')
-      end
-    end
-    it 'returns user data with profile picture link' do
-      VCR.use_cassette('get_user_info_by_api_token') do
-        expect(subject.get_user_info_by_api_token(user_id)['data']['profile_picture']).to eq('https://instagramimages-a.akamaihd.net/profiles/profile_45364550_75sq_1378321024.jpg')
-      end
-    end
-  end
-
-  describe '#get_instagram_accounts_by_access_token' do
-    it 'returns parsed data' do
-      VCR.use_cassette('get_instagram_accounts_by_access_token') do
-        expect(subject.get_instagram_accounts_by_access_token('1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4')['data'].class).to eq(Array)
-      end
-    end
-
-    it 'returns parsed data' do
-      VCR.use_cassette('get_instagram_accounts_by_access_token') do
-        expect(subject.get_instagram_accounts_by_access_token('1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4')['data'].size).to eq(19)
-      end
-    end
-  end
-
-  describe '#get_hashtag_info_by_api_token' do
-    it 'returns parsed data' do
-      VCR.use_cassette('get_hashtag_info_by_api_token') do
-        response = subject.get_hashtag_info_by_api_token(test_hashtag)
-        #puts "#{response}"
-        expect(response['data'].class).to eq(Array)
-      end
-    end
-    #1395788093935
-
-    it 'returns parsed data with min_id_param' do
-      VCR.use_cassette('get_hashtag_info_by_api_token_with_min_id') do
-        response = subject.get_hashtag_info_by_api_token(test_hashtag, 1395788093935)
-        #puts "#{response}"
-        expect(response['data'].class).to eq(Array)
-      end
-    end
-
-    it 'returns 20 media files infos inside' do
-      VCR.use_cassette('get_hashtag_info_by_api_token') do
-        response = subject.get_hashtag_info_by_api_token(test_hashtag)
-        expect(response['data'].size).to eq(20)
+        expect(subject.get_user_info_by_access_token(emoji_user_id, access_token)['data']['profile_picture']).to eq('https://scontent.cdninstagram.com/vp/29fba906643aaef54adce1e494fd8ef2/5B371138/t51.2885-19/s150x150/14156298_905610876252361_2101762856_a.jpg')
       end
     end
   end
@@ -110,14 +43,14 @@ describe InstagramApiCaller do
   describe '#get_hashtag_info_by_access_token' do
     it 'returns parsed data' do
       VCR.use_cassette('get_hashtag_info_by_access_token') do
-        response = subject.get_hashtag_info_by_access_token(test_hashtag, '1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4')
+        response = subject.get_hashtag_info_by_access_token(test_hashtag, '441979517.b4d2505.74433001c61845adba716152a0e1d3dd')
         expect(response['data'].class).to eq(Array)
       end
     end
 
     it 'returns 20 media files infos inside' do
       VCR.use_cassette('get_hashtag_info_by_access_token') do
-        response = subject.get_hashtag_info_by_access_token(test_hashtag, '1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4')
+        response = subject.get_hashtag_info_by_access_token(test_hashtag, '441979517.b4d2505.74433001c61845adba716152a0e1d3dd')
         expect(response['data'].size).to eq(20)
       end
     end
@@ -126,15 +59,7 @@ describe InstagramApiCaller do
   describe '#get_hashtag_media_count_by_access_token' do
     it 'returns the hashtag media count' do
       VCR.use_cassette('get_hashtag_media_count_by_access_token') do
-        expect(subject.get_hashtag_media_count_by_access_token(test_hashtag, access_token)['data']['media_count']).to eq(54271)
-      end
-    end
-  end
-
-  describe '#get_hashtag_media_count_by_api_token' do
-    it 'returns the hashtag media count' do
-      VCR.use_cassette('get_hashtag_media_count_by_api_token') do
-        expect(subject.get_hashtag_media_count_by_api_token(test_hashtag)['data']['media_count']).to eq(54271)
+        expect(subject.get_hashtag_media_count_by_access_token(test_hashtag, access_token)['data']['media_count']).to eq(177338)
       end
     end
   end
@@ -148,21 +73,7 @@ describe InstagramApiCaller do
 
     it 'returns only one hashtag if tag_name is too short' do
       VCR.use_cassette('get_similar_hashtags_by_access_token') do
-        expect(subject.get_similar_hashtags_by_access_token("sun", access_token)['data'].size).to eq(1)
-      end
-    end
-  end
-
-  describe '#get_similar_hashtags_by_api_token' do
-    it 'returns list of similar hashtags' do
-      VCR.use_cassette('get_similar_hashtags_by_api_token') do
-        expect(subject.get_similar_hashtags_by_api_token(test_hashtag)['data'].size).to eq(50)
-      end
-    end
-
-    it 'returns only one hashtag if tag_name is too short' do
-      VCR.use_cassette('get_similar_hashtags_by_access_token') do
-        expect(subject.get_similar_hashtags_by_access_token("sun", access_token)['data'].size).to eq(1)
+        expect(subject.get_similar_hashtags_by_access_token("sun", access_token)['data'].size).to eq(50)
       end
     end
   end
@@ -190,8 +101,8 @@ describe InstagramApiCaller do
       VCR.use_cassette('call_api_by_access_token_for_media_file_location') do
         response = subject.call_api_by_access_token_for_media_file_location(test_media_file_with_location_id, access_token)
         expect(response[:result]).to eq('ok')
-        expect(response['latitude']).to eq(59.943762911)
-        expect(response['longitude']).to eq(30.26491185)
+        expect(response['latitude']).to eq(52.4)
+        expect(response['longitude']).to eq(16.9167)
       end
     end
 
@@ -204,23 +115,22 @@ describe InstagramApiCaller do
   end
 
   describe '#get_user_recent_media' do
-    let(:access_token) { nil }
+    #let(:access_token) { nil }
 
     it "returns a response containing media data with image urls etc" do
       VCR.use_cassette('users_user-id_media_recent') do
         result = subject.get_user_recent_media(user_id, access_token)
-        expect(result['data'].first['images']['standard_resolution']['url']).to include('http://')
+        expect(result['data'].first['images']['standard_resolution']['url']).to include('https://')
         expect(result['data'].first['user']['id']).to eq(user_id)
       end
     end
 
     context 'when using access_token' do
 
-
       it "returns a response containing media data with image urls etc" do
         VCR.use_cassette('users_user-id_media_recent_by_access_token') do
           result = subject.get_user_recent_media(user_id, access_token)
-          expect(result['data'].first['images']['standard_resolution']['url']).to include('http://')
+          expect(result['data'].first['images']['standard_resolution']['url']).to include('https://')
           expect(result['data'].first['user']['id']).to eq(user_id)
         end
       end
@@ -230,15 +140,7 @@ describe InstagramApiCaller do
 
   describe '#get_users_by_name' do
     let(:username) { 'goldie_berlin' }
-    let(:access_token) { nil }
-
-    it 'returns proper response when called without access token' do
-      VCR.use_cassette('users_search_api_token') do
-        result = subject.get_users_by_name(username)
-        expect(result['data'].first['id']).to eq('165640')
-        expect(result['data'].first['username']).to eq('goldie_berlin')
-      end
-    end
+    #let(:access_token) { nil }
 
     it "returns a response containing media data with image urls etc" do
       VCR.use_cassette('users_search') do
@@ -250,7 +152,7 @@ describe InstagramApiCaller do
     end
 
     context 'when using access_token' do
-      let(:access_token) { '1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4' }
+      let(:access_token) { '441979517.b4d2505.74433001c61845adba716152a0e1d3dd' }
 
       it "returns a response containing media data with image urls etc" do
         VCR.use_cassette('users_search_by_access_token') do
@@ -277,9 +179,9 @@ describe InstagramApiCaller do
     it 'returns list of likes for media file' do
       VCR.use_cassette('get_media_likes_by_access_token') do
         result =
-          subject.get_media_likes_by_access_token("696433196675953608_225072619", access_token)
+          subject.get_media_likes_by_access_token("1733976787169752478", access_token)
         expect(result['result']).to eq('ok')
-        expect(result['data'].size).to eq(15)
+        expect(result['data'].size).to eq(46)
       end
     end
   end
@@ -288,74 +190,10 @@ describe InstagramApiCaller do
     it 'returns list of comments for media file' do
       VCR.use_cassette('get_media_comments_by_access_token') do
         result =
-          subject.get_media_comments_by_access_token("696433196675953608_225072619", access_token)
+          subject.get_media_comments_by_access_token("1733976787169752478", access_token)
         expect(result['result']).to eq('ok')
-        expect(result['data'].size).to eq(1)
+        expect(result['data'].size).to eq(2)
       end
     end
   end
-
-  describe 'get_user_info_by_api_token_with_invalid_bio' do
-    it 'returns user data with correct bio' do
-      VCR.use_cassette('get_user_info_by_api_token_with_invalid_bio') do
-        expect(subject.get_user_info_by_api_token(user_id)['data']['bio']).to eq('bemyself💎😏')
-      end
-    end
-  end
-
-  describe 'get_user_info_by_api_token_with_invalid_bios' do
-    it 'returns user data with correct bios' do
-      VCR.use_cassette('get_user_info_by_api_token_with_invalid_bios') do
-        expect(subject.get_user_info_by_api_token(user_id)['data']['bio']).to_not be_empty
-      end
-    end
-  end
-
-  describe 'get_user_info_by_api_token_with_extra_back_slash' do
-    it 'returns user data' do
-      VCR.use_cassette('get_user_info_by_api_token_with_extra_back_slash') do
-        expect(subject.get_user_info_by_api_token(user_id)['data']['bio']).to_not be_empty
-      end
-    end
-  end
-
-  describe 'get_user_info_by_api_token_with_emojis_unicode_in_bio' do
-    it 'returns user data' do
-      VCR.use_cassette('get_user_info_by_api_token_with_emojis_unicode_in_bio') do
-        expect(subject.get_user_info_by_api_token(user_id)['data']['bio']).to_not be_empty
-      end
-    end
-  end
-
-  describe 'get_user_info_by_api_token_with_chinese_emojis_unicode_in_bio' do
-    it 'returns user data' do
-      VCR.use_cassette('get_user_info_by_api_token_with_chinese_emojis_unicode_in_bio') do
-        expect(subject.get_user_info_by_api_token(user_id)['data']['bio']).to_not be_empty
-      end
-    end
-  end
-
-  describe 'get_user_details_by_api_token' do
-    it 'returns user data' do
-
-      VCR.use_cassette('get_user_details_by_api_token') do
-        disable_rspec_warning do
-          expect { subject.get_user_info_by_api_token(user_id)['data']['bio'] }.not_to \
-          raise_error(/Oj Parser Error: unable to parse instagram api response data/)
-        end
-      end
-    end
-  end
-
-  describe 'get_invalid_user_details_by_api_token' do
-    it 'raises error' do
-
-      VCR.use_cassette('get_invalid_user_details_by_api_token') do
-        disable_rspec_warning do
-          expect { subject.get_user_info_by_api_token(user_id)['data']['bio'] }.to \
-          raise_error(/Oj Parser Error: unable to parse instagram api response data/)
-        end
-      end
-    end
-  end
-end
+ end

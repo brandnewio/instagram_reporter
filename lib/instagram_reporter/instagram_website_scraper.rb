@@ -36,12 +36,12 @@ class InstagramWebsiteScraper
     el = Hash.new
     doc = Nokogiri::HTML(html)
     prematched_content = doc.content.match(/{"ProfilePage":.*}\]}/).to_s
-    profile_data = JSON.parse(prematched_content)['ProfilePage'][0]
+    profile_data = JSON.parse(prematched_content)['ProfilePage'][0]['graphql']
 
     el['counts'] = {
-      'followed_by' => profile_data['user']['followed_by']['count'],
-      'media'       => profile_data['user']['media']['count'],
-      'follows'     => profile_data['user']['follows']['count']
+      'followed_by' => profile_data['user']['edge_followed_by']['count'],
+      'media'       => profile_data['user']['edge_owner_to_timeline_media']['count'],
+      'follows'     => profile_data['user']['edge_follow']['count']
     }
     el['username'] = profile_data['user']['username']
     el['full_name'] = profile_data['user']['full_name'].to_s
@@ -62,14 +62,14 @@ class InstagramWebsiteScraper
     if !doc.content.match(/Page Not Found/).nil?
       returnee.merge!({ status: 'offline', result: 'error', body: 'Page not found for media file' })
     else
-      likes_content    = doc.content.match(/"likes":\{"count":[0-9]+(?:\.[0-9]*)?/).to_s
-      likes            = likes_content.match(/[0-9][0-9]*/).to_s
-      comments_content = doc.content.match(/"comments":{"nodes":\[.*?\]}/).to_s || '0'
-      comments         = comments_content.scan(/"id":"[0-9]*"/)
+      likes_content    = doc.content.scan(/"edge_media_preview_like":\{"count":([0-9]+)/)
+      comments_content = doc.content.scan(/"edge_media_to_comment":\{"count":([0-9]+)/)
 
-      if likes.nil? || comments.nil?
+      if likes_content.nil? || comments_content.nil?
         { result: 'error', status: 'offline', body: 'could not scrape web page for likes and comments' }
       else
+        likes = (likes_content.first.first || 0).to_s
+        comments = (comments_content.first.first || 0).to_s
         returnee.merge!({ result: 'ok', likes_count: likes, comments_count: comments.size.to_s })
       end
     end
@@ -90,12 +90,12 @@ class InstagramWebsiteScraper
       return {result: 'error', body: "Did not get profile page with statistics. Obtained response page \n #{error_header} \n with \n #{error_message} \n content"}
     end
 
-    profile_data = profile_data[0]
+    profile_data = profile_data[0]['graphql']
 
     el['counts']= {
-      'followed_by' => profile_data['user']['followed_by']['count'],
-      'media'       => profile_data['user']['media']['count'],
-      'follows'     => profile_data['user']['follows']['count']
+      'followed_by' => profile_data['user']['edge_followed_by']['count'],
+      'media'       => profile_data['user']['edge_owner_to_timeline_media']['count'],
+      'follows'     => profile_data['user']['edge_follow']['count']
     }
     el['username'] = profile_data['user']['username']
     el['full_name'] = profile_data['user']['full_name'].to_s

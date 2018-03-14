@@ -56,9 +56,9 @@ describe InstagramWebsiteScraper do
       "username"            => "luki3k5",
       "bio"                 => "",
       "website"             => "",
-      "profile_picture"     => "https://instagramimages-a.akamaihd.net/profiles/profile_4907942_75sq_1392804574.jpg",
+      "profile_picture"     => "https://scontent-waw1-1.cdninstagram.com/vp/879498e290707c2c624a667137249cbd/5B32FB93/t51.2885-19/11850251_915632031835791_1153498572_a.jpg",
       "full_name"           => "",
-      "counts"              => { "media" => 37, "followed_by" => 35, "follows" => 4 },
+      "counts"              => {"followed_by"=>30, "media"=>37, "follows"=>5},
       "id"                  => "4907942",
       "isVerified" => false,
       "contact_data_email"  => nil,
@@ -83,21 +83,21 @@ describe InstagramWebsiteScraper do
     end
 
     it 'returns number of followers' do
-      expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["followed_by"].to_s).to eq("35")
+      expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["followed_by"].to_s).to eq("30")
     end
 
     it 'returns number of followed profiles' do
-      expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["follows"].to_s).to eq("4")
+      expect(subject.get_profile_statistic(luki3k5_web_profile)['counts']["follows"].to_s).to eq("5")
     end
 
     it 'returns number of commets and likes for media file with given media_id for given profile' do
-      expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:likes_count]).to eq("9")
-      expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:comments_count]).to eq("2")
+      expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:likes_count]).to eq("11")
+      expect(subject.get_likes_and_comments(luki3k5_media_file_page)[:comments_count]).to eq("1")
     end
 
     it 'returns number of commets and likes for media file with given media_id for given profile' do
       expect(subject.get_likes_and_comments(luki3k5_media_file_page_no_likes_no_comments)[:likes_count]).to eq("0")
-      expect(subject.get_likes_and_comments(luki3k5_media_file_page_no_likes_no_comments)[:comments_count]).to eq("0")
+      expect(subject.get_likes_and_comments(luki3k5_media_file_page_no_likes_no_comments)[:comments_count]).to eq("1")
     end
 
     it 'parses the data correctly' do

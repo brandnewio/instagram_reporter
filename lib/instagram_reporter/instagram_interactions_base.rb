@@ -12,7 +12,7 @@ class InstagramInteractionsBase
   end
 
   private
-  def check_env_variables 
+  def check_env_variables
       raise ArgumentError, "INSTAGRAM_API_TOKEN environment variable not set" unless API_TOKEN
   end
 end

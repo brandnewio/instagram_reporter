@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/media/696433196675953608_225072619/comments?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
+    uri: https://api.instagram.com/v1/media/696433196675953608_225072619/comments?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd
     body:
       encoding: US-ASCII
       string: ''
@@ -14,36 +14,95 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      X-Ratelimit-Remaining:
-      - '4994'
+      Content-Type:
+      - application/json; charset=utf-8
+      x-ratelimit-limit:
+      - '5000'
+      x-ratelimit-remaining:
+      - '4959'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
       Content-Language:
       - en
+      Date:
+      - Wed, 14 Mar 2018 07:59:13 GMT
+      Set-Cookie:
+      - rur=FTW; Path=/
+      - csrftoken=15GRhXCt3Hn6Eqn8qvqFYpKi50Nn2Uz0; expires=Wed, 13-Mar-2019 07:59:13
+        GMT; Max-Age=31449600; Path=/; Secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '35'
+    body:
+      encoding: UTF-8
+      string: '{"data": [], "meta": {"code": 200}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/media/696433196675953608_225072619/comments?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd
+  recorded_at: Wed, 14 Mar 2018 07:59:14 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1733976787169752478/comments?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      x-ratelimit-limit:
+      - '5000'
+      x-ratelimit-remaining:
+      - '4969'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Vary:
       - Cookie, Accept-Language, Accept-Encoding
-      X-Ratelimit-Limit:
-      - '5000'
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
       Date:
-      - Wed, 27 May 2015 15:41:33 GMT
-      Content-Type:
-      - application/json; charset=utf-8
+      - Wed, 14 Mar 2018 08:27:06 GMT
       Set-Cookie:
-      - csrftoken=90bc0af33753cf0b7d3efdc4087d8382; expires=Wed, 25-May-2016 15:41:33
-        GMT; Max-Age=31449600; Path=/
+      - rur=FTW; Path=/
+      - csrftoken=qHyXoiK92Yz50cDbikNwZCCDr4qYHswW; expires=Wed, 13-Mar-2019 08:27:06
+        GMT; Max-Age=31449600; Path=/; Secure
+      - 'urlgen="{\"time\": 1521016026\054 \"109.232.29.156\": 8477}:1ew1kY:JOadLu3Hl29bVp_X7I7niE4va3A";
+        Path=/'
       Connection:
       - keep-alive
       Content-Length:
-      - '283'
+      - '998'
     body:
       encoding: UTF-8
-      string: '{"meta":{"code":200},"data":[{"created_time":"1432741245","text":"\ue022","from":{"username":"letsleaveitempty","profile_picture":"https:\/\/instagramimages-a.akamaihd.net\/profiles\/profile_225072619_75sq_1348157237.jpg","id":"225072619","full_name":""},"id":"994228084496986729"}]}'
+      string: '{"data": [{"id": "17917610338109844", "from": {"id": "6210490399",
+        "username": "madrosci_cytaty_inspiracje", "full_name": "\u017byciowe M\u0105dro\u015bci
+        Dla Ka\u017cdego\ud83d\udcda\ud83d\udcd3", "profile_picture": "https://scontent.cdninstagram.com/vp/9c33a9c2b1ba7a897b06750f64d9c44c/5B42EBA4/t51.2885-19/s150x150/22794328_1909070829411233_4458249170771247104_n.jpg"},
+        "text": "\"Kto goni dwa zaj\u0105ce nie z\u0142apie ani jednego\"\ud83c\udf1f
+        Kto chce zobaczy\u0107 wi\u0119cej m\u0105dro\u015bci zapraszamy do obserwowania
+        naszego profilu \ud83d\ude18", "created_time": "1520982063"}, {"id": "17903895811191308",
+        "from": {"id": "2533577219", "username": "lukas_soltys", "full_name": "\ud83d\udca0
+        \u0141ukasz So\u0142tys", "profile_picture": "https://scontent.cdninstagram.com/vp/fdb3b5bfcadb546ad8cfa2453f98b7e9/5B3C69D2/t51.2885-19/s150x150/12729522_221399748204078_598039377_a.jpg"},
+        "text": "\ud83d\udc4d\ud83d\udc4f\ud83c\udffc", "created_time": "1520991138"}],
+        "meta": {"code": 200}}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://api.instagram.com/v1/media/696433196675953608_225072619/comments?access_token=1491324783.1fb234f.a3e00b2881f342e39efb3a0b43941db4
-  recorded_at: Wed, 27 May 2015 15:41:33 GMT
+      effective_url: https://api.instagram.com/v1/media/1733976787169752478/comments?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd
+  recorded_at: Wed, 14 Mar 2018 08:27:06 GMT
 recorded_with: VCR 2.9.3
