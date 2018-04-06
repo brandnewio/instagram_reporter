@@ -99,9 +99,9 @@ module InstagramReporter
               media: user_info['edge_owner_to_timeline_media']['count'],
               followed_by: user_info['edge_followed_by']['count'],
               follows: user_info['edge_follow']['count']
-            },
-            result: 'ok'
+            }
           },
+          result: 'ok',
           meta: {
             code: 200
           }
@@ -115,6 +115,7 @@ module InstagramReporter
           pagination: {
             next_max_id: user_media['page_info']['end_cursor']
           },
+          result: 'ok',
           data: user_media['edges'].map do |edge|
             node = edge['node']
             images = [:thumbnail, :low_resolution, :standard_resolution].map.with_index do |k, i|
@@ -132,7 +133,6 @@ module InstagramReporter
             tags = extract_tags(caption)
 
             {
-              result: 'ok',
               id: node['id'],
               user: {
                 id: node['owner']['id'],
