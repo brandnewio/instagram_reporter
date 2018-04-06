@@ -39,13 +39,22 @@ module InstagramReporter
       resp = conn.get(url, query_params)
       if resp.status == 200
         raw_user_media = JSON.parse(resp.body)
-        transform_user_recent_media(raw_user_media, profile_name)
+        if raw_user_media['data'].compact.empty?
+          {
+            result: 'error',
+            body: 'APINotAllowedError you cannot view this resource',
+            status: 404,
+            url: url
+          }
+        else
+          transform_user_recent_media(raw_user_media, profile_name)
+        end
       else
         {
           result: 'error',
           body: response.body,
           status: response.status,
-          url: uri
+          url: url
         }
       end.with_indifferent_access
     end
