@@ -12,8 +12,6 @@ Dir[File.join(File.expand_path('../support/**/*.rb', __FILE__))].each {|f| requi
 
 RSpec.configure do |c|
   c.order = "random"
-  c.tty = true
-  c.color = true
 end
 
 def puts(*args); end unless ENV['VERBOSE']
