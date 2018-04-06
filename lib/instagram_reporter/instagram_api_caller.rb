@@ -1,6 +1,7 @@
 # encoding: UTF-8
 
 class InstagramApiCaller < InstagramInteractionsBase
+  prepend InstagramReporter::InstagramApiExtensions
 
   EMOJI_AND_SKIN_TONES_REGEXP =
     /
@@ -66,11 +67,13 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/tags/search?q=#{tag}", params)
   end
 
+  # TO CHANGE
   def get_user_info_by_access_token(user_id, access_token)
     params = query_params(access_token)
     api_get_and_parse("/v1/users/#{user_id}", params)
   end
 
+  # TO CHANGE
   def get_user_recent_media(user_id, access_token, max_tag_id = nil)
     params = query_params(access_token)
     params.merge!(max_tag_id: max_tag_id) unless max_tag_id.nil?
@@ -87,6 +90,7 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/media/#{media_id}/comments", params)
   end
 
+  # TO CHANGE
   def get_users_by_name(username, access_token = nil)
     params = query_params(access_token).merge!(q: username)
     puts "params: #{params}"
@@ -102,6 +106,7 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/locations/search", params, true)
   end
 
+  # TO VERIFY
   def call_api_by_access_token_for_media_file_stats(instagram_media_id, access_token)
     call_api_by_access_token_for_media_info(instagram_media_id, access_token, ['likes', 'comments', 'tags'])
   end

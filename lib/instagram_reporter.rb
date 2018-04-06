@@ -12,8 +12,10 @@ require 'oj'
 require 'typhoeus'
 require 'typhoeus/adapters/faraday'
 require 'rubocop'
+require 'active_support/core_ext/hash'
 
 # MAIN FILES
+require 'instagram_reporter/instagram_api_extensions'
 require 'instagram_reporter/instagram_interactions_base'
 require 'instagram_reporter/instagram_api_caller'
 require 'instagram_reporter/instagram_website_caller'
