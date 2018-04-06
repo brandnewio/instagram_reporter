@@ -52,8 +52,8 @@ module InstagramReporter
       else
         {
           result: 'error',
-          body: response.body,
-          status: response.status,
+          body: resp.body,
+          status: resp.status,
           url: url
         }
       end.with_indifferent_access
@@ -149,7 +149,7 @@ module InstagramReporter
                 count: node['edge_media_to_comment']['count']
               },
               link: "https://instagram.com/p/#{node['shortcode']}",
-              caption: { 
+              caption: {
                 text: caption
               }.compact.presence
             }
