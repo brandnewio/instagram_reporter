@@ -99,7 +99,8 @@ module InstagramReporter
               media: user_info['edge_owner_to_timeline_media']['count'],
               followed_by: user_info['edge_followed_by']['count'],
               follows: user_info['edge_follow']['count']
-            }
+            },
+            result: 'ok'
           },
           meta: {
             code: 200
@@ -131,6 +132,7 @@ module InstagramReporter
             tags = extract_tags(caption)
 
             {
+              result: 'ok',
               id: node['id'],
               user: {
                 id: node['owner']['id'],
