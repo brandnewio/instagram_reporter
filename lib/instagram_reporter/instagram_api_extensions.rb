@@ -141,7 +141,7 @@ module InstagramReporter
               images: images,
               tags: tags,
               created_time: node['taken_at_timestamp'],
-              type: node['__typename'][4..-1].downcase,
+              type: node['__typename'][5..-1].downcase,
               likes: {
                 count: node['edge_media_preview_like']['count']
               },
