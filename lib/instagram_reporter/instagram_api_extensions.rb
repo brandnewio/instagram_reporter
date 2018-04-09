@@ -39,13 +39,22 @@ module InstagramReporter
       resp = conn.get(url, query_params)
       if resp.status == 200
         raw_user_media = JSON.parse(resp.body)
-        transform_user_recent_media(raw_user_media, profile_name)
+        if raw_user_media['data'].compact.empty?
+          {
+            result: 'error',
+            body: 'APINotAllowedError you cannot view this resource',
+            status: 404,
+            url: url
+          }
+        else
+          transform_user_recent_media(raw_user_media, profile_name)
+        end
       else
         {
           result: 'error',
-          body: response.body,
-          status: response.status,
-          url: uri
+          body: resp.body,
+          status: resp.status,
+          url: url
         }
       end.with_indifferent_access
     end
@@ -92,6 +101,7 @@ module InstagramReporter
               follows: user_info['edge_follow']['count']
             }
           },
+          result: 'ok',
           meta: {
             code: 200
           }
@@ -105,6 +115,7 @@ module InstagramReporter
           pagination: {
             next_max_id: user_media['page_info']['end_cursor']
           },
+          result: 'ok',
           data: user_media['edges'].map do |edge|
             node = edge['node']
             images = [:thumbnail, :low_resolution, :standard_resolution].map.with_index do |k, i|
@@ -130,7 +141,7 @@ module InstagramReporter
               images: images,
               tags: tags,
               created_time: node['taken_at_timestamp'],
-              type: node['__typename'][4..-1].downcase,
+              type: node['__typename'][5..-1].downcase,
               likes: {
                 count: node['edge_media_preview_like']['count']
               },
@@ -138,7 +149,7 @@ module InstagramReporter
                 count: node['edge_media_to_comment']['count']
               },
               link: "https://instagram.com/p/#{node['shortcode']}",
-              caption: { 
+              caption: {
                 text: caption
               }.compact.presence
             }
