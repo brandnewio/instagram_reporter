@@ -21,7 +21,7 @@ http_interactions:
       x-ratelimit-limit:
       - '200'
       x-ratelimit-remaining:
-      - '187'
+      - '184'
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Pragma:
@@ -33,10 +33,10 @@ http_interactions:
       Content-Language:
       - en
       Date:
-      - Tue, 10 Apr 2018 07:50:38 GMT
+      - Tue, 10 Apr 2018 08:04:35 GMT
       Set-Cookie:
       - rur=FRC; Path=/
-      - csrftoken=X6HyZue43QFwhgrokTdoKTDFT7Kt8bV8; expires=Tue, 09-Apr-2019 07:50:38
+      - csrftoken=EKmkJrH50Yeb9FJTeMzH98OeVe5S2Zgy; expires=Tue, 09-Apr-2019 08:04:35
         GMT; Max-Age=31449600; Path=/; Secure
       Connection:
       - keep-alive
@@ -49,5 +49,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://api.instagram.com/v1/tags/inspiredby?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd
-  recorded_at: Tue, 10 Apr 2018 07:50:39 GMT
+  recorded_at: Tue, 10 Apr 2018 08:04:36 GMT
 recorded_with: VCR 3.0.3

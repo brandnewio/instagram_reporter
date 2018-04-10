@@ -29,10 +29,10 @@ http_interactions:
       Content-Language:
       - en
       Date:
-      - Tue, 10 Apr 2018 07:50:41 GMT
+      - Tue, 10 Apr 2018 08:04:39 GMT
       Set-Cookie:
       - rur=FRC; Path=/
-      - csrftoken=ZopbtHQC4EK4ZzYzDebuwPbpqQu76PzJ; expires=Tue, 09-Apr-2019 07:50:41
+      - csrftoken=cD4yZWsMy2hbWJmwrQ10o7ojqufNZjPS; expires=Tue, 09-Apr-2019 08:04:39
         GMT; Max-Age=31449600; Path=/; Secure
       Connection:
       - keep-alive
@@ -45,5 +45,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://api.instagram.com/v1/media/653714645670132444_16192269?client_id=<API_TOKEN>
-  recorded_at: Tue, 10 Apr 2018 07:50:41 GMT
+  recorded_at: Tue, 10 Apr 2018 08:04:39 GMT
 recorded_with: VCR 3.0.3

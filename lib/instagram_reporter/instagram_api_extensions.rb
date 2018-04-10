@@ -54,12 +54,7 @@ module InstagramReporter
         elsif resp.status == 404
           media_not_found_response(url)
         else
-          {
-            result: 'error',
-            body: resp.body,
-            status: resp.status,
-            url: url
-          }
+          media_error_response(url: url, status: resp.status, body: resp.body)
         end.with_indifferent_access
       end
 
@@ -165,10 +160,10 @@ module InstagramReporter
         text.to_s.scan(/#[A-z\d-]+/).map{|x| x[1..-1] }
       end
 
-      def media_error_response(url:, status:)
+      def media_error_response(url:, status:, body:)
         {
           result: 'error',
-          body: 'APINotAllowedError you cannot view this resource',
+          body: "#{body} APINotAllowedError you cannot view this resource",
           status: status,
           url: url
         }

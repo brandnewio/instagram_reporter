@@ -2,16 +2,142 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.instagram.com/some-non-existing-profile-or-deleted-profile/?__a=1
+    uri: http://instagram.com/zxc323terefeere
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
-      user-agent:
-      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/65.0.3325.181 Safari/537.36
+      - Faraday v0.9.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Location:
+      - https://instagram.com/zxc323terefeere
+      Content-Type:
+      - text/plain
+      Server:
+      - proxygen-bolt
+      Date:
+      - Tue, 10 Apr 2018 08:04:33 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://instagram.com/zxc323terefeere
+  recorded_at: Tue, 10 Apr 2018 08:04:33 GMT
+- request:
+    method: get
+    uri: https://instagram.com/zxc323terefeere
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Location:
+      - https://instagram.com/zxc323terefeere/
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Accept-Language, Cookie
+      Content-Language:
+      - en
+      Date:
+      - Tue, 10 Apr 2018 08:04:33 GMT
+      Set-Cookie:
+      - rur=FRC; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://instagram.com/zxc323terefeere
+  recorded_at: Tue, 10 Apr 2018 08:04:34 GMT
+- request:
+    method: get
+    uri: https://instagram.com/zxc323terefeere/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Location:
+      - https://www.instagram.com/zxc323terefeere/
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language
+      Content-Language:
+      - en
+      Date:
+      - Tue, 10 Apr 2018 08:04:34 GMT
+      Set-Cookie:
+      - rur=FRC; Path=/
+      - csrftoken=g6PPfwWSNgXWi91t6PK44fNyN4eufDfk; expires=Tue, 09-Apr-2019 08:04:34
+        GMT; Max-Age=31449600; Path=/; Secure
+      - mid=WsxwEgAEAAHFdtOTbzvMATZe97fs; expires=Mon, 05-Apr-2038 08:04:34 GMT; Max-Age=630720000;
+        Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://instagram.com/zxc323terefeere/
+  recorded_at: Tue, 10 Apr 2018 08:04:34 GMT
+- request:
+    method: get
+    uri: https://www.instagram.com/zxc323terefeere/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
       Expect:
       - ''
   response:
@@ -30,21 +156,23 @@ http_interactions:
       Expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       Vary:
-      - Accept-Language, Cookie
+      - Cookie, Accept-Language
       Content-Language:
       - en
       Date:
-      - Tue, 10 Apr 2018 08:04:39 GMT
+      - Tue, 10 Apr 2018 08:04:34 GMT
       Strict-Transport-Security:
       - max-age=86400
       Set-Cookie:
       - rur=FRC; Path=/
-      - mid=WsxwFwALAAHg4i5NiunAcv1uI25C; expires=Mon, 05-Apr-2038 08:04:39 GMT; Max-Age=630720000;
+      - csrftoken=bpl4x8rwmJyPXUcQxRPAhFMe8Kqiv0KZ; expires=Tue, 09-Apr-2019 08:04:34
+        GMT; Max-Age=31449600; Path=/; Secure
+      - mid=WsxwEgAEAAF5Au34VfutstWobP2t; expires=Mon, 05-Apr-2038 08:04:34 GMT; Max-Age=630720000;
         Path=/
       Connection:
       - keep-alive
       Content-Length:
-      - '22090'
+      - '22291'
     body:
       encoding: UTF-8
       string: "<!DOCTYPE html>\n<html lang=\"en\" class=\"no-js not-logged-in \">\n
@@ -182,11 +310,13 @@ http_interactions:
         \                   </footer>\n                    \n                \n                <div
         id=\"reactModalMountPoint\"></div>\n            </div> <!-- .root -->\n        \n
         \       \n\n        \n            <script type=\"text/javascript\">window._sharedData
-        = {\"activity_counts\":null,\"config\":{\"csrf_token\":\"NOTPROVIDED\",\"viewer\":null},\"supports_es6\":true,\"country_code\":\"unknown\",\"language_code\":\"en\",\"locale\":\"en_US\",\"entry_data\":{},\"gatekeepers\":{\"ld\":true,\"seo\":true,\"seoht\":true},\"knobs\":{\"acct:ntb\":0},\"qe\":{\"dash_for_vod\":{\"g\":\"\",\"p\":{}},\"aysf\":{\"g\":\"\",\"p\":{}},\"bc3l\":{\"g\":\"\",\"p\":{}},\"comment_reporting\":{\"g\":\"\",\"p\":{}},\"direct_reporting\":{\"g\":\"\",\"p\":{}},\"reporting\":{\"g\":\"\",\"p\":{}},\"media_reporting\":{\"g\":\"\",\"p\":{}},\"acc_recovery_link\":{\"g\":\"\",\"p\":{}},\"notif\":{\"g\":\"\",\"p\":{}},\"drct_nav\":{\"g\":\"\",\"p\":{}},\"pl_pivot_li\":{\"g\":\"\",\"p\":{}},\"pl_pivot_lo\":{\"g\":\"\",\"p\":{}},\"404_as_react\":{\"g\":\"\",\"p\":{}},\"acc_recovery\":{\"g\":\"\",\"p\":{}},\"client_gql\":{\"g\":\"\",\"p\":{}},\"collections\":{\"g\":\"\",\"p\":{}},\"comment_ta\":{\"g\":\"\",\"p\":{}},\"connections\":{\"g\":\"\",\"p\":{}},\"disc_ppl\":{\"g\":\"\",\"p\":{}},\"embeds\":{\"g\":\"\",\"p\":{}},\"ebdsim_li\":{\"g\":\"\",\"p\":{}},\"ebdsim_lo\":{\"g\":\"\",\"p\":{}},\"es6\":{\"g\":\"\",\"p\":{}},\"exit_story_creation\":{\"g\":\"\",\"p\":{}},\"fs\":{\"g\":\"\",\"p\":{}},\"gdpr_logged_out\":{\"g\":\"\",\"p\":{}},\"appsell\":{\"g\":\"\",\"p\":{}},\"imgopt\":{\"g\":\"\",\"p\":{}},\"follow_button\":{\"g\":\"\",\"p\":{}},\"loggedout\":{\"g\":\"launch\",\"p\":{\"new_cta\":\"true\",\"remove_upsell_banner\":\"true\",\"update_nav\":\"true\"}},\"loggedout_upsell\":{\"g\":\"test_with_new_loggedout_upsell_content_03_15_18\",\"p\":{\"has_new_loggedout_upsell_content\":\"true\"}},\"us_li\":{\"g\":\"\",\"p\":{}},\"msisdn\":{\"g\":\"\",\"p\":{}},\"bg_sync\":{\"g\":\"\",\"p\":{}},\"onetaplogin\":{\"g\":\"\",\"p\":{}},\"onetaplogin_userbased\":{\"g\":\"\",\"p\":{}},\"login_poe\":{\"g\":\"\",\"p\":{}},\"prvcy_tggl\":{\"g\":\"\",\"p\":{}},\"private_lo\":{\"g\":\"\",\"p\":{}},\"profile_photo_nux_fbc_v2\":{\"g\":\"\",\"p\":{}},\"push_notifications\":{\"g\":\"\",\"p\":{}},\"reg\":{\"g\":\"\",\"p\":{}},\"reg_vp\":{\"g\":\"\",\"p\":{}},\"feed_vp\":{\"g\":\"\",\"p\":{}},\"report_haf\":{\"g\":\"\",\"p\":{}},\"report_media\":{\"g\":\"\",\"p\":{}},\"report_profile\":{\"g\":\"\",\"p\":{}},\"save\":{\"g\":\"\",\"p\":{}},\"sidecar\":{\"g\":\"\",\"p\":{}},\"su_universe\":{\"g\":\"\",\"p\":{}},\"stale\":{\"g\":\"\",\"p\":{}},\"stories_lo\":{\"g\":\"\",\"p\":{}},\"stories\":{\"g\":\"\",\"p\":{}},\"tp_pblshr\":{\"g\":\"\",\"p\":{}},\"video\":{\"g\":\"\",\"p\":{}},\"gdpr_settings\":{\"g\":\"\",\"p\":{}}},\"hostname\":\"www.instagram.com\",\"display_properties_server_guess\":{\"pixel_ratio\":1.5,\"viewport_width\":360,\"viewport_height\":480,\"orientation\":\"\"},\"environment_switcher_visible_server_guess\":true,\"platform\":\"windows_nt_10\",\"rhx_gis\":\"647ed3e11a4d78a6cf7e771fc12cd2da\",\"nonce\":\"2jqvL5lm7gNtrxvRGzPc2w==\",\"is_bot\":false,\"zero_data\":{},\"rollout_hash\":\"428ec201d2c6-hot\",\"bundle_variant\":\"base\",\"probably_has_app\":false,\"show_app_install\":true};</script>\n
-        \           \n            <script type=\"text/javascript\" src=\"/static/bundles/base/Vendor.js/0b34a2e2f7c2.js\"
-        crossorigin=\"anonymous\"></script>\n<script type=\"text/javascript\">!function(e){var
-        a=window.webpackJsonp;window.webpackJsonp=function(n,r,i){for(var c,d,f,s=0,g=[];s<n.length;s++)d=n[s],o[d]&&g.push(o[d][0]),o[d]=0;for(c
-        in r)Object.prototype.hasOwnProperty.call(r,c)&&(e[c]=r[c]);for(a&&a(n,r,i);g.length;)g.shift()();if(i)for(s=0;s<i.length;s++)f=t(t.s=i[s]);return
+        = {\"activity_counts\":null,\"config\":{\"csrf_token\":\"bpl4x8rwmJyPXUcQxRPAhFMe8Kqiv0KZ\",\"viewer\":null},\"supports_es6\":false,\"country_code\":\"unknown\",\"language_code\":\"en\",\"locale\":\"en_US\",\"entry_data\":{},\"gatekeepers\":{\"ld\":true,\"seo\":true,\"seoht\":true},\"knobs\":{\"acct:ntb\":0},\"qe\":{\"dash_for_vod\":{\"g\":\"\",\"p\":{}},\"aysf\":{\"g\":\"\",\"p\":{}},\"bc3l\":{\"g\":\"\",\"p\":{}},\"comment_reporting\":{\"g\":\"\",\"p\":{}},\"direct_reporting\":{\"g\":\"\",\"p\":{}},\"reporting\":{\"g\":\"\",\"p\":{}},\"media_reporting\":{\"g\":\"\",\"p\":{}},\"acc_recovery_link\":{\"g\":\"\",\"p\":{}},\"notif\":{\"g\":\"\",\"p\":{}},\"drct_nav\":{\"g\":\"\",\"p\":{}},\"pl_pivot_li\":{\"g\":\"\",\"p\":{}},\"pl_pivot_lo\":{\"g\":\"\",\"p\":{}},\"404_as_react\":{\"g\":\"\",\"p\":{}},\"acc_recovery\":{\"g\":\"\",\"p\":{}},\"client_gql\":{\"g\":\"\",\"p\":{}},\"collections\":{\"g\":\"\",\"p\":{}},\"comment_ta\":{\"g\":\"\",\"p\":{}},\"connections\":{\"g\":\"\",\"p\":{}},\"disc_ppl\":{\"g\":\"\",\"p\":{}},\"embeds\":{\"g\":\"\",\"p\":{}},\"ebdsim_li\":{\"g\":\"\",\"p\":{}},\"ebdsim_lo\":{\"g\":\"\",\"p\":{}},\"es6\":{\"g\":\"\",\"p\":{}},\"exit_story_creation\":{\"g\":\"\",\"p\":{}},\"fs\":{\"g\":\"\",\"p\":{}},\"gdpr_logged_out\":{\"g\":\"\",\"p\":{}},\"appsell\":{\"g\":\"\",\"p\":{}},\"imgopt\":{\"g\":\"\",\"p\":{}},\"follow_button\":{\"g\":\"\",\"p\":{}},\"loggedout\":{\"g\":\"launch\",\"p\":{\"new_cta\":\"true\",\"remove_upsell_banner\":\"true\",\"update_nav\":\"true\"}},\"loggedout_upsell\":{\"g\":\"control_without_new_loggedout_upsell_content_03_15_18\",\"p\":{\"has_new_loggedout_upsell_content\":\"false\"}},\"us_li\":{\"g\":\"\",\"p\":{}},\"msisdn\":{\"g\":\"\",\"p\":{}},\"bg_sync\":{\"g\":\"\",\"p\":{}},\"onetaplogin\":{\"g\":\"control\",\"p\":{\"enabled\":\"false\"}},\"onetaplogin_userbased\":{\"g\":\"\",\"p\":{}},\"login_poe\":{\"g\":\"\",\"p\":{}},\"prvcy_tggl\":{\"g\":\"\",\"p\":{}},\"private_lo\":{\"g\":\"\",\"p\":{}},\"profile_photo_nux_fbc_v2\":{\"g\":\"\",\"p\":{}},\"push_notifications\":{\"g\":\"\",\"p\":{}},\"reg\":{\"g\":\"\",\"p\":{}},\"reg_vp\":{\"g\":\"\",\"p\":{}},\"feed_vp\":{\"g\":\"\",\"p\":{}},\"report_haf\":{\"g\":\"\",\"p\":{}},\"report_media\":{\"g\":\"\",\"p\":{}},\"report_profile\":{\"g\":\"\",\"p\":{}},\"save\":{\"g\":\"\",\"p\":{}},\"sidecar\":{\"g\":\"\",\"p\":{}},\"su_universe\":{\"g\":\"\",\"p\":{}},\"stale\":{\"g\":\"\",\"p\":{}},\"stories_lo\":{\"g\":\"control_03_15\",\"p\":{\"stories_profile\":\"false\"}},\"stories\":{\"g\":\"\",\"p\":{}},\"tp_pblshr\":{\"g\":\"\",\"p\":{}},\"video\":{\"g\":\"\",\"p\":{}},\"gdpr_settings\":{\"g\":\"\",\"p\":{}}},\"hostname\":\"www.instagram.com\",\"display_properties_server_guess\":{\"pixel_ratio\":1.5,\"viewport_width\":360,\"viewport_height\":480,\"orientation\":\"\"},\"environment_switcher_visible_server_guess\":true,\"platform\":\"web\",\"rhx_gis\":\"9d9310a55432a453aed30f8aad094c1f\",\"nonce\":\"eR+sIhskUrCCbp0q5Vu/mA==\",\"is_bot\":false,\"zero_data\":{},\"rollout_hash\":\"428ec201d2c6-hot\",\"bundle_variant\":\"base\",\"probably_has_app\":false,\"show_app_install\":true};</script>\n
+        \           <script type=\"text/javascript\" src=\"/static/bundles/base/Polyfills.js/9b36f184e49e.js\"
+        crossorigin=\"anonymous\"></script>\n            <script type=\"text/javascript\"
+        src=\"/static/bundles/base/Vendor.js/0b34a2e2f7c2.js\" crossorigin=\"anonymous\"></script>\n<script
+        type=\"text/javascript\">!function(e){var a=window.webpackJsonp;window.webpackJsonp=function(n,r,i){for(var
+        c,d,f,s=0,g=[];s<n.length;s++)d=n[s],o[d]&&g.push(o[d][0]),o[d]=0;for(c in
+        r)Object.prototype.hasOwnProperty.call(r,c)&&(e[c]=r[c]);for(a&&a(n,r,i);g.length;)g.shift()();if(i)for(s=0;s<i.length;s++)f=t(t.s=i[s]);return
         f};var n={},o={60:0};function t(a){if(n[a])return n[a].exports;var o=n[a]={i:a,l:!1,exports:{}};return
         e[a].call(o.exports,o,o.exports,t),o.l=!0,o.exports}t.e=function(e){var a=o[e];if(0===a)return
         new Promise(function(e){e()});if(a)return a[2];var n=new Promise(function(n,t){a=o[e]=[n,t]});a[2]=n;var
@@ -202,6 +332,6 @@ http_interactions:
         \       \n    </body>\n</html>"
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://www.instagram.com/some-non-existing-profile-or-deleted-profile/?__a=1
-  recorded_at: Tue, 10 Apr 2018 08:04:39 GMT
+      effective_url: https://www.instagram.com/zxc323terefeere/
+  recorded_at: Tue, 10 Apr 2018 08:04:34 GMT
 recorded_with: VCR 3.0.3
