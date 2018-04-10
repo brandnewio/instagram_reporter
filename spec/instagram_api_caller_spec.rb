@@ -119,6 +119,37 @@ describe InstagramApiCaller do
   describe '#get_user_recent_media' do
     #let(:access_token) { nil }
 
+    context 'when private profile' do
+      it 'returns error response for private profile' do
+        VCR.use_cassette('get_user_recent_media_private') do
+          result = subject.get_user_recent_media(1016919403, 'maitriye')
+          expect(result['result']).to eq('error')
+          expect(result['status']).to eq(400)
+          expect(result['body']).to match('APINotAllowedError')
+          expect(result['body']).to match('you cannot view this resource')
+        end
+      end
+    end
+
+    context 'when profile does not have any media' do
+      it 'returns success response' do
+        VCR.use_cassette('get_user_recent_media_empty_profile') do
+          result = subject.get_user_recent_media(6533520937, 'fake')
+          expect(result).to eq('data' => [], 'pagination' => nil, 'result' => 'ok')
+        end
+      end
+    end
+
+    context 'when profile not found' do
+      it 'returns not found error' do
+        VCR.use_cassette('get_user_recent_media_not_found_profile') do
+          result = subject.get_user_recent_media(65335237, 'deleted_profile')
+          expect(result['result']).to eq('error')
+          expect(result['status']).to eq(404)
+        end
+      end
+    end
+
     it "returns a response containing media data with image urls etc" do
       VCR.use_cassette('users_user-id_media_recent') do
         result = subject.get_user_recent_media(user_id, profile_name)

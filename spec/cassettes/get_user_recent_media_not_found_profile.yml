@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.instagram.com/graphql/query/?query_hash=42323d64886122307be10013ad2dcc44&variables=%7B%22id%22%3A65335237%2C%22first%22%3A12%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Cookie:
+      - ig_pr=2
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Cookie, Accept-Language
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Language:
+      - en
+      Date:
+      - Mon, 09 Apr 2018 11:54:56 GMT
+      Strict-Transport-Security:
+      - max-age=86400
+      Set-Cookie:
+      - csrftoken=z7DLOp9ednHuaxyEbum6zI4IkUpGgHih; expires=Mon, 08-Apr-2019 11:54:56
+        GMT; Max-Age=31449600; Path=/; Secure
+      - rur=FRC; Path=/
+      - mid=WstUkAAEAAE2DkBFcx-v66rfmwHY; expires=Sun, 04-Apr-2038 11:54:56 GMT; Max-Age=630720000;
+        Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '36'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"user":null},"status":"ok"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://www.instagram.com/graphql/query/?query_hash=42323d64886122307be10013ad2dcc44&variables=%7B%22id%22%3A65335237%2C%22first%22%3A12%7D
+  recorded_at: Mon, 09 Apr 2018 11:54:56 GMT
+recorded_with: VCR 3.0.3
