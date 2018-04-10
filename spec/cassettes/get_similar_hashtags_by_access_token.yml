@@ -2,83 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/tags/search?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd&q=sun
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      x-ratelimit-limit:
-      - '5000'
-      x-ratelimit-remaining:
-      - '4966'
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - Sat, 01 Jan 2000 00:00:00 GMT
-      Vary:
-      - Cookie, Accept-Language, Accept-Encoding
-      Content-Language:
-      - en
-      Date:
-      - Wed, 14 Mar 2018 07:59:11 GMT
-      Set-Cookie:
-      - rur=FTW; Path=/
-      - csrftoken=yBASbhuUaPo6dU1FtQtk3CKrvPI1ichk; expires=Wed, 13-Mar-2019 07:59:11
-        GMT; Max-Age=31449600; Path=/; Secure
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '2439'
-    body:
-      encoding: UTF-8
-      string: '{"data": [{"name": "sun", "media_count": 181102630}, {"name": "sunday",
-        "media_count": 77482907}, {"name": "sunset", "media_count": 166486633}, {"name":
-        "sunny", "media_count": 37903978}, {"name": "sunnah", "media_count": 2313742},
-        {"name": "sundae", "media_count": 632981}, {"name": "sunshine", "media_count":
-        48441940}, {"name": "sunrise", "media_count": 45896959}, {"name": "sundayfunday",
-        "media_count": 35510041}, {"name": "sunrise_sunsets_aroundworld", "media_count":
-        1939727}, {"name": "sunglasses", "media_count": 23404733}, {"name": "sunset_stream",
-        "media_count": 790478}, {"name": "sunset_vision", "media_count": 962239},
-        {"name": "sunrise_and_sunsets", "media_count": 1138761}, {"name": "sunset_madness",
-        "media_count": 2569625}, {"name": "sunum\u00f6nemlidir", "media_count": 1554672},
-        {"name": "sunset_greece", "media_count": 318603}, {"name": "sunset_lovee",
-        "media_count": 457788}, {"name": "sunlight", "media_count": 8123732}, {"name":
-        "sundays", "media_count": 4878660}, {"name": "sunset_pics", "media_count":
-        1994381}, {"name": "sunglass", "media_count": 1316178}, {"name": "sungyeol",
-        "media_count": 689922}, {"name": "sundown", "media_count": 2972757}, {"name":
-        "sunnies", "media_count": 2337890}, {"name": "sunsets", "media_count": 8410024},
-        {"name": "sunflowers", "media_count": 1962842}, {"name": "sungjong", "media_count":
-        675557}, {"name": "sunset\ud83c\udf05", "media_count": 1671000}, {"name":
-        "sunrises", "media_count": 555947}, {"name": "sundance", "media_count": 435223},
-        {"name": "sunset_hub", "media_count": 1112450}, {"name": "sunblock", "media_count":
-        384633}, {"name": "sunburn", "media_count": 1632227}, {"name": "sungmin",
-        "media_count": 899118}, {"name": "sundaze", "media_count": 856890}, {"name":
-        "sunflower", "media_count": 3379793}, {"name": "sunkissed", "media_count":
-        2580951}, {"name": "sunscreen", "media_count": 812459}, {"name": "sunset_ig",
-        "media_count": 718457}, {"name": "s\u00fcnnet", "media_count": 790760}, {"name":
-        "sundress", "media_count": 319623}, {"name": "sunum", "media_count": 2705431},
-        {"name": "sundaymorning", "media_count": 5434936}, {"name": "sundayafternoon",
-        "media_count": 1045836}, {"name": "sunshinecoast", "media_count": 1764284},
-        {"name": "sunshinestate", "media_count": 893902}, {"name": "sunsets_oftheworld",
-        "media_count": 392371}, {"name": "sunsetphotography", "media_count": 426863},
-        {"name": "sunsoutgunsout", "media_count": 866425}], "meta": {"code": 200}}'
-    http_version: '1.1'
-    adapter_metadata:
-      effective_url: https://api.instagram.com/v1/tags/search?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd&q=sun
-  recorded_at: Wed, 14 Mar 2018 07:59:11 GMT
-- request:
-    method: get
     uri: https://api.instagram.com/v1/tags/search?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd&q=inspiredby
     body:
       encoding: US-ASCII
@@ -86,6 +9,8 @@ http_interactions:
     headers:
       User-Agent:
       - Faraday v0.9.1
+      Expect:
+      - ''
   response:
     status:
       code: 200
@@ -94,9 +19,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       x-ratelimit-limit:
-      - '5000'
+      - '200'
       x-ratelimit-remaining:
-      - '4960'
+      - '186'
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Pragma:
@@ -108,52 +33,131 @@ http_interactions:
       Content-Language:
       - en
       Date:
-      - Wed, 14 Mar 2018 07:59:13 GMT
+      - Tue, 10 Apr 2018 08:04:35 GMT
       Set-Cookie:
-      - rur=FTW; Path=/
-      - csrftoken=LNkBliFYAZ1Ntlba9Ne0w76i4Zgpxz1d; expires=Wed, 13-Mar-2019 07:59:13
+      - rur=FRC; Path=/
+      - csrftoken=8l8HYpdjqbqFhCU2PKDgzSROif8SK4K6; expires=Tue, 09-Apr-2019 08:04:35
         GMT; Max-Age=31449600; Path=/; Secure
       Connection:
       - keep-alive
       Content-Length:
-      - '2595'
+      - '2593'
     body:
       encoding: UTF-8
-      string: '{"data": [{"name": "inspiredbypets", "media_count": 453464}, {"name":
-        "inspiredbyyou", "media_count": 139938}, {"name": "inspiredbynature", "media_count":
-        398285}, {"name": "inspiredbypetals", "media_count": 198911}, {"name": "inspiredbyiceland",
-        "media_count": 162185}, {"name": "inspiredbycolour", "media_count": 80318},
-        {"name": "inspiredbythis", "media_count": 86723}, {"name": "inspiredbynature_",
-        "media_count": 34095}, {"name": "inspiredbyinstyle", "media_count": 26875},
-        {"name": "inspiredby", "media_count": 177338}, {"name": "inspiredbygippsland",
-        "media_count": 26539}, {"name": "inspiredbymichigan", "media_count": 32955},
-        {"name": "inspiredbyohio", "media_count": 25788}, {"name": "inspiredbyb3",
-        "media_count": 29566}, {"name": "inspiredbybabies", "media_count": 20192},
-        {"name": "inspiredbyshetland", "media_count": 19027}, {"name": "inspiredbycolor",
-        "media_count": 18858}, {"name": "inspiredbypassion", "media_count": 14602},
-        {"name": "inspiredbyadventure", "media_count": 14752}, {"name": "inspiredbylife",
-        "media_count": 16172}, {"name": "inspiredbylove", "media_count": 13694}, {"name":
-        "inspiredbykristina", "media_count": 12482}, {"name": "inspiredbydayton",
-        "media_count": 10359}, {"name": "inspiredbythesea", "media_count": 10117},
-        {"name": "inspiredbyafrica", "media_count": 11260}, {"name": "inspiredbytravel",
-        "media_count": 9666}, {"name": "inspiredbymusic", "media_count": 10182}, {"name":
-        "inspiredbyflowers", "media_count": 10885}, {"name": "inspiredbylight", "media_count":
-        13289}, {"name": "inspiredbyred", "media_count": 5692}, {"name": "inspiredbyart",
-        "media_count": 6642}, {"name": "inspiredbystarbucks", "media_count": 7856},
-        {"name": "inspiredbythemoment", "media_count": 6985}, {"name": "inspiredbyrvca",
-        "media_count": 6714}, {"name": "inspiredbygod", "media_count": 5004}, {"name":
-        "inspiredbyscandinavia", "media_count": 16391}, {"name": "inspiredbyhue",
-        "media_count": 3959}, {"name": "inspiredbykhj", "media_count": 4423}, {"name":
-        "inspiredbyothers", "media_count": 5472}, {"name": "inspiredbyhim", "media_count":
-        3877}, {"name": "inspiredbypinterest", "media_count": 5597}, {"name": "inspiredbycharm",
-        "media_count": 5010}, {"name": "inspiredbyyoga", "media_count": 4882}, {"name":
-        "inspiredbyzara", "media_count": 4781}, {"name": "inspiredbystyle", "media_count":
-        4207}, {"name": "inspiredbykids", "media_count": 4054}, {"name": "inspiredbybristol",
-        "media_count": 4735}, {"name": "inspiredbyigdecor", "media_count": 4337},
-        {"name": "inspiredbywomen", "media_count": 3329}, {"name": "inspiredbyfaith",
-        "media_count": 3133}], "meta": {"code": 200}}'
+      string: '{"data": [{"name": "inspiredbypets", "media_count": 467639}, {"name":
+        "inspiredbynature", "media_count": 423153}, {"name": "inspiredbyyou", "media_count":
+        143108}, {"name": "inspiredbypetals", "media_count": 215737}, {"name": "inspiredbyiceland",
+        "media_count": 169056}, {"name": "inspiredbycolour", "media_count": 84662},
+        {"name": "inspiredbythis", "media_count": 90629}, {"name": "inspiredbynature_",
+        "media_count": 36545}, {"name": "inspiredbyinstyle", "media_count": 28246},
+        {"name": "inspiredby", "media_count": 181697}, {"name": "inspiredbygippsland",
+        "media_count": 26978}, {"name": "inspiredbymichigan", "media_count": 33317},
+        {"name": "inspiredbyohio", "media_count": 27083}, {"name": "inspiredbyb3",
+        "media_count": 30190}, {"name": "inspiredbybabies", "media_count": 20340},
+        {"name": "inspiredbyshetland", "media_count": 19694}, {"name": "inspiredbycolor",
+        "media_count": 19767}, {"name": "inspiredbypassion", "media_count": 14946},
+        {"name": "inspiredbyadventure", "media_count": 15351}, {"name": "inspiredbylife",
+        "media_count": 16586}, {"name": "inspiredbylove", "media_count": 14267}, {"name":
+        "inspiredbyflowers", "media_count": 12252}, {"name": "inspiredbyafrica", "media_count":
+        11782}, {"name": "inspiredbykristina", "media_count": 12447}, {"name": "inspiredbytravel",
+        "media_count": 9980}, {"name": "inspiredbydayton", "media_count": 11003},
+        {"name": "inspiredbylight", "media_count": 13913}, {"name": "inspiredbythesea",
+        "media_count": 10528}, {"name": "inspiredbymusic", "media_count": 10583},
+        {"name": "inspiredbyart", "media_count": 6975}, {"name": "inspiredbyred",
+        "media_count": 5993}, {"name": "inspiredbystarbucks", "media_count": 7857},
+        {"name": "inspiredbythemoment", "media_count": 6990}, {"name": "inspiredbyrvca",
+        "media_count": 6769}, {"name": "inspiredbygod", "media_count": 5168}, {"name":
+        "inspiredbyscandinavia", "media_count": 16487}, {"name": "inspiredbyothers",
+        "media_count": 5698}, {"name": "inspiredbykhj", "media_count": 4436}, {"name":
+        "inspiredbyhue", "media_count": 4048}, {"name": "inspiredbyhim", "media_count":
+        3926}, {"name": "inspiredbypinterest", "media_count": 5766}, {"name": "inspiredbyyoga",
+        "media_count": 5137}, {"name": "inspiredbycharm", "media_count": 5066}, {"name":
+        "inspiredbyzara", "media_count": 4967}, {"name": "inspiredbystyle", "media_count":
+        4532}, {"name": "inspiredbykids", "media_count": 4191}, {"name": "inspiredbywomen",
+        "media_count": 3492}, {"name": "inspiredbybristol", "media_count": 4865},
+        {"name": "inspiredbyher", "media_count": 3171}, {"name": "inspiredbyigdecor",
+        "media_count": 4661}], "meta": {"code": 200}}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://api.instagram.com/v1/tags/search?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd&q=inspiredby
-  recorded_at: Wed, 14 Mar 2018 07:59:13 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Tue, 10 Apr 2018 08:04:35 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/tags/search?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd&q=sun
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      x-ratelimit-limit:
+      - '200'
+      x-ratelimit-remaining:
+      - '185'
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      Content-Language:
+      - en
+      Date:
+      - Tue, 10 Apr 2018 08:04:35 GMT
+      Set-Cookie:
+      - rur=FRC; Path=/
+      - csrftoken=GNv4t25ym3sxtgh3s2Cl8U6yS5aG7iX2; expires=Tue, 09-Apr-2019 08:04:35
+        GMT; Max-Age=31449600; Path=/; Secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2440'
+    body:
+      encoding: UTF-8
+      string: '{"data": [{"name": "sun", "media_count": 183769654}, {"name": "sunday",
+        "media_count": 78914363}, {"name": "sunset", "media_count": 169097968}, {"name":
+        "sunny", "media_count": 38542456}, {"name": "sunnah", "media_count": 2472832},
+        {"name": "sundae", "media_count": 639463}, {"name": "sunshine", "media_count":
+        49389084}, {"name": "sunrise", "media_count": 46616563}, {"name": "sundayfunday",
+        "media_count": 36264852}, {"name": "sunrise_sunsets_aroundworld", "media_count":
+        1971506}, {"name": "sunglasses", "media_count": 23892863}, {"name": "sunset_stream",
+        "media_count": 822241}, {"name": "sunset_vision", "media_count": 1033518},
+        {"name": "sunrise_and_sunsets", "media_count": 1174172}, {"name": "sunset_madness",
+        "media_count": 2622591}, {"name": "sunum\u00f6nemlidir", "media_count": 1611818},
+        {"name": "sunset_pics", "media_count": 2093965}, {"name": "sunset_greece",
+        "media_count": 323565}, {"name": "sunset_lovee", "media_count": 465089}, {"name":
+        "sunlight", "media_count": 8278082}, {"name": "sundays", "media_count": 4944740},
+        {"name": "sunglass", "media_count": 1339049}, {"name": "sungyeol", "media_count":
+        691700}, {"name": "sundown", "media_count": 3023445}, {"name": "sunnies",
+        "media_count": 2382049}, {"name": "sunsets", "media_count": 8606276}, {"name":
+        "sunflowers", "media_count": 1985529}, {"name": "sungjong", "media_count":
+        676827}, {"name": "sunset\ud83c\udf05", "media_count": 1704680}, {"name":
+        "sundance", "media_count": 438576}, {"name": "sunset_hub", "media_count":
+        1142691}, {"name": "sunblock", "media_count": 394540}, {"name": "sunrises",
+        "media_count": 573662}, {"name": "sunburn", "media_count": 1652905}, {"name":
+        "sungmin", "media_count": 912418}, {"name": "sundaze", "media_count": 872271},
+        {"name": "sunflower", "media_count": 3429299}, {"name": "sunkissed", "media_count":
+        2655407}, {"name": "sunset_ig", "media_count": 744149}, {"name": "sunscreen",
+        "media_count": 831599}, {"name": "s\u00fcnnet", "media_count": 817498}, {"name":
+        "sundress", "media_count": 324787}, {"name": "sunum", "media_count": 2813829},
+        {"name": "sundaymorning", "media_count": 5526397}, {"name": "sundayafternoon",
+        "media_count": 1068275}, {"name": "sunshinecoast", "media_count": 1809734},
+        {"name": "sunshinestate", "media_count": 920530}, {"name": "sunsets_oftheworld",
+        "media_count": 407215}, {"name": "sunsetphotography", "media_count": 453740},
+        {"name": "sunsoutgunsout", "media_count": 881557}], "meta": {"code": 200}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.instagram.com/v1/tags/search?access_token=441979517.b4d2505.74433001c61845adba716152a0e1d3dd&q=sun
+  recorded_at: Tue, 10 Apr 2018 08:04:35 GMT
+recorded_with: VCR 3.0.3

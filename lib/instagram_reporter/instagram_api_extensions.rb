@@ -4,59 +4,11 @@ module InstagramReporter
 
     # TO CHANGE
     def get_user_info_by_access_token(profile_name, access_token)
-      url = "https://www.instagram.com/#{profile_name}/?__a=1"
-      resp = conn.get(url)
-      if resp.status == 200
-        raw_user_info = JSON.parse(resp.body)
-        user_info = raw_user_info['graphql']['user'] || {}
-        if user_info['is_private'].to_s == 'true'
-          private_profile_response(url)
-        else
-          transform_user_info(user_info)
-        end
-      else
-        {
-          result: 'error',
-          body: resp.body,
-          status: resp.status,
-          url: url
-        }
-      end.with_indifferent_access
+      fetch_and_process_data(:transform_user_info, profile_name)
     end
 
-    # TO CHANGE
-    def get_user_recent_media(user_id, profile_name, max_tag_id = nil)
-      url = 'https://www.instagram.com/graphql/query/'
-      query_params = {
-        query_hash: ENV['INSTAGRAM_RECENT_QUERY_HASH'] || '42323d64886122307be10013ad2dcc44',
-        variables: {
-          id: user_id,
-          first: (ENV['INSTAGRAM_MEDIA_COUNT_PER_REQUEST'] || 12).to_i,
-          after: max_tag_id
-        }.compact.to_json
-      }
-      resp = conn_with_token(profile_name).get(url, query_params)
-      if resp.status == 200
-        raw_user_media = JSON.parse(resp.body)
-        user = raw_user_media['data']['user']
-        if user
-          user_media = user['edge_owner_to_timeline_media'] || {}
-          if user_media['count'].to_i.nonzero? && user_media['edges'].empty?
-            private_profile_response(url)
-          else
-            transform_user_recent_media(user_media, profile_name)
-          end
-        else
-          media_not_found_response(url)
-        end
-      else
-        {
-          result: 'error',
-          body: resp.body,
-          status: resp.status,
-          url: url
-        }
-      end.with_indifferent_access
+    def get_user_recent_media(_user_id, profile_name, max_tag_id = nil)
+      fetch_and_process_data(:transform_user_recent_media, profile_name)
     end
 
     # TO CHANGE
@@ -86,7 +38,27 @@ module InstagramReporter
 
     private
 
-      def transform_user_info(user_info)
+      def fetch_and_process_data(sanitizer_method_name, profile_name)
+        url = "https://www.instagram.com/#{profile_name}/?__a=1"
+        resp = conn.get(url)
+        if resp.status == 200
+          raw_user_info = JSON.parse(resp.body)
+          user_info = raw_user_info['graphql']['user']
+          if user_info.nil?
+            media_not_found_response(url)
+          elsif user_info['is_private'].to_s == 'true'
+            private_profile_response(url)
+          else
+            send(sanitizer_method_name, user_info, profile_name)
+          end
+        elsif resp.status == 404
+          media_not_found_response(url)
+        else
+          media_error_response(url: url, status: resp.status, body: resp.body)
+        end.with_indifferent_access
+      end
+
+      def transform_user_info(user_info, _)
         {
           data: {
             id: user_info['id'],
@@ -107,11 +79,14 @@ module InstagramReporter
         }
       end
 
-      def transform_user_recent_media(user_media, profile_name)
+      def transform_user_recent_media(user_info, profile_name)
+        user_media = user_info['edge_owner_to_timeline_media'] || {}
         {
-          pagination: {
-            next_max_tag_id: user_media['page_info']['end_cursor']
-          }.compact.presence,
+          # Because we can't use the next_max_tag_id endpoint, so setting it to +nil+
+          # pagination: {
+          #   next_max_tag_id: user_media['page_info']['end_cursor']
+          # }.compact.presence,
+          pagination: nil,
           result: 'ok',
           data: user_media['edges'].map do |edge|
             node = edge['node']
@@ -181,27 +156,14 @@ module InstagramReporter
         end
       end
 
-      def conn_with_token(username)
-        @conn_with_token ||= Faraday.new do |faraday|
-          response = Faraday.new.get("https://www.instagram.com/#{username}/?__a=1")
-          faraday.headers['user-agent'] = CHROME_WIN_UA
-          faraday.headers['cookie'] = response.headers['set-cookie'] + %{\; ig_pr=2\; x-instagram-gis=7f07cbf9d12941b80ac1a674cbc10271\; ds_user_id=135159951; }
-          faraday.headers['csrftoken'] = response.headers['set-cookie'].match(/csrftoken=([A-z0-9]{32})/)[1]
-          faraday.request  :url_encoded
-          faraday.use      FaradayMiddleware::FollowRedirects
-          faraday.adapter  :typhoeus
-          faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i
-        end
-      end
-
       def extract_tags(text)
         text.to_s.scan(/#[A-z\d-]+/).map{|x| x[1..-1] }
       end
 
-      def media_error_response(url:, status:)
+      def media_error_response(url:, status:, body:)
         {
           result: 'error',
-          body: 'APINotAllowedError you cannot view this resource',
+          body: "#{body} APINotAllowedError you cannot view this resource",
           status: status,
           url: url
         }
