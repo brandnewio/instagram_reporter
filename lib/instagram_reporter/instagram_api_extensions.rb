@@ -26,25 +26,28 @@ module InstagramReporter
 
     # TO CHANGE
     def get_user_recent_media(user_id, profile_name, max_tag_id = nil)
-      url = "https://instagram.com/graphql/query/"
+      url = 'https://www.instagram.com/graphql/query/'
       query_params = {
-        query_id: ENV['INSTAGRAM_USER_QUERY_ID'] || "17888483320059182",
-        id: user_id,
-        first: 12,
-        after: max_tag_id
-      }.compact
-      resp = conn.get(url, query_params)
+        query_hash: ENV['INSTAGRAM_RECENT_QUERY_HASH'] || '42323d64886122307be10013ad2dcc44',
+        variables: {
+          id: user_id,
+          first: (ENV['INSTAGRAM_MEDIA_COUNT_PER_REQUEST'] || 12).to_i,
+          after: max_tag_id
+        }.compact.to_json
+      }
+      resp = conn_with_token(profile_name).get(url, query_params)
       if resp.status == 200
         raw_user_media = JSON.parse(resp.body)
-        if raw_user_media['data'].compact.empty?
-          {
-            result: 'error',
-            body: 'APINotAllowedError you cannot view this resource',
-            status: 404,
-            url: url
-          }
+        user = raw_user_media['data']['user']
+        if user
+          user_media = user['edge_owner_to_timeline_media'] || {}
+          if user_media['count'].to_i.nonzero? && user_media['edges'].empty?
+            private_profile_response(url)
+          else
+            transform_user_recent_media(user_media, profile_name)
+          end
         else
-          transform_user_recent_media(raw_user_media, profile_name)
+          media_not_found_response(url)
         end
       else
         {
@@ -104,13 +107,11 @@ module InstagramReporter
         }
       end
 
-      def transform_user_recent_media(raw_user_media, profile_name)
-        user_media = raw_user_media['data']['user']['edge_owner_to_timeline_media']
-
+      def transform_user_recent_media(user_media, profile_name)
         {
           pagination: {
-            next_max_id: user_media['page_info']['end_cursor']
-          },
+            next_max_tag_id: user_media['page_info']['end_cursor']
+          }.compact.presence,
           result: 'ok',
           data: user_media['edges'].map do |edge|
             node = edge['node']
@@ -180,8 +181,30 @@ module InstagramReporter
         end
       end
 
+      def conn_with_token(username)
+        @conn_with_token ||= Faraday.new do |faraday|
+          response = Faraday.new.get("https://www.instagram.com/#{username}/?__a=1")
+          faraday.headers['user-agent'] = CHROME_WIN_UA
+          faraday.headers['cookie'] = response.headers['set-cookie'] + %{\; ig_pr=2\; x-instagram-gis=7f07cbf9d12941b80ac1a674cbc10271\; ds_user_id=135159951; }
+          faraday.headers['csrftoken'] = response.headers['set-cookie'].match(/csrftoken=([A-z0-9]{32})/)[1]
+          faraday.request  :url_encoded
+          faraday.use      FaradayMiddleware::FollowRedirects
+          faraday.adapter  :typhoeus
+          faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i
+        end
+      end
+
       def extract_tags(text)
         text.to_s.scan(/#[A-z\d-]+/).map{|x| x[1..-1] }
+      end
+
+      def media_error_response(url:, status:)
+        {
+          result: 'error',
+          body: 'APINotAllowedError you cannot view this resource',
+          status: status,
+          url: url
+        }
       end
 
       def private_profile_response(url)
@@ -190,6 +213,15 @@ module InstagramReporter
           status: 400,
           url: url,
           body: 'APINotAllowedError you cannot view this resource',
+        }
+      end
+
+      def media_not_found_response(url)
+        {
+          result: 'error',
+          status: 404,
+          url: url,
+          body: 'Page Not Found, APINotFoundError'
         }
       end
   end
