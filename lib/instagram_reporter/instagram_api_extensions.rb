@@ -1,62 +1,14 @@
 module InstagramReporter
   module InstagramApiExtensions
+    CHROME_WIN_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
 
     # TO CHANGE
     def get_user_info_by_access_token(profile_name, access_token)
-      url = "https://www.instagram.com/#{profile_name}/?__a=1"
-      resp = conn.get(url)
-      if resp.status == 200
-        raw_user_info = JSON.parse(resp.body)
-        if raw_user_info['is_private'] == 'true'
-          {
-            result: 'error',
-            body: 'APINotAllowedError you cannot view this resource',
-            status: 400,
-            url: url
-          }
-        else
-          transform_user_info(raw_user_info)
-        end
-      else
-        {
-          result: 'error',
-          body: resp.body,
-          status: resp.status,
-          url: url
-        }
-      end.with_indifferent_access
+      fetch_and_process_data(:transform_user_info, profile_name)
     end
 
-    # TO CHANGE
-    def get_user_recent_media(user_id, profile_name, max_tag_id = nil)
-      url = "https://instagram.com/graphql/query/"
-      query_params = {
-        query_id: ENV['INSTAGRAM_USER_QUERY_ID'] || "17888483320059182",
-        id: user_id,
-        first: 12,
-        after: max_tag_id
-      }.compact
-      resp = conn.get(url, query_params)
-      if resp.status == 200
-        raw_user_media = JSON.parse(resp.body)
-        if raw_user_media['data'].compact.empty?
-          {
-            result: 'error',
-            body: 'APINotAllowedError you cannot view this resource',
-            status: 404,
-            url: url
-          }
-        else
-          transform_user_recent_media(raw_user_media, profile_name)
-        end
-      else
-        {
-          result: 'error',
-          body: resp.body,
-          status: resp.status,
-          url: url
-        }
-      end.with_indifferent_access
+    def get_user_recent_media(_user_id, profile_name, max_tag_id = nil)
+      fetch_and_process_data(:transform_user_recent_media, profile_name)
     end
 
     # TO CHANGE
@@ -86,8 +38,27 @@ module InstagramReporter
 
     private
 
-      def transform_user_info(raw_user_info)
-        user_info = raw_user_info['graphql']['user']
+      def fetch_and_process_data(sanitizer_method_name, profile_name)
+        url = "https://www.instagram.com/#{profile_name}/?__a=1"
+        resp = conn.get(url)
+        if resp.status == 200
+          raw_user_info = JSON.parse(resp.body)
+          user_info = raw_user_info['graphql']['user']
+          if user_info.nil?
+            media_not_found_response(url)
+          elsif user_info['is_private'].to_s == 'true'
+            private_profile_response(url)
+          else
+            send(sanitizer_method_name, user_info, profile_name)
+          end
+        elsif resp.status == 404
+          media_not_found_response(url)
+        else
+          media_error_response(url: url, status: resp.status, body: resp.body)
+        end.with_indifferent_access
+      end
+
+      def transform_user_info(user_info, _)
         {
           data: {
             id: user_info['id'],
@@ -108,13 +79,14 @@ module InstagramReporter
         }
       end
 
-      def transform_user_recent_media(raw_user_media, profile_name)
-        user_media = raw_user_media['data']['user']['edge_owner_to_timeline_media']
-
+      def transform_user_recent_media(user_info, profile_name)
+        user_media = user_info['edge_owner_to_timeline_media'] || {}
         {
-          pagination: {
-            next_max_id: user_media['page_info']['end_cursor']
-          },
+          # Because we can't use the next_max_tag_id endpoint, so setting it to +nil+
+          # pagination: {
+          #   next_max_tag_id: user_media['page_info']['end_cursor']
+          # }.compact.presence,
+          pagination: nil,
           result: 'ok',
           data: user_media['edges'].map do |edge|
             node = edge['node']
@@ -179,12 +151,40 @@ module InstagramReporter
           faraday.request  :url_encoded
           faraday.use      FaradayMiddleware::FollowRedirects
           faraday.adapter  :typhoeus
-          faraday.options.timeout = 5
+          faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i
+          faraday.headers['user-agent'] = CHROME_WIN_UA
         end
       end
 
       def extract_tags(text)
         text.to_s.scan(/#[A-z\d-]+/).map{|x| x[1..-1] }
+      end
+
+      def media_error_response(url:, status:, body:)
+        {
+          result: 'error',
+          body: "#{body} APINotAllowedError you cannot view this resource",
+          status: status,
+          url: url
+        }
+      end
+
+      def private_profile_response(url)
+        {
+          result: 'error',
+          status: 400,
+          url: url,
+          body: 'APINotAllowedError you cannot view this resource',
+        }
+      end
+
+      def media_not_found_response(url)
+        {
+          result: 'error',
+          status: 404,
+          url: url,
+          body: 'Page Not Found, APINotFoundError'
+        }
       end
   end
 end

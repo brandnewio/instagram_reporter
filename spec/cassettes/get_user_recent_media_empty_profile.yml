@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.instagram.com/fake/?__a=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      user-agent:
+      - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/65.0.3325.181 Safari/537.36
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      Content-Language:
+      - en
+      Date:
+      - Tue, 10 Apr 2018 08:04:38 GMT
+      Strict-Transport-Security:
+      - max-age=86400
+      Set-Cookie:
+      - rur=FRC; Path=/
+      - csrftoken=5aPHfI6yRajuUVcyfX6ks5tBkskOaCY1; expires=Tue, 09-Apr-2019 08:04:38
+        GMT; Max-Age=31449600; Path=/; Secure
+      - mid=WsxwFgALAAFpuplztzleqfaVQS0k; expires=Mon, 05-Apr-2038 08:04:38 GMT; Max-Age=630720000;
+        Path=/
+      - 'urlgen="{\"time\": 1523347478}:1f5oGc:_jNbLB11VjIoekRXPN5k-DCCepQ"; Path=/'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1209'
+    body:
+      encoding: UTF-8
+      string: '{"logging_page_id":"profilePage_6533520937","show_suggested_profiles":false,"graphql":{"user":{"biography":"","blocked_by_viewer":false,"country_block":false,"external_url":null,"external_url_linkshimmed":null,"edge_followed_by":{"count":928},"followed_by_viewer":false,"edge_follow":{"count":33},"follows_viewer":false,"full_name":"i","has_blocked_viewer":false,"has_requested_viewer":false,"id":"6533520937","is_private":false,"is_verified":false,"mutual_followers":null,"profile_pic_url":"https://instagram.fdel8-1.fna.fbcdn.net/vp/deaf1324b1593b5f407c16b5645d90ef/5B6F44A8/t51.2885-19/s150x150/25007212_1994097070814077_931048600811601920_n.jpg","profile_pic_url_hd":"https://instagram.fdel8-1.fna.fbcdn.net/vp/26a5f30804280f759a2b2aa5b547ee01/5B68F058/t51.2885-19/s320x320/25007212_1994097070814077_931048600811601920_n.jpg","requested_by_viewer":false,"username":"fake","connected_fb_page":null,"edge_owner_to_timeline_media":{"count":0,"page_info":{"has_next_page":false,"end_cursor":null},"edges":[]},"edge_saved_media":{"count":0,"page_info":{"has_next_page":false,"end_cursor":null},"edges":[]},"edge_media_collections":{"count":0,"page_info":{"has_next_page":false,"end_cursor":null},"edges":[]}}}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://www.instagram.com/fake/?__a=1
+  recorded_at: Tue, 10 Apr 2018 08:04:38 GMT
+recorded_with: VCR 3.0.3
