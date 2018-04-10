@@ -178,9 +178,9 @@ class InstagramApiCaller < InstagramInteractionsBase
 
       response = Hash.new
       api_response = api_connection.get(uri, params) do |req|
-        req.options = DEFAULT_REQUEST_OPTIONS
+        DEFAULT_REQUEST_OPTIONS.each {|k,v| req.options.send("#{k}=", v) }
       end
-       puts "#{params} #{uri} #{api_response.inspect}"
+      puts "#{params} #{uri} #{api_response.inspect}"
       if(api_response.status == 200)
         response['data']       = parse_response(api_response, uri, params)
         response['pagination'] = get_pagination(api_response.body) if get_pagination
@@ -259,16 +259,15 @@ class InstagramApiCaller < InstagramInteractionsBase
     def get_response(uri)
       @response ||= api_connection.get do |req|
         req.url uri
-        req.options = DEFAULT_REQUEST_OPTIONS
+        DEFAULT_REQUEST_OPTIONS.each {|k,v| req.options.send("#{k}=", v) }
       end
     end
 
     def api_connection
       @api_connection ||= Faraday.new(url: API_BASE_URL) do |faraday|
         faraday.request  :url_encoded
-        faraday.use FaradayMiddleware::FollowRedirects
+        # faraday.use FaradayMiddleware::FollowRedirects
         faraday.adapter  :typhoeus
-        faraday.options.timeout = 5
       end
     end
 

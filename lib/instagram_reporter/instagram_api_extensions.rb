@@ -2,7 +2,6 @@ module InstagramReporter
   module InstagramApiExtensions
     CHROME_WIN_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
 
-    # TO CHANGE
     def get_user_info_by_access_token(profile_name, access_token)
       fetch_and_process_data(:transform_user_info, profile_name)
     end
@@ -19,7 +18,6 @@ module InstagramReporter
       }
     end
 
-    # TO CHANGE
     def call_api_by_access_token_for_media_file_stats(instagram_link, access_token)
       url = instagram_link + "?__a=1"
       resp = conn.get(url)
@@ -121,7 +119,7 @@ module InstagramReporter
                 count: node['edge_media_to_comment']['count']
               },
               link: "https://instagram.com/p/#{node['shortcode']}",
-              caption: {
+              caption: { 
                 text: caption
               }.compact.presence
             }
@@ -147,13 +145,29 @@ module InstagramReporter
       end
 
       def conn
-        @conn ||= Faraday.new do |faraday|
+        ssl_opt = if ENV['PROXY_CA_FILE_PATH'].present?
+                    {ssl: {verify: true, ca_file: ENV['PROXY_CA_FILE_PATH']}}
+                  else
+                    {ssl: {verify: false}}
+                  end
+        Faraday.new(ssl_opt) do |faraday|
           faraday.request  :url_encoded
-          faraday.use      FaradayMiddleware::FollowRedirects
+          # faraday.use      FaradayMiddleware::FollowRedirects
           faraday.adapter  :typhoeus
+          faraday.proxy    roll_proxy_server
           faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i
           faraday.headers['user-agent'] = CHROME_WIN_UA
         end
+      end
+
+      def roll_proxy_server
+        # Algorithm for choosing proxy server, e.g. 
+        # 
+        # server = redis.lpop('proxy_servers')
+        # redis.rpush('proxy_server', server)
+        # server
+
+        ENV['PROXY_SERVER'] #|| "http://ec2-52-16-66-173.eu-west-1.compute.amazonaws.com:9888"
       end
 
       def extract_tags(text)
