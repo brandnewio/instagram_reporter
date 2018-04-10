@@ -178,7 +178,7 @@ class InstagramApiCaller < InstagramInteractionsBase
 
       response = Hash.new
       api_response = api_connection.get(uri, params) do |req|
-        req.options = DEFAULT_REQUEST_OPTIONS
+        # req.options = DEFAULT_REQUEST_OPTIONS
       end
        puts "#{params} #{uri} #{api_response.inspect}"
       if(api_response.status == 200)
@@ -259,16 +259,15 @@ class InstagramApiCaller < InstagramInteractionsBase
     def get_response(uri)
       @response ||= api_connection.get do |req|
         req.url uri
-        req.options = DEFAULT_REQUEST_OPTIONS
+        # req.options = DEFAULT_REQUEST_OPTIONS
       end
     end
 
     def api_connection
       @api_connection ||= Faraday.new(url: API_BASE_URL) do |faraday|
-        faraday.request  :url_encoded
-        faraday.use FaradayMiddleware::FollowRedirects
+        # faraday.request  :url_encoded
+        # faraday.use FaradayMiddleware::FollowRedirects
         faraday.adapter  :typhoeus
-        faraday.options.timeout = 5
       end
     end
 

@@ -31,11 +31,13 @@ module InstagramReporter
     def get_user_recent_media(user_id, profile_name, max_tag_id = nil)
       url = "https://instagram.com/graphql/query/"
       query_params = {
-        query_id: ENV['INSTAGRAM_USER_QUERY_ID'] || "17888483320059182",
-        id: user_id,
-        first: 12,
-        after: max_tag_id
-      }.compact
+        query_hash: ENV['INSTAGRAM_RECENT_MEDIA_QUERY_HASH'] || "42323d64886122307be10013ad2dcc44",
+        variables: {
+          id: user_id,
+          first: 12,
+          after: max_tag_id
+        }.compact.to_query
+      }
       resp = conn.get(url, query_params)
       if resp.status == 200
         raw_user_media = JSON.parse(resp.body)
@@ -149,7 +151,7 @@ module InstagramReporter
                 count: node['edge_media_to_comment']['count']
               },
               link: "https://instagram.com/p/#{node['shortcode']}",
-              caption: {
+              caption: { 
                 text: caption
               }.compact.presence
             }
@@ -175,12 +177,27 @@ module InstagramReporter
       end
 
       def conn
-        @conn ||= Faraday.new do |faraday|
+        ssl_opt = if ENV['PROXY_CA_FILE_PATH'].present?
+                    {ssl: {verify: true, ca_file: ENV['PROXY_CA_FILE_PATH']}}
+                  else
+                    {ssl: {verify: false}}
+                  end
+        Faraday.new(ssl_opt) do |faraday|
           faraday.request  :url_encoded
-          faraday.use      FaradayMiddleware::FollowRedirects
+          # faraday.use      FaradayMiddleware::FollowRedirects
           faraday.adapter  :typhoeus
-          faraday.options.timeout = 5
+          faraday.proxy    roll_proxy_server
         end
+      end
+
+      def roll_proxy_server
+        # Algorithm for choosing proxy server, e.g. 
+        # 
+        # server = redis.lpop('proxy_servers')
+        # redis.rpush('proxy_server', server)
+        # server
+
+        ENV['PROXY_SERVER'] #|| "http://ec2-52-16-66-173.eu-west-1.compute.amazonaws.com:9888"
       end
 
       def extract_tags(text)
