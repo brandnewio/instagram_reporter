@@ -80,15 +80,15 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/users/#{user_id}/media/recent", params, true)
   end
 
-  def get_media_likes_by_access_token(media_id, access_token)
-    params = query_params(access_token)
-    api_get_and_parse("/v1/media/#{media_id}/likes", params)
-  end
+  # def get_media_likes_by_access_token(media_id, access_token)
+  #   params = query_params(access_token)
+  #   api_get_and_parse("/v1/media/#{media_id}/likes", params)
+  # end
 
-  def get_media_comments_by_access_token(media_id, access_token)
-    params = query_params(access_token)
-    api_get_and_parse("/v1/media/#{media_id}/comments", params)
-  end
+  # def get_media_comments_by_access_token(media_id, access_token)
+  #   params = query_params(access_token)
+  #   api_get_and_parse("/v1/media/#{media_id}/comments", params)
+  # end
 
   # TO CHANGE
   def get_users_by_name(username, access_token = nil)
@@ -97,9 +97,9 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/users/search", params, true)
   end
 
-  def call_api_by_access_token_for_media_file_location(instagram_media_id, access_token)
-    call_api_by_access_token_for_media_info(instagram_media_id, access_token, 'location')
-  end
+  # def call_api_by_access_token_for_media_file_location(instagram_media_id, access_token)
+  #   call_api_by_access_token_for_media_info(instagram_media_id, access_token, 'location')
+  # end
 
   def get_location_info_by_access_token(longitude, latitude, access_token)
     params = query_params(access_token).merge!(lng: longitude, lat: latitude)
@@ -120,13 +120,13 @@ class InstagramApiCaller < InstagramInteractionsBase
     api_get_and_parse("/v1/locations/#{location_id}", query_params(access_token), false)
   end
 
-  def get_followers(user_id, access_token, cursor = nil)
-    #/v1/users/3/followed-by?access_token=ACCESS-TOKEN
-    #/v1/users/45364550/followed-by
-    params = query_params(access_token)
-    params.merge!(cursor: cursor) unless cursor.nil?
-    api_get_and_parse("/v1/users/#{user_id}/followed-by", params, true)
-  end
+  # def get_followers(user_id, access_token, cursor = nil)
+  #   #/v1/users/3/followed-by?access_token=ACCESS-TOKEN
+  #   #/v1/users/45364550/followed-by
+  #   params = query_params(access_token)
+  #   params.merge!(cursor: cursor) unless cursor.nil?
+  #   api_get_and_parse("/v1/users/#{user_id}/followed-by", params, true)
+  # end
 
   private
 
@@ -178,9 +178,9 @@ class InstagramApiCaller < InstagramInteractionsBase
 
       response = Hash.new
       api_response = api_connection.get(uri, params) do |req|
-        # req.options = DEFAULT_REQUEST_OPTIONS
+        DEFAULT_REQUEST_OPTIONS.each {|k,v| req.options.send("#{k}=", v) }
       end
-       puts "#{params} #{uri} #{api_response.inspect}"
+      puts "#{params} #{uri} #{api_response.inspect}"
       if(api_response.status == 200)
         response['data']       = parse_response(api_response, uri, params)
         response['pagination'] = get_pagination(api_response.body) if get_pagination
@@ -259,13 +259,13 @@ class InstagramApiCaller < InstagramInteractionsBase
     def get_response(uri)
       @response ||= api_connection.get do |req|
         req.url uri
-        # req.options = DEFAULT_REQUEST_OPTIONS
+        DEFAULT_REQUEST_OPTIONS.each {|k,v| req.options.send("#{k}=", v) }
       end
     end
 
     def api_connection
       @api_connection ||= Faraday.new(url: API_BASE_URL) do |faraday|
-        # faraday.request  :url_encoded
+        faraday.request  :url_encoded
         # faraday.use FaradayMiddleware::FollowRedirects
         faraday.adapter  :typhoeus
       end

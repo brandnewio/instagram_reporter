@@ -56,7 +56,7 @@ describe InstagramWebsiteScraper do
       "username"            => "luki3k5",
       "bio"                 => "",
       "website"             => "",
-      "profile_picture"     => "https://scontent-waw1-1.cdninstagram.com/vp/879498e290707c2c624a667137249cbd/5B32FB93/t51.2885-19/11850251_915632031835791_1153498572_a.jpg",
+      "profile_picture"     => "https://instagram.fdel8-1.fna.fbcdn.net/vp/84d0b0d29a73515547382d7b8254900d/5B5A8893/t51.2885-19/11850251_915632031835791_1153498572_a.jpg",
       "full_name"           => "",
       "counts"              => {"followed_by"=>30, "media"=>37, "follows"=>5},
       "id"                  => "4907942",
