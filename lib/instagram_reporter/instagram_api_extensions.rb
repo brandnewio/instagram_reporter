@@ -1,5 +1,6 @@
 module InstagramReporter
   module InstagramApiExtensions
+    CHROME_WIN_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
 
     # TO CHANGE
     def get_user_info_by_access_token(profile_name, access_token)
@@ -7,15 +8,11 @@ module InstagramReporter
       resp = conn.get(url)
       if resp.status == 200
         raw_user_info = JSON.parse(resp.body)
-        if raw_user_info['is_private'] == 'true'
-          {
-            result: 'error',
-            body: 'APINotAllowedError you cannot view this resource',
-            status: 400,
-            url: url
-          }
+        user_info = raw_user_info['graphql']['user'] || {}
+        if user_info['is_private'].to_s == 'true'
+          private_profile_response(url)
         else
-          transform_user_info(raw_user_info)
+          transform_user_info(user_info)
         end
       else
         {
@@ -86,8 +83,7 @@ module InstagramReporter
 
     private
 
-      def transform_user_info(raw_user_info)
-        user_info = raw_user_info['graphql']['user']
+      def transform_user_info(user_info)
         {
           data: {
             id: user_info['id'],
@@ -179,12 +175,22 @@ module InstagramReporter
           faraday.request  :url_encoded
           faraday.use      FaradayMiddleware::FollowRedirects
           faraday.adapter  :typhoeus
-          faraday.options.timeout = 5
+          faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i
+          faraday.headers['user-agent'] = CHROME_WIN_UA
         end
       end
 
       def extract_tags(text)
         text.to_s.scan(/#[A-z\d-]+/).map{|x| x[1..-1] }
+      end
+
+      def private_profile_response(url)
+        {
+          result: 'error',
+          status: 400,
+          url: url,
+          body: 'APINotAllowedError you cannot view this resource',
+        }
       end
   end
 end
