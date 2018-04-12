@@ -13,6 +13,114 @@ describe InstagramApiCaller do
   let(:emoji_user_id) { '3899278747' }
   let(:instagram_link) { 'https://www.instagram.com/p/1LzJUdRSap/' }
 
+  context 'when scrape via API only' do
+    around do |example|
+      original = ENV['SCRAPE_VIA_API']
+      ENV['SCRAPE_VIA_API'] = 'true'
+      begin
+        example.run
+      ensure
+        ENV['SCRAPE_VIA_API'] = original
+      end
+    end
+
+    describe '#call_api_by_access_token_for_media_file_stats' do
+      it 'returns likes and comments and hashtags' do
+        VCR.use_cassette('call_api_for_media_file_stats') do
+          response = subject.call_api_by_access_token_for_media_file_stats(instagram_link, access_token)
+          expect(response.keys).to contain_exactly('likes', 'comments', 'tags', 'result')
+        end
+      end
+    end
+
+    describe '#get_user_info_by_access_token' do
+      it 'returns user data with username' do
+        VCR.use_cassette('get_user_info_by_access_token') do
+          expect(subject.get_user_info_by_access_token(profile_name, access_token)['data']['username']).to eq('xiazek')
+        end
+      end
+
+      it 'returns user data with profile picture link' do
+        VCR.use_cassette('get_user_info_by_access_token') do
+          expect(subject.get_user_info_by_access_token(profile_name, access_token)['data']['profile_picture']).to eq('https://instagram.fdel8-1.fna.fbcdn.net/vp/0bc05807133a21afb32bedd9534c9757/5B633DAB/t51.2885-19/11939555_723875314425165_599316154_a.jpg')
+        end
+      end
+
+      context 'when private profile' do
+        it 'returns error response for private profile' do
+          VCR.use_cassette('get_user_recent_media_private') do
+            result = subject.get_user_info_by_access_token('maitriye', nil)
+            expect(result['result']).to eq('error')
+            expect(result['status']).to eq(400)
+            expect(result['body']).to match('APINotAllowedError')
+            expect(result['body']).to match('you cannot view this resource')
+          end
+        end
+      end
+
+      context 'when profile not found' do
+        it 'returns not found error' do
+          VCR.use_cassette('get_user_recent_media_not_found_profile') do
+            result = subject.get_user_info_by_access_token('some-non-existing-profile-or-deleted-profile', nil)
+            expect(result['result']).to eq('error')
+            expect(result['status']).to eq(404)
+          end
+        end
+      end
+    end
+
+    describe '#get_user_recent_media' do
+      context 'when private profile' do
+        it 'returns error response for private profile' do
+          VCR.use_cassette('get_user_recent_media_private') do
+            result = subject.get_user_recent_media(1016919403, 'maitriye')
+            expect(result['result']).to eq('error')
+            expect(result['status']).to eq(400)
+            expect(result['body']).to match('APINotAllowedError')
+            expect(result['body']).to match('you cannot view this resource')
+          end
+        end
+      end
+
+      context 'when profile does not have any media' do
+        it 'returns success response' do
+          VCR.use_cassette('get_user_recent_media_empty_profile') do
+            result = subject.get_user_recent_media(6533520937, 'fake')
+            expect(result).to eq('data' => [], 'pagination' => nil, 'result' => 'ok')
+          end
+        end
+      end
+
+      context 'when profile not found' do
+        it 'returns not found error' do
+          VCR.use_cassette('get_user_recent_media_not_found_profile') do
+            result = subject.get_user_recent_media(65335237, 'some-non-existing-profile-or-deleted-profile')
+            expect(result['result']).to eq('error')
+            expect(result['status']).to eq(404)
+          end
+        end
+      end
+
+      it "returns a response containing media data with image urls etc" do
+        VCR.use_cassette('users_user-id_media_recent') do
+          result = subject.get_user_recent_media(user_id, profile_name)
+          expect(result['data'].first['images']['standard_resolution']['url']).to include('https://')
+          expect(result['data'].first['user']['id']).to eq(user_id)
+        end
+      end
+
+      context 'when using access_token' do
+        it "returns a response containing media data with image urls etc" do
+          VCR.use_cassette('users_user-id_media_recent_by_access_token') do
+            result = subject.get_user_recent_media(user_id, profile_name)
+            expect(result['data'].first['images']['standard_resolution']['url']).to include('https://')
+            expect(result['data'].first['user']['id']).to eq(user_id)
+          end
+        end
+      end
+    end
+  end
+
   describe '#initialize' do
     before do
       stub_const("InstagramInteractionsBase::API_TOKEN", nil)
