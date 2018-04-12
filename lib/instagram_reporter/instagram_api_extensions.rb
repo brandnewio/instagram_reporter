@@ -1,6 +1,7 @@
 module InstagramReporter
   module InstagramApiExtensions
-    CHROME_WIN_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+    DATA_MATCHER = Regexp.new('<script type="text/javascript">window._sharedData\s*=\s*(.*)\;\s*</script>')
 
     def get_user_info_by_access_token(profile_name, access_token)
       fetch_and_process_data(:transform_user_info, profile_name)
@@ -19,10 +20,10 @@ module InstagramReporter
     end
 
     def call_api_by_access_token_for_media_file_stats(instagram_link, access_token)
-      url = instagram_link + "?__a=1"
+      url = build_uri(instagram_link)
       resp = conn.get(url)
       if resp.status == 200
-        raw_media_info = JSON.parse(resp.body)
+        raw_media_info = find_media_file_json(resp.body)
         transform_media_info(raw_media_info)
       else
         {
@@ -37,10 +38,10 @@ module InstagramReporter
     private
 
       def fetch_and_process_data(sanitizer_method_name, profile_name)
-        url = "https://www.instagram.com/#{profile_name}/?__a=1"
+        url = build_uri("https://www.instagram.com/#{profile_name}/")
         resp = conn.get(url)
         if resp.status == 200
-          raw_user_info = JSON.parse(resp.body)
+          raw_user_info = find_profile_json(resp.body)
           user_info = raw_user_info['graphql']['user']
           if user_info.nil?
             media_not_found_response(url)
@@ -54,6 +55,30 @@ module InstagramReporter
         else
           media_error_response(url: url, status: resp.status, body: resp.body)
         end.with_indifferent_access
+      end
+
+      def scrape_via_api?
+        ENV['SCRAPE_VIA_API'] == 'true'
+      end
+
+      def find_media_file_json(body)
+        if scrape_via_api?
+          JSON(body)
+        else
+          JSON(body.match(DATA_MATCHER)[1])['entry_data']['PostPage'][0]
+        end
+      end
+
+      def find_profile_json(body)
+        if scrape_via_api?
+          JSON(body)
+        else
+          JSON(body.match(DATA_MATCHER)[1])['entry_data']['ProfilePage'][0]
+        end
+      end
+
+      def build_uri(url)
+        scrape_via_api? ? "#{url}?__a=1" : url
       end
 
       def transform_user_info(user_info, _)
@@ -119,7 +144,7 @@ module InstagramReporter
                 count: node['edge_media_to_comment']['count']
               },
               link: "https://instagram.com/p/#{node['shortcode']}",
-              caption: { 
+              caption: {
                 text: caption
               }.compact.presence
             }
@@ -154,15 +179,15 @@ module InstagramReporter
           faraday.request  :url_encoded
           # faraday.use      FaradayMiddleware::FollowRedirects
           faraday.adapter  :net_http
-          faraday.proxy    roll_proxy_server
+          faraday.proxy    roll_proxy_server if roll_proxy_server.present?
           faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i
-          faraday.headers['user-agent'] = CHROME_WIN_UA
+          faraday.headers['User-Agent'] = USER_AGENT
         end
       end
 
       def roll_proxy_server
-        # Algorithm for choosing proxy server, e.g. 
-        # 
+        # Algorithm for choosing proxy server, e.g.
+        #
         # server = redis.lpop('proxy_servers')
         # redis.rpush('proxy_server', server)
         # server
