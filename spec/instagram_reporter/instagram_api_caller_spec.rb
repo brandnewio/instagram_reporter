@@ -42,7 +42,7 @@ describe InstagramApiCaller do
 
       it 'returns user data with profile picture link' do
         VCR.use_cassette('get_user_info_by_access_token') do
-          expect(subject.get_user_info_by_access_token(profile_name, access_token)['data']['profile_picture']).to eq('https://instagram.fdel8-1.fna.fbcdn.net/vp/0bc05807133a21afb32bedd9534c9757/5B633DAB/t51.2885-19/11939555_723875314425165_599316154_a.jpg')
+          expect(subject.get_user_info_by_access_token(profile_name, access_token)['data']['profile_picture']).to eq('https://scontent-waw1-1.cdninstagram.com/vp/0bc05807133a21afb32bedd9534c9757/5B633DAB/t51.2885-19/11939555_723875314425165_599316154_a.jpg')
         end
       end
 
