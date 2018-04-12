@@ -153,7 +153,7 @@ module InstagramReporter
         Faraday.new(ssl_opt) do |faraday|
           faraday.request  :url_encoded
           # faraday.use      FaradayMiddleware::FollowRedirects
-          faraday.adapter  :typhoeus
+          faraday.adapter  :net_http
           faraday.proxy    roll_proxy_server
           faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i
           faraday.headers['user-agent'] = CHROME_WIN_UA
