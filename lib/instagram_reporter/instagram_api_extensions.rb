@@ -172,6 +172,9 @@ module InstagramReporter
       def conn
         ssl_opt = if ENV['PROXY_CA_FILE_PATH'].present?
                     {ssl: {verify: true, ca_file: ENV['PROXY_CA_FILE_PATH']}}
+                  elsif ENV['PROXY_PRIVATE_KEY'].present?
+                    key = OpenSSL::PKey::RSA.new(ENV['PROXY_PRIVATE_KEY'])
+                    {ssl: {verify: true, client_key: key}}
                   else
                     {ssl: {verify: false}}
                   end
