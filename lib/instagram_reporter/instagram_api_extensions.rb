@@ -172,13 +172,16 @@ module InstagramReporter
       def conn
         ssl_opt = if ENV['PROXY_CA_FILE_PATH'].present?
                     {ssl: {verify: true, ca_file: ENV['PROXY_CA_FILE_PATH']}}
+                  elsif ENV['PROXY_PRIVATE_KEY'].present?
+                    key = OpenSSL::PKey::RSA.new(ENV['PROXY_PRIVATE_KEY'])
+                    {ssl: {verify: true, client_key: key}}
                   else
                     {ssl: {verify: false}}
                   end
         Faraday.new(ssl_opt) do |faraday|
           faraday.request  :url_encoded
           # faraday.use      FaradayMiddleware::FollowRedirects
-          faraday.adapter  :typhoeus
+          faraday.adapter  :net_http
           faraday.proxy    roll_proxy_server if roll_proxy_server.present?
           faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i
           faraday.headers['User-Agent'] = USER_AGENT
