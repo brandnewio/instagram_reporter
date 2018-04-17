@@ -2,6 +2,7 @@ module InstagramReporter
   module InstagramApiExtensions
     USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
     DATA_MATCHER = Regexp.new('<script type="text/javascript">window._sharedData\s*=\s*(.*)\;\s*</script>')
+    RESTRICTED_PROFILE = Regexp.new('Restricted profile', 'i')
 
     def get_user_info_by_access_token(profile_name, access_token)
       fetch_and_process_data(:transform_user_info, profile_name)
@@ -73,7 +74,11 @@ module InstagramReporter
         if scrape_via_api?
           JSON(body)
         else
-          JSON(body.match(DATA_MATCHER)[1])['entry_data']['ProfilePage'][0]
+          if body.match(RESTRICTED_PROFILE)
+            { 'graphql' => { 'user' => { 'is_private' => 'true' } } }
+          else
+            JSON(body.match(DATA_MATCHER)[1])['entry_data']['ProfilePage'][0]
+          end
         end
       end
 
@@ -180,7 +185,7 @@ module InstagramReporter
                   end
         Faraday.new(ssl_opt) do |faraday|
           faraday.request  :url_encoded
-          # faraday.use      FaradayMiddleware::FollowRedirects
+          faraday.use      FaradayMiddleware::FollowRedirects
           faraday.adapter  :net_http
           faraday.proxy    roll_proxy_server if roll_proxy_server.present?
           faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i
