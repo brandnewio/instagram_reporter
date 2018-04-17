@@ -166,6 +166,18 @@ describe InstagramApiCaller do
         end
       end
     end
+
+    context 'when Restricted profile' do
+      it 'returns error response for private profile' do
+        VCR.use_cassette('restricted_profile_home') do
+          result = subject.get_user_info_by_access_token('absolutvodka', nil)
+          expect(result['result']).to eq('error')
+          expect(result['status']).to eq(400)
+          expect(result['body']).to match('APINotAllowedError')
+          expect(result['body']).to match('you cannot view this resource')
+        end
+      end
+    end
   end
 
   describe '#get_hashtag_info_by_access_token' do
@@ -244,6 +256,18 @@ describe InstagramApiCaller do
 
   describe '#get_user_recent_media' do
     #let(:access_token) { nil }
+
+    context 'when Restricted profile' do
+      it 'returns error response for private profile' do
+        VCR.use_cassette('restricted_profile_home') do
+          result = subject.get_user_recent_media(nil, 'absolutvodka', nil)
+          expect(result['result']).to eq('error')
+          expect(result['status']).to eq(400)
+          expect(result['body']).to match('APINotAllowedError')
+          expect(result['body']).to match('you cannot view this resource')
+        end
+      end
+    end
 
     context 'when private profile' do
       it 'returns error response for private profile' do
