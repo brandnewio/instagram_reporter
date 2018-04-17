@@ -185,7 +185,7 @@ module InstagramReporter
                   end
         Faraday.new(ssl_opt) do |faraday|
           faraday.request  :url_encoded
-          # faraday.use      FaradayMiddleware::FollowRedirects
+          faraday.use      FaradayMiddleware::FollowRedirects
           faraday.adapter  :net_http
           faraday.proxy    roll_proxy_server if roll_proxy_server.present?
           faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i

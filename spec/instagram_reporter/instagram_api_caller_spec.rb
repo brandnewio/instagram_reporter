@@ -234,6 +234,14 @@ describe InstagramApiCaller do
         expect(response.keys).to contain_exactly('likes', 'comments', 'tags', 'result')
       end
     end
+
+    it 'follows redirection' do
+      VCR.use_cassette('call_redirection_url') do
+        instagram_link = 'http://instagram.com/p/BhMHEMJjbNm/'
+        response = subject.call_api_by_access_token_for_media_file_stats(instagram_link, nil)
+        expect(response[:result]).to eq('ok')
+      end
+    end
   end
 
   xdescribe '#call_api_by_access_token_for_media_file_location' do
