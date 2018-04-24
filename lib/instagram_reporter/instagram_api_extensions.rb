@@ -190,7 +190,7 @@ module InstagramReporter
           faraday.proxy    roll_proxy_server if roll_proxy_server.present?
           faraday.options.timeout = (ENV['INSTAGRAM_REQUEST_TIMEOUT_LIMIT'] || 15).to_i
           faraday.headers['User-Agent'] = USER_AGENT
-          faraday.headers['Accept-Encoding'] = 'identity'
+          faraday.headers['Accept-Encoding'] = ENV['INSTAGRAM_SCRAPER_ENCODING'] if ENV.key?('INSTAGRAM_SCRAPER_ENCODING')
         end
       end
 
